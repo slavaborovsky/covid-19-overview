@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+main {
+	min-height: 0;
+	height: 100%;
+	min-width: 0;
+	width: 100%;
+}
+
+:root {
+	--font-display: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	--font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.covid-light-theme {
+	--covid-default: theme('colors.gray.900');
+
+	--covid-primary: theme('colors.pink.600');
+	--covid-primary-100: theme('colors.pink.100');
+	--covid-primary-200: theme('colors.pink.200');
+	--covid-primary-300: theme('colors.pink.300');
+	--covid-primary-400: theme('colors.pink.400');
+	--covid-primary-500: theme('colors.pink.500');
+
+	--covid-secondary: theme('colors.blue.600');
+	--covid-secondary-100: theme('colors.blue.100');
+	--covid-secondary-200: theme('colors.blue.200');
+	--covid-secondary-300: theme('colors.blue.300');
+	--covid-secondary-400: theme('colors.blue.400');
+	--covid-secondary-500: theme('colors.blue.500');
+
+	--covid-on-primary: theme('colors.teal.900');
+	--covid-on-body: var(--covid-default);
+	--covid-on-footer: theme('colors.gray.900');
+
+	--covid-info: theme('colors.green.600');
+	--covid-alert: theme('colors.orange.600');
+	--covid-error: theme('colors.red.600');
+
+	--body-background: theme('colors.gray.200');
+	--card-background: theme('colors.gray.100');
+	--footer-background: theme('colors.gray.300');
+}
+
+.covid-dark-theme {
+	--covid-default: theme('colors.gray.400');
+
+	--covid-primary: theme('colors.pink.500');
+	--covid-primary-100: theme('colors.pink.100');
+	--covid-primary-200: theme('colors.pink.200');
+	--covid-primary-300: theme('colors.pink.300');
+	--covid-primary-400: theme('colors.pink.400');
+	--covid-primary-500: theme('colors.pink.500');
+
+	--covid-secondary: theme('colors.green.600');
+	--covid-secondary-100: theme('colors.green.100');
+	--covid-secondary-200: theme('colors.green.200');
+	--covid-secondary-300: theme('colors.green.300');
+	--covid-secondary-400: theme('colors.green.400');
+	--covid-secondary-500: theme('colors.green.500');
+
+	--covid-on-primary: theme('colors.indigo.800');
+	--covid-on-body: var(--covid-default);
+	--covid-on-footer: theme('colors.gray.100');
+
+	--covid-info: theme('colors.teal.500');
+	--covid-alert: theme('colors.yellow.600');
+	--covid-error: theme('colors.red.600');
+
+	--body-background: theme('colors.gray.900');
+	--card-background: theme('colors.gray.800');
+	--footer-background: theme('colors.gray.700');
+}

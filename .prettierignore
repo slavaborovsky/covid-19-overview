@@ -1,0 +1,8 @@
+.idea
+.vscode
+
+yarn.lock
+
+dist
+
+tailwind.generated.css
