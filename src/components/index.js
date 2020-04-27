@@ -1,4 +1,4 @@
-export { Card } from './Card/Card';
-export { Header } from './Header/Header';
-export { Footer } from './Footer/Footer';
-export { Loader } from './Loader/Loader';
+export { Card } from './Card';
+export { Header } from './Header';
+export { Footer } from './Footer';
+export { Loader } from './Loader';
