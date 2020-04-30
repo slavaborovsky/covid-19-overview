@@ -1108,8 +1108,20 @@ video {
   background-color: var(--covid-error);
 }
 
+.bg-link {
+  background-color: var(--covid-link);
+}
+
+.bg-link-active {
+  background-color: var(--covid-link-active);
+}
+
 .bg-on-primary {
   background-color: var(--covid-on-primary);
+}
+
+.bg-on-header {
+  background-color: var(--covid-on-header);
 }
 
 .bg-on-body {
@@ -1124,16 +1136,20 @@ video {
   background-color: var(--covid-on-footer);
 }
 
+.bg-header {
+  background-color: var(--covid-header-background);
+}
+
 .bg-body {
-  background-color: var(--body-background);
+  background-color: var(--covid-body-background);
 }
 
 .bg-card {
-  background-color: var(--card-background);
+  background-color: var(--covid-card-background);
 }
 
 .bg-footer {
-  background-color: var(--footer-background);
+  background-color: var(--covid-footer-background);
 }
 
 .hover\:bg-transparent:hover {
@@ -1572,8 +1588,20 @@ video {
   background-color: var(--covid-error);
 }
 
+.hover\:bg-link:hover {
+  background-color: var(--covid-link);
+}
+
+.hover\:bg-link-active:hover {
+  background-color: var(--covid-link-active);
+}
+
 .hover\:bg-on-primary:hover {
   background-color: var(--covid-on-primary);
+}
+
+.hover\:bg-on-header:hover {
+  background-color: var(--covid-on-header);
 }
 
 .hover\:bg-on-body:hover {
@@ -1588,16 +1616,20 @@ video {
   background-color: var(--covid-on-footer);
 }
 
+.hover\:bg-header:hover {
+  background-color: var(--covid-header-background);
+}
+
 .hover\:bg-body:hover {
-  background-color: var(--body-background);
+  background-color: var(--covid-body-background);
 }
 
 .hover\:bg-card:hover {
-  background-color: var(--card-background);
+  background-color: var(--covid-card-background);
 }
 
 .hover\:bg-footer:hover {
-  background-color: var(--footer-background);
+  background-color: var(--covid-footer-background);
 }
 
 .focus\:bg-transparent:focus {
@@ -2036,8 +2068,20 @@ video {
   background-color: var(--covid-error);
 }
 
+.focus\:bg-link:focus {
+  background-color: var(--covid-link);
+}
+
+.focus\:bg-link-active:focus {
+  background-color: var(--covid-link-active);
+}
+
 .focus\:bg-on-primary:focus {
   background-color: var(--covid-on-primary);
+}
+
+.focus\:bg-on-header:focus {
+  background-color: var(--covid-on-header);
 }
 
 .focus\:bg-on-body:focus {
@@ -2052,16 +2096,20 @@ video {
   background-color: var(--covid-on-footer);
 }
 
+.focus\:bg-header:focus {
+  background-color: var(--covid-header-background);
+}
+
 .focus\:bg-body:focus {
-  background-color: var(--body-background);
+  background-color: var(--covid-body-background);
 }
 
 .focus\:bg-card:focus {
-  background-color: var(--card-background);
+  background-color: var(--covid-card-background);
 }
 
 .focus\:bg-footer:focus {
-  background-color: var(--footer-background);
+  background-color: var(--covid-footer-background);
 }
 
 .bg-bottom {
@@ -2576,8 +2624,20 @@ video {
   border-color: var(--covid-error);
 }
 
+.border-link {
+  border-color: var(--covid-link);
+}
+
+.border-link-active {
+  border-color: var(--covid-link-active);
+}
+
 .border-on-primary {
   border-color: var(--covid-on-primary);
+}
+
+.border-on-header {
+  border-color: var(--covid-on-header);
 }
 
 .border-on-body {
@@ -3024,8 +3084,20 @@ video {
   border-color: var(--covid-error);
 }
 
+.hover\:border-link:hover {
+  border-color: var(--covid-link);
+}
+
+.hover\:border-link-active:hover {
+  border-color: var(--covid-link-active);
+}
+
 .hover\:border-on-primary:hover {
   border-color: var(--covid-on-primary);
+}
+
+.hover\:border-on-header:hover {
+  border-color: var(--covid-on-header);
 }
 
 .hover\:border-on-body:hover {
@@ -3472,8 +3544,20 @@ video {
   border-color: var(--covid-error);
 }
 
+.focus\:border-link:focus {
+  border-color: var(--covid-link);
+}
+
+.focus\:border-link-active:focus {
+  border-color: var(--covid-link-active);
+}
+
 .focus\:border-on-primary:focus {
   border-color: var(--covid-on-primary);
+}
+
+.focus\:border-on-header:focus {
+  border-color: var(--covid-on-header);
 }
 
 .focus\:border-on-body:focus {
@@ -6928,8 +7012,20 @@ video {
   color: var(--covid-error);
 }
 
+.placeholder-link::placeholder {
+  color: var(--covid-link);
+}
+
+.placeholder-link-active::placeholder {
+  color: var(--covid-link-active);
+}
+
 .placeholder-on-primary::placeholder {
   color: var(--covid-on-primary);
+}
+
+.placeholder-on-header::placeholder {
+  color: var(--covid-on-header);
 }
 
 .placeholder-on-body::placeholder {
@@ -7380,8 +7476,20 @@ video {
   color: var(--covid-error);
 }
 
+.focus\:placeholder-link:focus::placeholder {
+  color: var(--covid-link);
+}
+
+.focus\:placeholder-link-active:focus::placeholder {
+  color: var(--covid-link-active);
+}
+
 .focus\:placeholder-on-primary:focus::placeholder {
   color: var(--covid-on-primary);
+}
+
+.focus\:placeholder-on-header:focus::placeholder {
+  color: var(--covid-on-header);
 }
 
 .focus\:placeholder-on-body:focus::placeholder {
@@ -8107,8 +8215,20 @@ video {
   color: var(--covid-error);
 }
 
+.text-link {
+  color: var(--covid-link);
+}
+
+.text-link-active {
+  color: var(--covid-link-active);
+}
+
 .text-on-primary {
   color: var(--covid-on-primary);
+}
+
+.text-on-header {
+  color: var(--covid-on-header);
 }
 
 .text-on-body {
@@ -8559,8 +8679,20 @@ video {
   color: var(--covid-error);
 }
 
+.hover\:text-link:hover {
+  color: var(--covid-link);
+}
+
+.hover\:text-link-active:hover {
+  color: var(--covid-link-active);
+}
+
 .hover\:text-on-primary:hover {
   color: var(--covid-on-primary);
+}
+
+.hover\:text-on-header:hover {
+  color: var(--covid-on-header);
 }
 
 .hover\:text-on-body:hover {
@@ -9011,8 +9143,20 @@ video {
   color: var(--covid-error);
 }
 
+.focus\:text-link:focus {
+  color: var(--covid-link);
+}
+
+.focus\:text-link-active:focus {
+  color: var(--covid-link-active);
+}
+
 .focus\:text-on-primary:focus {
   color: var(--covid-on-primary);
+}
+
+.focus\:text-on-header:focus {
+  color: var(--covid-on-header);
 }
 
 .focus\:text-on-body:focus {
@@ -11866,6 +12010,11 @@ video {
   transition-duration: 1000ms;
 }
 
+:root {
+  --font-display: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
 html,
 body,
 main {
@@ -11873,11 +12022,6 @@ main {
   height: 100%;
   min-width: 0;
   width: 100%;
-}
-
-:root {
-  --font-display: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .covid-light-theme {
@@ -11894,15 +12038,19 @@ main {
   --covid-secondary-300: #90cdf4;
   --covid-secondary-400: #63b3ed;
   --covid-secondary-500: #4299e1;
-  --covid-on-primary: #234e52;
-  --covid-on-body: var(--covid-default);
-  --covid-on-footer: #1a202c;
   --covid-info: #38a169;
   --covid-alert: #dd6b20;
   --covid-error: #e53e3e;
-  --body-background: #edf2f7;
-  --card-background: #f7fafc;
-  --footer-background: #e2e8f0;
+  --covid-link: #cbd5e0;
+  --covid-link-active: #2d3748;
+  --covid-header-background: #434190;
+  --covid-body-background: #edf2f7;
+  --covid-card-background: #f7fafc;
+  --covid-footer-background: #e2e8f0;
+  --covid-on-primary: #234e52;
+  --covid-on-header: #c3dafe;
+  --covid-on-body: var(--covid-default);
+  --covid-on-footer: #1a202c;
 }
 
 .covid-dark-theme {
@@ -11919,15 +12067,19 @@ main {
   --covid-secondary-300: #9ae6b4;
   --covid-secondary-400: #68d391;
   --covid-secondary-500: #48bb78;
-  --covid-on-primary: #434190;
-  --covid-on-body: var(--covid-default);
-  --covid-on-footer: #f7fafc;
   --covid-info: #38b2ac;
   --covid-alert: #d69e2e;
   --covid-error: #e53e3e;
-  --body-background: #1a202c;
-  --card-background: #2d3748;
-  --footer-background: #4a5568;
+  --covid-link: #fc8181;
+  --covid-link-active: #9b2c2c;
+  --covid-header-background: #2d3748;
+  --covid-body-background: #1a202c;
+  --covid-card-background: #2d3748;
+  --covid-footer-background: #4a5568;
+  --covid-on-primary: #434190;
+  --covid-on-header: #edf2f7;
+  --covid-on-body: var(--covid-default);
+  --covid-on-footer: #f7fafc;
 }
 
 @media (min-width: 640px) {
@@ -12431,8 +12583,20 @@ main {
     background-color: var(--covid-error);
   }
 
+  .sm\:bg-link {
+    background-color: var(--covid-link);
+  }
+
+  .sm\:bg-link-active {
+    background-color: var(--covid-link-active);
+  }
+
   .sm\:bg-on-primary {
     background-color: var(--covid-on-primary);
+  }
+
+  .sm\:bg-on-header {
+    background-color: var(--covid-on-header);
   }
 
   .sm\:bg-on-body {
@@ -12447,16 +12611,20 @@ main {
     background-color: var(--covid-on-footer);
   }
 
+  .sm\:bg-header {
+    background-color: var(--covid-header-background);
+  }
+
   .sm\:bg-body {
-    background-color: var(--body-background);
+    background-color: var(--covid-body-background);
   }
 
   .sm\:bg-card {
-    background-color: var(--card-background);
+    background-color: var(--covid-card-background);
   }
 
   .sm\:bg-footer {
-    background-color: var(--footer-background);
+    background-color: var(--covid-footer-background);
   }
 
   .sm\:hover\:bg-transparent:hover {
@@ -12895,8 +13063,20 @@ main {
     background-color: var(--covid-error);
   }
 
+  .sm\:hover\:bg-link:hover {
+    background-color: var(--covid-link);
+  }
+
+  .sm\:hover\:bg-link-active:hover {
+    background-color: var(--covid-link-active);
+  }
+
   .sm\:hover\:bg-on-primary:hover {
     background-color: var(--covid-on-primary);
+  }
+
+  .sm\:hover\:bg-on-header:hover {
+    background-color: var(--covid-on-header);
   }
 
   .sm\:hover\:bg-on-body:hover {
@@ -12911,16 +13091,20 @@ main {
     background-color: var(--covid-on-footer);
   }
 
+  .sm\:hover\:bg-header:hover {
+    background-color: var(--covid-header-background);
+  }
+
   .sm\:hover\:bg-body:hover {
-    background-color: var(--body-background);
+    background-color: var(--covid-body-background);
   }
 
   .sm\:hover\:bg-card:hover {
-    background-color: var(--card-background);
+    background-color: var(--covid-card-background);
   }
 
   .sm\:hover\:bg-footer:hover {
-    background-color: var(--footer-background);
+    background-color: var(--covid-footer-background);
   }
 
   .sm\:focus\:bg-transparent:focus {
@@ -13359,8 +13543,20 @@ main {
     background-color: var(--covid-error);
   }
 
+  .sm\:focus\:bg-link:focus {
+    background-color: var(--covid-link);
+  }
+
+  .sm\:focus\:bg-link-active:focus {
+    background-color: var(--covid-link-active);
+  }
+
   .sm\:focus\:bg-on-primary:focus {
     background-color: var(--covid-on-primary);
+  }
+
+  .sm\:focus\:bg-on-header:focus {
+    background-color: var(--covid-on-header);
   }
 
   .sm\:focus\:bg-on-body:focus {
@@ -13375,16 +13571,20 @@ main {
     background-color: var(--covid-on-footer);
   }
 
+  .sm\:focus\:bg-header:focus {
+    background-color: var(--covid-header-background);
+  }
+
   .sm\:focus\:bg-body:focus {
-    background-color: var(--body-background);
+    background-color: var(--covid-body-background);
   }
 
   .sm\:focus\:bg-card:focus {
-    background-color: var(--card-background);
+    background-color: var(--covid-card-background);
   }
 
   .sm\:focus\:bg-footer:focus {
-    background-color: var(--footer-background);
+    background-color: var(--covid-footer-background);
   }
 
   .sm\:bg-bottom {
@@ -13899,8 +14099,20 @@ main {
     border-color: var(--covid-error);
   }
 
+  .sm\:border-link {
+    border-color: var(--covid-link);
+  }
+
+  .sm\:border-link-active {
+    border-color: var(--covid-link-active);
+  }
+
   .sm\:border-on-primary {
     border-color: var(--covid-on-primary);
+  }
+
+  .sm\:border-on-header {
+    border-color: var(--covid-on-header);
   }
 
   .sm\:border-on-body {
@@ -14347,8 +14559,20 @@ main {
     border-color: var(--covid-error);
   }
 
+  .sm\:hover\:border-link:hover {
+    border-color: var(--covid-link);
+  }
+
+  .sm\:hover\:border-link-active:hover {
+    border-color: var(--covid-link-active);
+  }
+
   .sm\:hover\:border-on-primary:hover {
     border-color: var(--covid-on-primary);
+  }
+
+  .sm\:hover\:border-on-header:hover {
+    border-color: var(--covid-on-header);
   }
 
   .sm\:hover\:border-on-body:hover {
@@ -14795,8 +15019,20 @@ main {
     border-color: var(--covid-error);
   }
 
+  .sm\:focus\:border-link:focus {
+    border-color: var(--covid-link);
+  }
+
+  .sm\:focus\:border-link-active:focus {
+    border-color: var(--covid-link-active);
+  }
+
   .sm\:focus\:border-on-primary:focus {
     border-color: var(--covid-on-primary);
+  }
+
+  .sm\:focus\:border-on-header:focus {
+    border-color: var(--covid-on-header);
   }
 
   .sm\:focus\:border-on-body:focus {
@@ -18251,8 +18487,20 @@ main {
     color: var(--covid-error);
   }
 
+  .sm\:placeholder-link::placeholder {
+    color: var(--covid-link);
+  }
+
+  .sm\:placeholder-link-active::placeholder {
+    color: var(--covid-link-active);
+  }
+
   .sm\:placeholder-on-primary::placeholder {
     color: var(--covid-on-primary);
+  }
+
+  .sm\:placeholder-on-header::placeholder {
+    color: var(--covid-on-header);
   }
 
   .sm\:placeholder-on-body::placeholder {
@@ -18703,8 +18951,20 @@ main {
     color: var(--covid-error);
   }
 
+  .sm\:focus\:placeholder-link:focus::placeholder {
+    color: var(--covid-link);
+  }
+
+  .sm\:focus\:placeholder-link-active:focus::placeholder {
+    color: var(--covid-link-active);
+  }
+
   .sm\:focus\:placeholder-on-primary:focus::placeholder {
     color: var(--covid-on-primary);
+  }
+
+  .sm\:focus\:placeholder-on-header:focus::placeholder {
+    color: var(--covid-on-header);
   }
 
   .sm\:focus\:placeholder-on-body:focus::placeholder {
@@ -19430,8 +19690,20 @@ main {
     color: var(--covid-error);
   }
 
+  .sm\:text-link {
+    color: var(--covid-link);
+  }
+
+  .sm\:text-link-active {
+    color: var(--covid-link-active);
+  }
+
   .sm\:text-on-primary {
     color: var(--covid-on-primary);
+  }
+
+  .sm\:text-on-header {
+    color: var(--covid-on-header);
   }
 
   .sm\:text-on-body {
@@ -19882,8 +20154,20 @@ main {
     color: var(--covid-error);
   }
 
+  .sm\:hover\:text-link:hover {
+    color: var(--covid-link);
+  }
+
+  .sm\:hover\:text-link-active:hover {
+    color: var(--covid-link-active);
+  }
+
   .sm\:hover\:text-on-primary:hover {
     color: var(--covid-on-primary);
+  }
+
+  .sm\:hover\:text-on-header:hover {
+    color: var(--covid-on-header);
   }
 
   .sm\:hover\:text-on-body:hover {
@@ -20334,8 +20618,20 @@ main {
     color: var(--covid-error);
   }
 
+  .sm\:focus\:text-link:focus {
+    color: var(--covid-link);
+  }
+
+  .sm\:focus\:text-link-active:focus {
+    color: var(--covid-link-active);
+  }
+
   .sm\:focus\:text-on-primary:focus {
     color: var(--covid-on-primary);
+  }
+
+  .sm\:focus\:text-on-header:focus {
+    color: var(--covid-on-header);
   }
 
   .sm\:focus\:text-on-body:focus {
@@ -23691,8 +23987,20 @@ main {
     background-color: var(--covid-error);
   }
 
+  .md\:bg-link {
+    background-color: var(--covid-link);
+  }
+
+  .md\:bg-link-active {
+    background-color: var(--covid-link-active);
+  }
+
   .md\:bg-on-primary {
     background-color: var(--covid-on-primary);
+  }
+
+  .md\:bg-on-header {
+    background-color: var(--covid-on-header);
   }
 
   .md\:bg-on-body {
@@ -23707,16 +24015,20 @@ main {
     background-color: var(--covid-on-footer);
   }
 
+  .md\:bg-header {
+    background-color: var(--covid-header-background);
+  }
+
   .md\:bg-body {
-    background-color: var(--body-background);
+    background-color: var(--covid-body-background);
   }
 
   .md\:bg-card {
-    background-color: var(--card-background);
+    background-color: var(--covid-card-background);
   }
 
   .md\:bg-footer {
-    background-color: var(--footer-background);
+    background-color: var(--covid-footer-background);
   }
 
   .md\:hover\:bg-transparent:hover {
@@ -24155,8 +24467,20 @@ main {
     background-color: var(--covid-error);
   }
 
+  .md\:hover\:bg-link:hover {
+    background-color: var(--covid-link);
+  }
+
+  .md\:hover\:bg-link-active:hover {
+    background-color: var(--covid-link-active);
+  }
+
   .md\:hover\:bg-on-primary:hover {
     background-color: var(--covid-on-primary);
+  }
+
+  .md\:hover\:bg-on-header:hover {
+    background-color: var(--covid-on-header);
   }
 
   .md\:hover\:bg-on-body:hover {
@@ -24171,16 +24495,20 @@ main {
     background-color: var(--covid-on-footer);
   }
 
+  .md\:hover\:bg-header:hover {
+    background-color: var(--covid-header-background);
+  }
+
   .md\:hover\:bg-body:hover {
-    background-color: var(--body-background);
+    background-color: var(--covid-body-background);
   }
 
   .md\:hover\:bg-card:hover {
-    background-color: var(--card-background);
+    background-color: var(--covid-card-background);
   }
 
   .md\:hover\:bg-footer:hover {
-    background-color: var(--footer-background);
+    background-color: var(--covid-footer-background);
   }
 
   .md\:focus\:bg-transparent:focus {
@@ -24619,8 +24947,20 @@ main {
     background-color: var(--covid-error);
   }
 
+  .md\:focus\:bg-link:focus {
+    background-color: var(--covid-link);
+  }
+
+  .md\:focus\:bg-link-active:focus {
+    background-color: var(--covid-link-active);
+  }
+
   .md\:focus\:bg-on-primary:focus {
     background-color: var(--covid-on-primary);
+  }
+
+  .md\:focus\:bg-on-header:focus {
+    background-color: var(--covid-on-header);
   }
 
   .md\:focus\:bg-on-body:focus {
@@ -24635,16 +24975,20 @@ main {
     background-color: var(--covid-on-footer);
   }
 
+  .md\:focus\:bg-header:focus {
+    background-color: var(--covid-header-background);
+  }
+
   .md\:focus\:bg-body:focus {
-    background-color: var(--body-background);
+    background-color: var(--covid-body-background);
   }
 
   .md\:focus\:bg-card:focus {
-    background-color: var(--card-background);
+    background-color: var(--covid-card-background);
   }
 
   .md\:focus\:bg-footer:focus {
-    background-color: var(--footer-background);
+    background-color: var(--covid-footer-background);
   }
 
   .md\:bg-bottom {
@@ -25159,8 +25503,20 @@ main {
     border-color: var(--covid-error);
   }
 
+  .md\:border-link {
+    border-color: var(--covid-link);
+  }
+
+  .md\:border-link-active {
+    border-color: var(--covid-link-active);
+  }
+
   .md\:border-on-primary {
     border-color: var(--covid-on-primary);
+  }
+
+  .md\:border-on-header {
+    border-color: var(--covid-on-header);
   }
 
   .md\:border-on-body {
@@ -25607,8 +25963,20 @@ main {
     border-color: var(--covid-error);
   }
 
+  .md\:hover\:border-link:hover {
+    border-color: var(--covid-link);
+  }
+
+  .md\:hover\:border-link-active:hover {
+    border-color: var(--covid-link-active);
+  }
+
   .md\:hover\:border-on-primary:hover {
     border-color: var(--covid-on-primary);
+  }
+
+  .md\:hover\:border-on-header:hover {
+    border-color: var(--covid-on-header);
   }
 
   .md\:hover\:border-on-body:hover {
@@ -26055,8 +26423,20 @@ main {
     border-color: var(--covid-error);
   }
 
+  .md\:focus\:border-link:focus {
+    border-color: var(--covid-link);
+  }
+
+  .md\:focus\:border-link-active:focus {
+    border-color: var(--covid-link-active);
+  }
+
   .md\:focus\:border-on-primary:focus {
     border-color: var(--covid-on-primary);
+  }
+
+  .md\:focus\:border-on-header:focus {
+    border-color: var(--covid-on-header);
   }
 
   .md\:focus\:border-on-body:focus {
@@ -29511,8 +29891,20 @@ main {
     color: var(--covid-error);
   }
 
+  .md\:placeholder-link::placeholder {
+    color: var(--covid-link);
+  }
+
+  .md\:placeholder-link-active::placeholder {
+    color: var(--covid-link-active);
+  }
+
   .md\:placeholder-on-primary::placeholder {
     color: var(--covid-on-primary);
+  }
+
+  .md\:placeholder-on-header::placeholder {
+    color: var(--covid-on-header);
   }
 
   .md\:placeholder-on-body::placeholder {
@@ -29963,8 +30355,20 @@ main {
     color: var(--covid-error);
   }
 
+  .md\:focus\:placeholder-link:focus::placeholder {
+    color: var(--covid-link);
+  }
+
+  .md\:focus\:placeholder-link-active:focus::placeholder {
+    color: var(--covid-link-active);
+  }
+
   .md\:focus\:placeholder-on-primary:focus::placeholder {
     color: var(--covid-on-primary);
+  }
+
+  .md\:focus\:placeholder-on-header:focus::placeholder {
+    color: var(--covid-on-header);
   }
 
   .md\:focus\:placeholder-on-body:focus::placeholder {
@@ -30690,8 +31094,20 @@ main {
     color: var(--covid-error);
   }
 
+  .md\:text-link {
+    color: var(--covid-link);
+  }
+
+  .md\:text-link-active {
+    color: var(--covid-link-active);
+  }
+
   .md\:text-on-primary {
     color: var(--covid-on-primary);
+  }
+
+  .md\:text-on-header {
+    color: var(--covid-on-header);
   }
 
   .md\:text-on-body {
@@ -31142,8 +31558,20 @@ main {
     color: var(--covid-error);
   }
 
+  .md\:hover\:text-link:hover {
+    color: var(--covid-link);
+  }
+
+  .md\:hover\:text-link-active:hover {
+    color: var(--covid-link-active);
+  }
+
   .md\:hover\:text-on-primary:hover {
     color: var(--covid-on-primary);
+  }
+
+  .md\:hover\:text-on-header:hover {
+    color: var(--covid-on-header);
   }
 
   .md\:hover\:text-on-body:hover {
@@ -31594,8 +32022,20 @@ main {
     color: var(--covid-error);
   }
 
+  .md\:focus\:text-link:focus {
+    color: var(--covid-link);
+  }
+
+  .md\:focus\:text-link-active:focus {
+    color: var(--covid-link-active);
+  }
+
   .md\:focus\:text-on-primary:focus {
     color: var(--covid-on-primary);
+  }
+
+  .md\:focus\:text-on-header:focus {
+    color: var(--covid-on-header);
   }
 
   .md\:focus\:text-on-body:focus {
@@ -34951,8 +35391,20 @@ main {
     background-color: var(--covid-error);
   }
 
+  .lg\:bg-link {
+    background-color: var(--covid-link);
+  }
+
+  .lg\:bg-link-active {
+    background-color: var(--covid-link-active);
+  }
+
   .lg\:bg-on-primary {
     background-color: var(--covid-on-primary);
+  }
+
+  .lg\:bg-on-header {
+    background-color: var(--covid-on-header);
   }
 
   .lg\:bg-on-body {
@@ -34967,16 +35419,20 @@ main {
     background-color: var(--covid-on-footer);
   }
 
+  .lg\:bg-header {
+    background-color: var(--covid-header-background);
+  }
+
   .lg\:bg-body {
-    background-color: var(--body-background);
+    background-color: var(--covid-body-background);
   }
 
   .lg\:bg-card {
-    background-color: var(--card-background);
+    background-color: var(--covid-card-background);
   }
 
   .lg\:bg-footer {
-    background-color: var(--footer-background);
+    background-color: var(--covid-footer-background);
   }
 
   .lg\:hover\:bg-transparent:hover {
@@ -35415,8 +35871,20 @@ main {
     background-color: var(--covid-error);
   }
 
+  .lg\:hover\:bg-link:hover {
+    background-color: var(--covid-link);
+  }
+
+  .lg\:hover\:bg-link-active:hover {
+    background-color: var(--covid-link-active);
+  }
+
   .lg\:hover\:bg-on-primary:hover {
     background-color: var(--covid-on-primary);
+  }
+
+  .lg\:hover\:bg-on-header:hover {
+    background-color: var(--covid-on-header);
   }
 
   .lg\:hover\:bg-on-body:hover {
@@ -35431,16 +35899,20 @@ main {
     background-color: var(--covid-on-footer);
   }
 
+  .lg\:hover\:bg-header:hover {
+    background-color: var(--covid-header-background);
+  }
+
   .lg\:hover\:bg-body:hover {
-    background-color: var(--body-background);
+    background-color: var(--covid-body-background);
   }
 
   .lg\:hover\:bg-card:hover {
-    background-color: var(--card-background);
+    background-color: var(--covid-card-background);
   }
 
   .lg\:hover\:bg-footer:hover {
-    background-color: var(--footer-background);
+    background-color: var(--covid-footer-background);
   }
 
   .lg\:focus\:bg-transparent:focus {
@@ -35879,8 +36351,20 @@ main {
     background-color: var(--covid-error);
   }
 
+  .lg\:focus\:bg-link:focus {
+    background-color: var(--covid-link);
+  }
+
+  .lg\:focus\:bg-link-active:focus {
+    background-color: var(--covid-link-active);
+  }
+
   .lg\:focus\:bg-on-primary:focus {
     background-color: var(--covid-on-primary);
+  }
+
+  .lg\:focus\:bg-on-header:focus {
+    background-color: var(--covid-on-header);
   }
 
   .lg\:focus\:bg-on-body:focus {
@@ -35895,16 +36379,20 @@ main {
     background-color: var(--covid-on-footer);
   }
 
+  .lg\:focus\:bg-header:focus {
+    background-color: var(--covid-header-background);
+  }
+
   .lg\:focus\:bg-body:focus {
-    background-color: var(--body-background);
+    background-color: var(--covid-body-background);
   }
 
   .lg\:focus\:bg-card:focus {
-    background-color: var(--card-background);
+    background-color: var(--covid-card-background);
   }
 
   .lg\:focus\:bg-footer:focus {
-    background-color: var(--footer-background);
+    background-color: var(--covid-footer-background);
   }
 
   .lg\:bg-bottom {
@@ -36419,8 +36907,20 @@ main {
     border-color: var(--covid-error);
   }
 
+  .lg\:border-link {
+    border-color: var(--covid-link);
+  }
+
+  .lg\:border-link-active {
+    border-color: var(--covid-link-active);
+  }
+
   .lg\:border-on-primary {
     border-color: var(--covid-on-primary);
+  }
+
+  .lg\:border-on-header {
+    border-color: var(--covid-on-header);
   }
 
   .lg\:border-on-body {
@@ -36867,8 +37367,20 @@ main {
     border-color: var(--covid-error);
   }
 
+  .lg\:hover\:border-link:hover {
+    border-color: var(--covid-link);
+  }
+
+  .lg\:hover\:border-link-active:hover {
+    border-color: var(--covid-link-active);
+  }
+
   .lg\:hover\:border-on-primary:hover {
     border-color: var(--covid-on-primary);
+  }
+
+  .lg\:hover\:border-on-header:hover {
+    border-color: var(--covid-on-header);
   }
 
   .lg\:hover\:border-on-body:hover {
@@ -37315,8 +37827,20 @@ main {
     border-color: var(--covid-error);
   }
 
+  .lg\:focus\:border-link:focus {
+    border-color: var(--covid-link);
+  }
+
+  .lg\:focus\:border-link-active:focus {
+    border-color: var(--covid-link-active);
+  }
+
   .lg\:focus\:border-on-primary:focus {
     border-color: var(--covid-on-primary);
+  }
+
+  .lg\:focus\:border-on-header:focus {
+    border-color: var(--covid-on-header);
   }
 
   .lg\:focus\:border-on-body:focus {
@@ -40771,8 +41295,20 @@ main {
     color: var(--covid-error);
   }
 
+  .lg\:placeholder-link::placeholder {
+    color: var(--covid-link);
+  }
+
+  .lg\:placeholder-link-active::placeholder {
+    color: var(--covid-link-active);
+  }
+
   .lg\:placeholder-on-primary::placeholder {
     color: var(--covid-on-primary);
+  }
+
+  .lg\:placeholder-on-header::placeholder {
+    color: var(--covid-on-header);
   }
 
   .lg\:placeholder-on-body::placeholder {
@@ -41223,8 +41759,20 @@ main {
     color: var(--covid-error);
   }
 
+  .lg\:focus\:placeholder-link:focus::placeholder {
+    color: var(--covid-link);
+  }
+
+  .lg\:focus\:placeholder-link-active:focus::placeholder {
+    color: var(--covid-link-active);
+  }
+
   .lg\:focus\:placeholder-on-primary:focus::placeholder {
     color: var(--covid-on-primary);
+  }
+
+  .lg\:focus\:placeholder-on-header:focus::placeholder {
+    color: var(--covid-on-header);
   }
 
   .lg\:focus\:placeholder-on-body:focus::placeholder {
@@ -41950,8 +42498,20 @@ main {
     color: var(--covid-error);
   }
 
+  .lg\:text-link {
+    color: var(--covid-link);
+  }
+
+  .lg\:text-link-active {
+    color: var(--covid-link-active);
+  }
+
   .lg\:text-on-primary {
     color: var(--covid-on-primary);
+  }
+
+  .lg\:text-on-header {
+    color: var(--covid-on-header);
   }
 
   .lg\:text-on-body {
@@ -42402,8 +42962,20 @@ main {
     color: var(--covid-error);
   }
 
+  .lg\:hover\:text-link:hover {
+    color: var(--covid-link);
+  }
+
+  .lg\:hover\:text-link-active:hover {
+    color: var(--covid-link-active);
+  }
+
   .lg\:hover\:text-on-primary:hover {
     color: var(--covid-on-primary);
+  }
+
+  .lg\:hover\:text-on-header:hover {
+    color: var(--covid-on-header);
   }
 
   .lg\:hover\:text-on-body:hover {
@@ -42854,8 +43426,20 @@ main {
     color: var(--covid-error);
   }
 
+  .lg\:focus\:text-link:focus {
+    color: var(--covid-link);
+  }
+
+  .lg\:focus\:text-link-active:focus {
+    color: var(--covid-link-active);
+  }
+
   .lg\:focus\:text-on-primary:focus {
     color: var(--covid-on-primary);
+  }
+
+  .lg\:focus\:text-on-header:focus {
+    color: var(--covid-on-header);
   }
 
   .lg\:focus\:text-on-body:focus {
@@ -46211,8 +46795,20 @@ main {
     background-color: var(--covid-error);
   }
 
+  .xl\:bg-link {
+    background-color: var(--covid-link);
+  }
+
+  .xl\:bg-link-active {
+    background-color: var(--covid-link-active);
+  }
+
   .xl\:bg-on-primary {
     background-color: var(--covid-on-primary);
+  }
+
+  .xl\:bg-on-header {
+    background-color: var(--covid-on-header);
   }
 
   .xl\:bg-on-body {
@@ -46227,16 +46823,20 @@ main {
     background-color: var(--covid-on-footer);
   }
 
+  .xl\:bg-header {
+    background-color: var(--covid-header-background);
+  }
+
   .xl\:bg-body {
-    background-color: var(--body-background);
+    background-color: var(--covid-body-background);
   }
 
   .xl\:bg-card {
-    background-color: var(--card-background);
+    background-color: var(--covid-card-background);
   }
 
   .xl\:bg-footer {
-    background-color: var(--footer-background);
+    background-color: var(--covid-footer-background);
   }
 
   .xl\:hover\:bg-transparent:hover {
@@ -46675,8 +47275,20 @@ main {
     background-color: var(--covid-error);
   }
 
+  .xl\:hover\:bg-link:hover {
+    background-color: var(--covid-link);
+  }
+
+  .xl\:hover\:bg-link-active:hover {
+    background-color: var(--covid-link-active);
+  }
+
   .xl\:hover\:bg-on-primary:hover {
     background-color: var(--covid-on-primary);
+  }
+
+  .xl\:hover\:bg-on-header:hover {
+    background-color: var(--covid-on-header);
   }
 
   .xl\:hover\:bg-on-body:hover {
@@ -46691,16 +47303,20 @@ main {
     background-color: var(--covid-on-footer);
   }
 
+  .xl\:hover\:bg-header:hover {
+    background-color: var(--covid-header-background);
+  }
+
   .xl\:hover\:bg-body:hover {
-    background-color: var(--body-background);
+    background-color: var(--covid-body-background);
   }
 
   .xl\:hover\:bg-card:hover {
-    background-color: var(--card-background);
+    background-color: var(--covid-card-background);
   }
 
   .xl\:hover\:bg-footer:hover {
-    background-color: var(--footer-background);
+    background-color: var(--covid-footer-background);
   }
 
   .xl\:focus\:bg-transparent:focus {
@@ -47139,8 +47755,20 @@ main {
     background-color: var(--covid-error);
   }
 
+  .xl\:focus\:bg-link:focus {
+    background-color: var(--covid-link);
+  }
+
+  .xl\:focus\:bg-link-active:focus {
+    background-color: var(--covid-link-active);
+  }
+
   .xl\:focus\:bg-on-primary:focus {
     background-color: var(--covid-on-primary);
+  }
+
+  .xl\:focus\:bg-on-header:focus {
+    background-color: var(--covid-on-header);
   }
 
   .xl\:focus\:bg-on-body:focus {
@@ -47155,16 +47783,20 @@ main {
     background-color: var(--covid-on-footer);
   }
 
+  .xl\:focus\:bg-header:focus {
+    background-color: var(--covid-header-background);
+  }
+
   .xl\:focus\:bg-body:focus {
-    background-color: var(--body-background);
+    background-color: var(--covid-body-background);
   }
 
   .xl\:focus\:bg-card:focus {
-    background-color: var(--card-background);
+    background-color: var(--covid-card-background);
   }
 
   .xl\:focus\:bg-footer:focus {
-    background-color: var(--footer-background);
+    background-color: var(--covid-footer-background);
   }
 
   .xl\:bg-bottom {
@@ -47679,8 +48311,20 @@ main {
     border-color: var(--covid-error);
   }
 
+  .xl\:border-link {
+    border-color: var(--covid-link);
+  }
+
+  .xl\:border-link-active {
+    border-color: var(--covid-link-active);
+  }
+
   .xl\:border-on-primary {
     border-color: var(--covid-on-primary);
+  }
+
+  .xl\:border-on-header {
+    border-color: var(--covid-on-header);
   }
 
   .xl\:border-on-body {
@@ -48127,8 +48771,20 @@ main {
     border-color: var(--covid-error);
   }
 
+  .xl\:hover\:border-link:hover {
+    border-color: var(--covid-link);
+  }
+
+  .xl\:hover\:border-link-active:hover {
+    border-color: var(--covid-link-active);
+  }
+
   .xl\:hover\:border-on-primary:hover {
     border-color: var(--covid-on-primary);
+  }
+
+  .xl\:hover\:border-on-header:hover {
+    border-color: var(--covid-on-header);
   }
 
   .xl\:hover\:border-on-body:hover {
@@ -48575,8 +49231,20 @@ main {
     border-color: var(--covid-error);
   }
 
+  .xl\:focus\:border-link:focus {
+    border-color: var(--covid-link);
+  }
+
+  .xl\:focus\:border-link-active:focus {
+    border-color: var(--covid-link-active);
+  }
+
   .xl\:focus\:border-on-primary:focus {
     border-color: var(--covid-on-primary);
+  }
+
+  .xl\:focus\:border-on-header:focus {
+    border-color: var(--covid-on-header);
   }
 
   .xl\:focus\:border-on-body:focus {
@@ -52031,8 +52699,20 @@ main {
     color: var(--covid-error);
   }
 
+  .xl\:placeholder-link::placeholder {
+    color: var(--covid-link);
+  }
+
+  .xl\:placeholder-link-active::placeholder {
+    color: var(--covid-link-active);
+  }
+
   .xl\:placeholder-on-primary::placeholder {
     color: var(--covid-on-primary);
+  }
+
+  .xl\:placeholder-on-header::placeholder {
+    color: var(--covid-on-header);
   }
 
   .xl\:placeholder-on-body::placeholder {
@@ -52483,8 +53163,20 @@ main {
     color: var(--covid-error);
   }
 
+  .xl\:focus\:placeholder-link:focus::placeholder {
+    color: var(--covid-link);
+  }
+
+  .xl\:focus\:placeholder-link-active:focus::placeholder {
+    color: var(--covid-link-active);
+  }
+
   .xl\:focus\:placeholder-on-primary:focus::placeholder {
     color: var(--covid-on-primary);
+  }
+
+  .xl\:focus\:placeholder-on-header:focus::placeholder {
+    color: var(--covid-on-header);
   }
 
   .xl\:focus\:placeholder-on-body:focus::placeholder {
@@ -53210,8 +53902,20 @@ main {
     color: var(--covid-error);
   }
 
+  .xl\:text-link {
+    color: var(--covid-link);
+  }
+
+  .xl\:text-link-active {
+    color: var(--covid-link-active);
+  }
+
   .xl\:text-on-primary {
     color: var(--covid-on-primary);
+  }
+
+  .xl\:text-on-header {
+    color: var(--covid-on-header);
   }
 
   .xl\:text-on-body {
@@ -53662,8 +54366,20 @@ main {
     color: var(--covid-error);
   }
 
+  .xl\:hover\:text-link:hover {
+    color: var(--covid-link);
+  }
+
+  .xl\:hover\:text-link-active:hover {
+    color: var(--covid-link-active);
+  }
+
   .xl\:hover\:text-on-primary:hover {
     color: var(--covid-on-primary);
+  }
+
+  .xl\:hover\:text-on-header:hover {
+    color: var(--covid-on-header);
   }
 
   .xl\:hover\:text-on-body:hover {
@@ -54114,8 +54830,20 @@ main {
     color: var(--covid-error);
   }
 
+  .xl\:focus\:text-link:focus {
+    color: var(--covid-link);
+  }
+
+  .xl\:focus\:text-link-active:focus {
+    color: var(--covid-link-active);
+  }
+
   .xl\:focus\:text-on-primary:focus {
     color: var(--covid-on-primary);
+  }
+
+  .xl\:focus\:text-on-header:focus {
+    color: var(--covid-on-header);
   }
 
   .xl\:focus\:text-on-body:focus {

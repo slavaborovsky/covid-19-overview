@@ -1,0 +1,8 @@
+a {
+	color: var(--link-color);
+
+	&.active {
+		font-weight: 600;
+		color: var(--link-active-color);
+	}
+}
