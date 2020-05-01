@@ -1048,60 +1048,24 @@ video {
   background-color: var(--covid-default);
 }
 
-.bg-primary-100 {
-  background-color: var(--covid-primary-100);
-}
-
-.bg-primary-200 {
-  background-color: var(--covid-primary-200);
-}
-
-.bg-primary-300 {
-  background-color: var(--covid-primary-300);
-}
-
-.bg-primary-400 {
-  background-color: var(--covid-primary-400);
-}
-
-.bg-primary-500 {
-  background-color: var(--covid-primary-500);
-}
-
 .bg-primary {
   background-color: var(--covid-primary);
-}
-
-.bg-secondary-100 {
-  background-color: var(--covid-secondary-100);
-}
-
-.bg-secondary-200 {
-  background-color: var(--covid-secondary-200);
-}
-
-.bg-secondary-300 {
-  background-color: var(--covid-secondary-300);
-}
-
-.bg-secondary-400 {
-  background-color: var(--covid-secondary-400);
-}
-
-.bg-secondary-500 {
-  background-color: var(--covid-secondary-500);
 }
 
 .bg-secondary {
   background-color: var(--covid-secondary);
 }
 
+.bg-success {
+  background-color: var(--covid-success);
+}
+
 .bg-info {
   background-color: var(--covid-info);
 }
 
-.bg-alert {
-  background-color: var(--covid-alert);
+.bg-warning {
+  background-color: var(--covid-warning);
 }
 
 .bg-error {
@@ -1528,60 +1492,24 @@ video {
   background-color: var(--covid-default);
 }
 
-.hover\:bg-primary-100:hover {
-  background-color: var(--covid-primary-100);
-}
-
-.hover\:bg-primary-200:hover {
-  background-color: var(--covid-primary-200);
-}
-
-.hover\:bg-primary-300:hover {
-  background-color: var(--covid-primary-300);
-}
-
-.hover\:bg-primary-400:hover {
-  background-color: var(--covid-primary-400);
-}
-
-.hover\:bg-primary-500:hover {
-  background-color: var(--covid-primary-500);
-}
-
 .hover\:bg-primary:hover {
   background-color: var(--covid-primary);
-}
-
-.hover\:bg-secondary-100:hover {
-  background-color: var(--covid-secondary-100);
-}
-
-.hover\:bg-secondary-200:hover {
-  background-color: var(--covid-secondary-200);
-}
-
-.hover\:bg-secondary-300:hover {
-  background-color: var(--covid-secondary-300);
-}
-
-.hover\:bg-secondary-400:hover {
-  background-color: var(--covid-secondary-400);
-}
-
-.hover\:bg-secondary-500:hover {
-  background-color: var(--covid-secondary-500);
 }
 
 .hover\:bg-secondary:hover {
   background-color: var(--covid-secondary);
 }
 
+.hover\:bg-success:hover {
+  background-color: var(--covid-success);
+}
+
 .hover\:bg-info:hover {
   background-color: var(--covid-info);
 }
 
-.hover\:bg-alert:hover {
-  background-color: var(--covid-alert);
+.hover\:bg-warning:hover {
+  background-color: var(--covid-warning);
 }
 
 .hover\:bg-error:hover {
@@ -2008,60 +1936,24 @@ video {
   background-color: var(--covid-default);
 }
 
-.focus\:bg-primary-100:focus {
-  background-color: var(--covid-primary-100);
-}
-
-.focus\:bg-primary-200:focus {
-  background-color: var(--covid-primary-200);
-}
-
-.focus\:bg-primary-300:focus {
-  background-color: var(--covid-primary-300);
-}
-
-.focus\:bg-primary-400:focus {
-  background-color: var(--covid-primary-400);
-}
-
-.focus\:bg-primary-500:focus {
-  background-color: var(--covid-primary-500);
-}
-
 .focus\:bg-primary:focus {
   background-color: var(--covid-primary);
-}
-
-.focus\:bg-secondary-100:focus {
-  background-color: var(--covid-secondary-100);
-}
-
-.focus\:bg-secondary-200:focus {
-  background-color: var(--covid-secondary-200);
-}
-
-.focus\:bg-secondary-300:focus {
-  background-color: var(--covid-secondary-300);
-}
-
-.focus\:bg-secondary-400:focus {
-  background-color: var(--covid-secondary-400);
-}
-
-.focus\:bg-secondary-500:focus {
-  background-color: var(--covid-secondary-500);
 }
 
 .focus\:bg-secondary:focus {
   background-color: var(--covid-secondary);
 }
 
+.focus\:bg-success:focus {
+  background-color: var(--covid-success);
+}
+
 .focus\:bg-info:focus {
   background-color: var(--covid-info);
 }
 
-.focus\:bg-alert:focus {
-  background-color: var(--covid-alert);
+.focus\:bg-warning:focus {
+  background-color: var(--covid-warning);
 }
 
 .focus\:bg-error:focus {
@@ -2564,60 +2456,24 @@ video {
   border-color: #702459;
 }
 
-.border-primary-100 {
-  border-color: var(--covid-primary-100);
-}
-
-.border-primary-200 {
-  border-color: var(--covid-primary-200);
-}
-
-.border-primary-300 {
-  border-color: var(--covid-primary-300);
-}
-
-.border-primary-400 {
-  border-color: var(--covid-primary-400);
-}
-
-.border-primary-500 {
-  border-color: var(--covid-primary-500);
-}
-
 .border-primary {
   border-color: var(--covid-primary);
-}
-
-.border-secondary-100 {
-  border-color: var(--covid-secondary-100);
-}
-
-.border-secondary-200 {
-  border-color: var(--covid-secondary-200);
-}
-
-.border-secondary-300 {
-  border-color: var(--covid-secondary-300);
-}
-
-.border-secondary-400 {
-  border-color: var(--covid-secondary-400);
-}
-
-.border-secondary-500 {
-  border-color: var(--covid-secondary-500);
 }
 
 .border-secondary {
   border-color: var(--covid-secondary);
 }
 
+.border-success {
+  border-color: var(--covid-success);
+}
+
 .border-info {
   border-color: var(--covid-info);
 }
 
-.border-alert {
-  border-color: var(--covid-alert);
+.border-warning {
+  border-color: var(--covid-warning);
 }
 
 .border-error {
@@ -3024,60 +2880,24 @@ video {
   border-color: #702459;
 }
 
-.hover\:border-primary-100:hover {
-  border-color: var(--covid-primary-100);
-}
-
-.hover\:border-primary-200:hover {
-  border-color: var(--covid-primary-200);
-}
-
-.hover\:border-primary-300:hover {
-  border-color: var(--covid-primary-300);
-}
-
-.hover\:border-primary-400:hover {
-  border-color: var(--covid-primary-400);
-}
-
-.hover\:border-primary-500:hover {
-  border-color: var(--covid-primary-500);
-}
-
 .hover\:border-primary:hover {
   border-color: var(--covid-primary);
-}
-
-.hover\:border-secondary-100:hover {
-  border-color: var(--covid-secondary-100);
-}
-
-.hover\:border-secondary-200:hover {
-  border-color: var(--covid-secondary-200);
-}
-
-.hover\:border-secondary-300:hover {
-  border-color: var(--covid-secondary-300);
-}
-
-.hover\:border-secondary-400:hover {
-  border-color: var(--covid-secondary-400);
-}
-
-.hover\:border-secondary-500:hover {
-  border-color: var(--covid-secondary-500);
 }
 
 .hover\:border-secondary:hover {
   border-color: var(--covid-secondary);
 }
 
+.hover\:border-success:hover {
+  border-color: var(--covid-success);
+}
+
 .hover\:border-info:hover {
   border-color: var(--covid-info);
 }
 
-.hover\:border-alert:hover {
-  border-color: var(--covid-alert);
+.hover\:border-warning:hover {
+  border-color: var(--covid-warning);
 }
 
 .hover\:border-error:hover {
@@ -3484,60 +3304,24 @@ video {
   border-color: #702459;
 }
 
-.focus\:border-primary-100:focus {
-  border-color: var(--covid-primary-100);
-}
-
-.focus\:border-primary-200:focus {
-  border-color: var(--covid-primary-200);
-}
-
-.focus\:border-primary-300:focus {
-  border-color: var(--covid-primary-300);
-}
-
-.focus\:border-primary-400:focus {
-  border-color: var(--covid-primary-400);
-}
-
-.focus\:border-primary-500:focus {
-  border-color: var(--covid-primary-500);
-}
-
 .focus\:border-primary:focus {
   border-color: var(--covid-primary);
-}
-
-.focus\:border-secondary-100:focus {
-  border-color: var(--covid-secondary-100);
-}
-
-.focus\:border-secondary-200:focus {
-  border-color: var(--covid-secondary-200);
-}
-
-.focus\:border-secondary-300:focus {
-  border-color: var(--covid-secondary-300);
-}
-
-.focus\:border-secondary-400:focus {
-  border-color: var(--covid-secondary-400);
-}
-
-.focus\:border-secondary-500:focus {
-  border-color: var(--covid-secondary-500);
 }
 
 .focus\:border-secondary:focus {
   border-color: var(--covid-secondary);
 }
 
+.focus\:border-success:focus {
+  border-color: var(--covid-success);
+}
+
 .focus\:border-info:focus {
   border-color: var(--covid-info);
 }
 
-.focus\:border-alert:focus {
-  border-color: var(--covid-alert);
+.focus\:border-warning:focus {
+  border-color: var(--covid-warning);
 }
 
 .focus\:border-error:focus {
@@ -6952,60 +6736,24 @@ video {
   color: var(--covid-default);
 }
 
-.placeholder-primary-100::placeholder {
-  color: var(--covid-primary-100);
-}
-
-.placeholder-primary-200::placeholder {
-  color: var(--covid-primary-200);
-}
-
-.placeholder-primary-300::placeholder {
-  color: var(--covid-primary-300);
-}
-
-.placeholder-primary-400::placeholder {
-  color: var(--covid-primary-400);
-}
-
-.placeholder-primary-500::placeholder {
-  color: var(--covid-primary-500);
-}
-
 .placeholder-primary::placeholder {
   color: var(--covid-primary);
-}
-
-.placeholder-secondary-100::placeholder {
-  color: var(--covid-secondary-100);
-}
-
-.placeholder-secondary-200::placeholder {
-  color: var(--covid-secondary-200);
-}
-
-.placeholder-secondary-300::placeholder {
-  color: var(--covid-secondary-300);
-}
-
-.placeholder-secondary-400::placeholder {
-  color: var(--covid-secondary-400);
-}
-
-.placeholder-secondary-500::placeholder {
-  color: var(--covid-secondary-500);
 }
 
 .placeholder-secondary::placeholder {
   color: var(--covid-secondary);
 }
 
+.placeholder-success::placeholder {
+  color: var(--covid-success);
+}
+
 .placeholder-info::placeholder {
   color: var(--covid-info);
 }
 
-.placeholder-alert::placeholder {
-  color: var(--covid-alert);
+.placeholder-warning::placeholder {
+  color: var(--covid-warning);
 }
 
 .placeholder-error::placeholder {
@@ -7416,60 +7164,24 @@ video {
   color: var(--covid-default);
 }
 
-.focus\:placeholder-primary-100:focus::placeholder {
-  color: var(--covid-primary-100);
-}
-
-.focus\:placeholder-primary-200:focus::placeholder {
-  color: var(--covid-primary-200);
-}
-
-.focus\:placeholder-primary-300:focus::placeholder {
-  color: var(--covid-primary-300);
-}
-
-.focus\:placeholder-primary-400:focus::placeholder {
-  color: var(--covid-primary-400);
-}
-
-.focus\:placeholder-primary-500:focus::placeholder {
-  color: var(--covid-primary-500);
-}
-
 .focus\:placeholder-primary:focus::placeholder {
   color: var(--covid-primary);
-}
-
-.focus\:placeholder-secondary-100:focus::placeholder {
-  color: var(--covid-secondary-100);
-}
-
-.focus\:placeholder-secondary-200:focus::placeholder {
-  color: var(--covid-secondary-200);
-}
-
-.focus\:placeholder-secondary-300:focus::placeholder {
-  color: var(--covid-secondary-300);
-}
-
-.focus\:placeholder-secondary-400:focus::placeholder {
-  color: var(--covid-secondary-400);
-}
-
-.focus\:placeholder-secondary-500:focus::placeholder {
-  color: var(--covid-secondary-500);
 }
 
 .focus\:placeholder-secondary:focus::placeholder {
   color: var(--covid-secondary);
 }
 
+.focus\:placeholder-success:focus::placeholder {
+  color: var(--covid-success);
+}
+
 .focus\:placeholder-info:focus::placeholder {
   color: var(--covid-info);
 }
 
-.focus\:placeholder-alert:focus::placeholder {
-  color: var(--covid-alert);
+.focus\:placeholder-warning:focus::placeholder {
+  color: var(--covid-warning);
 }
 
 .focus\:placeholder-error:focus::placeholder {
@@ -8155,60 +7867,24 @@ video {
   color: var(--covid-default);
 }
 
-.text-primary-100 {
-  color: var(--covid-primary-100);
-}
-
-.text-primary-200 {
-  color: var(--covid-primary-200);
-}
-
-.text-primary-300 {
-  color: var(--covid-primary-300);
-}
-
-.text-primary-400 {
-  color: var(--covid-primary-400);
-}
-
-.text-primary-500 {
-  color: var(--covid-primary-500);
-}
-
 .text-primary {
   color: var(--covid-primary);
-}
-
-.text-secondary-100 {
-  color: var(--covid-secondary-100);
-}
-
-.text-secondary-200 {
-  color: var(--covid-secondary-200);
-}
-
-.text-secondary-300 {
-  color: var(--covid-secondary-300);
-}
-
-.text-secondary-400 {
-  color: var(--covid-secondary-400);
-}
-
-.text-secondary-500 {
-  color: var(--covid-secondary-500);
 }
 
 .text-secondary {
   color: var(--covid-secondary);
 }
 
+.text-success {
+  color: var(--covid-success);
+}
+
 .text-info {
   color: var(--covid-info);
 }
 
-.text-alert {
-  color: var(--covid-alert);
+.text-warning {
+  color: var(--covid-warning);
 }
 
 .text-error {
@@ -8619,60 +8295,24 @@ video {
   color: var(--covid-default);
 }
 
-.hover\:text-primary-100:hover {
-  color: var(--covid-primary-100);
-}
-
-.hover\:text-primary-200:hover {
-  color: var(--covid-primary-200);
-}
-
-.hover\:text-primary-300:hover {
-  color: var(--covid-primary-300);
-}
-
-.hover\:text-primary-400:hover {
-  color: var(--covid-primary-400);
-}
-
-.hover\:text-primary-500:hover {
-  color: var(--covid-primary-500);
-}
-
 .hover\:text-primary:hover {
   color: var(--covid-primary);
-}
-
-.hover\:text-secondary-100:hover {
-  color: var(--covid-secondary-100);
-}
-
-.hover\:text-secondary-200:hover {
-  color: var(--covid-secondary-200);
-}
-
-.hover\:text-secondary-300:hover {
-  color: var(--covid-secondary-300);
-}
-
-.hover\:text-secondary-400:hover {
-  color: var(--covid-secondary-400);
-}
-
-.hover\:text-secondary-500:hover {
-  color: var(--covid-secondary-500);
 }
 
 .hover\:text-secondary:hover {
   color: var(--covid-secondary);
 }
 
+.hover\:text-success:hover {
+  color: var(--covid-success);
+}
+
 .hover\:text-info:hover {
   color: var(--covid-info);
 }
 
-.hover\:text-alert:hover {
-  color: var(--covid-alert);
+.hover\:text-warning:hover {
+  color: var(--covid-warning);
 }
 
 .hover\:text-error:hover {
@@ -9083,60 +8723,24 @@ video {
   color: var(--covid-default);
 }
 
-.focus\:text-primary-100:focus {
-  color: var(--covid-primary-100);
-}
-
-.focus\:text-primary-200:focus {
-  color: var(--covid-primary-200);
-}
-
-.focus\:text-primary-300:focus {
-  color: var(--covid-primary-300);
-}
-
-.focus\:text-primary-400:focus {
-  color: var(--covid-primary-400);
-}
-
-.focus\:text-primary-500:focus {
-  color: var(--covid-primary-500);
-}
-
 .focus\:text-primary:focus {
   color: var(--covid-primary);
-}
-
-.focus\:text-secondary-100:focus {
-  color: var(--covid-secondary-100);
-}
-
-.focus\:text-secondary-200:focus {
-  color: var(--covid-secondary-200);
-}
-
-.focus\:text-secondary-300:focus {
-  color: var(--covid-secondary-300);
-}
-
-.focus\:text-secondary-400:focus {
-  color: var(--covid-secondary-400);
-}
-
-.focus\:text-secondary-500:focus {
-  color: var(--covid-secondary-500);
 }
 
 .focus\:text-secondary:focus {
   color: var(--covid-secondary);
 }
 
+.focus\:text-success:focus {
+  color: var(--covid-success);
+}
+
 .focus\:text-info:focus {
   color: var(--covid-info);
 }
 
-.focus\:text-alert:focus {
-  color: var(--covid-alert);
+.focus\:text-warning:focus {
+  color: var(--covid-warning);
 }
 
 .focus\:text-error:focus {
@@ -12026,60 +11630,46 @@ main {
 
 .covid-light-theme {
   --covid-default: #1a202c;
-  --covid-primary: #d53f8c;
-  --covid-primary-100: #fff5f7;
-  --covid-primary-200: #fed7e2;
-  --covid-primary-300: #fbb6ce;
-  --covid-primary-400: #f687b3;
-  --covid-primary-500: #ed64a6;
-  --covid-secondary: #3182ce;
-  --covid-secondary-100: #ebf8ff;
-  --covid-secondary-200: #bee3f8;
-  --covid-secondary-300: #90cdf4;
-  --covid-secondary-400: #63b3ed;
-  --covid-secondary-500: #4299e1;
-  --covid-info: #38a169;
-  --covid-alert: #dd6b20;
+  --covid-primary: #805ad5;
+  --covid-secondary: #319795;
+  --covid-success: #38a169;
   --covid-error: #e53e3e;
+  --covid-info: #3182ce;
+  --covid-warning: #dd6b20;
   --covid-link: #cbd5e0;
   --covid-link-active: #2d3748;
   --covid-header-background: #434190;
   --covid-body-background: #edf2f7;
   --covid-card-background: #f7fafc;
   --covid-footer-background: #e2e8f0;
-  --covid-on-primary: #234e52;
+  --covid-on-primary: #faf5ff;
+  --covid-on-secondary: #e6fffa;
   --covid-on-header: #c3dafe;
   --covid-on-body: var(--covid-default);
   --covid-on-footer: #1a202c;
+  --covid-btn-box-shadow: 0 0 2px 0 #718096;
 }
 
 .covid-dark-theme {
   --covid-default: #cbd5e0;
-  --covid-primary: #ed64a6;
-  --covid-primary-100: #fff5f7;
-  --covid-primary-200: #fed7e2;
-  --covid-primary-300: #fbb6ce;
-  --covid-primary-400: #f687b3;
-  --covid-primary-500: #ed64a6;
-  --covid-secondary: #38a169;
-  --covid-secondary-100: #f0fff4;
-  --covid-secondary-200: #c6f6d5;
-  --covid-secondary-300: #9ae6b4;
-  --covid-secondary-400: #68d391;
-  --covid-secondary-500: #48bb78;
-  --covid-info: #38b2ac;
-  --covid-alert: #d69e2e;
+  --covid-primary: #d53f8c;
+  --covid-secondary: #dd6b20;
+  --covid-success: #38a169;
   --covid-error: #e53e3e;
+  --covid-info: #319795;
+  --covid-warning: #d69e2e;
   --covid-link: #fc8181;
   --covid-link-active: #9b2c2c;
   --covid-header-background: #2d3748;
   --covid-body-background: #1a202c;
   --covid-card-background: #2d3748;
   --covid-footer-background: #4a5568;
-  --covid-on-primary: #434190;
+  --covid-on-primary: #fff5f7;
+  --covid-on-secondary: #fffaf0;
   --covid-on-header: #edf2f7;
   --covid-on-body: var(--covid-default);
   --covid-on-footer: #f7fafc;
+  --covid-btn-box-shadow: 0 0 2px 0 #f7fafc;
 }
 
 @media (min-width: 640px) {
@@ -12523,60 +12113,24 @@ main {
     background-color: var(--covid-default);
   }
 
-  .sm\:bg-primary-100 {
-    background-color: var(--covid-primary-100);
-  }
-
-  .sm\:bg-primary-200 {
-    background-color: var(--covid-primary-200);
-  }
-
-  .sm\:bg-primary-300 {
-    background-color: var(--covid-primary-300);
-  }
-
-  .sm\:bg-primary-400 {
-    background-color: var(--covid-primary-400);
-  }
-
-  .sm\:bg-primary-500 {
-    background-color: var(--covid-primary-500);
-  }
-
   .sm\:bg-primary {
     background-color: var(--covid-primary);
-  }
-
-  .sm\:bg-secondary-100 {
-    background-color: var(--covid-secondary-100);
-  }
-
-  .sm\:bg-secondary-200 {
-    background-color: var(--covid-secondary-200);
-  }
-
-  .sm\:bg-secondary-300 {
-    background-color: var(--covid-secondary-300);
-  }
-
-  .sm\:bg-secondary-400 {
-    background-color: var(--covid-secondary-400);
-  }
-
-  .sm\:bg-secondary-500 {
-    background-color: var(--covid-secondary-500);
   }
 
   .sm\:bg-secondary {
     background-color: var(--covid-secondary);
   }
 
+  .sm\:bg-success {
+    background-color: var(--covid-success);
+  }
+
   .sm\:bg-info {
     background-color: var(--covid-info);
   }
 
-  .sm\:bg-alert {
-    background-color: var(--covid-alert);
+  .sm\:bg-warning {
+    background-color: var(--covid-warning);
   }
 
   .sm\:bg-error {
@@ -13003,60 +12557,24 @@ main {
     background-color: var(--covid-default);
   }
 
-  .sm\:hover\:bg-primary-100:hover {
-    background-color: var(--covid-primary-100);
-  }
-
-  .sm\:hover\:bg-primary-200:hover {
-    background-color: var(--covid-primary-200);
-  }
-
-  .sm\:hover\:bg-primary-300:hover {
-    background-color: var(--covid-primary-300);
-  }
-
-  .sm\:hover\:bg-primary-400:hover {
-    background-color: var(--covid-primary-400);
-  }
-
-  .sm\:hover\:bg-primary-500:hover {
-    background-color: var(--covid-primary-500);
-  }
-
   .sm\:hover\:bg-primary:hover {
     background-color: var(--covid-primary);
-  }
-
-  .sm\:hover\:bg-secondary-100:hover {
-    background-color: var(--covid-secondary-100);
-  }
-
-  .sm\:hover\:bg-secondary-200:hover {
-    background-color: var(--covid-secondary-200);
-  }
-
-  .sm\:hover\:bg-secondary-300:hover {
-    background-color: var(--covid-secondary-300);
-  }
-
-  .sm\:hover\:bg-secondary-400:hover {
-    background-color: var(--covid-secondary-400);
-  }
-
-  .sm\:hover\:bg-secondary-500:hover {
-    background-color: var(--covid-secondary-500);
   }
 
   .sm\:hover\:bg-secondary:hover {
     background-color: var(--covid-secondary);
   }
 
+  .sm\:hover\:bg-success:hover {
+    background-color: var(--covid-success);
+  }
+
   .sm\:hover\:bg-info:hover {
     background-color: var(--covid-info);
   }
 
-  .sm\:hover\:bg-alert:hover {
-    background-color: var(--covid-alert);
+  .sm\:hover\:bg-warning:hover {
+    background-color: var(--covid-warning);
   }
 
   .sm\:hover\:bg-error:hover {
@@ -13483,60 +13001,24 @@ main {
     background-color: var(--covid-default);
   }
 
-  .sm\:focus\:bg-primary-100:focus {
-    background-color: var(--covid-primary-100);
-  }
-
-  .sm\:focus\:bg-primary-200:focus {
-    background-color: var(--covid-primary-200);
-  }
-
-  .sm\:focus\:bg-primary-300:focus {
-    background-color: var(--covid-primary-300);
-  }
-
-  .sm\:focus\:bg-primary-400:focus {
-    background-color: var(--covid-primary-400);
-  }
-
-  .sm\:focus\:bg-primary-500:focus {
-    background-color: var(--covid-primary-500);
-  }
-
   .sm\:focus\:bg-primary:focus {
     background-color: var(--covid-primary);
-  }
-
-  .sm\:focus\:bg-secondary-100:focus {
-    background-color: var(--covid-secondary-100);
-  }
-
-  .sm\:focus\:bg-secondary-200:focus {
-    background-color: var(--covid-secondary-200);
-  }
-
-  .sm\:focus\:bg-secondary-300:focus {
-    background-color: var(--covid-secondary-300);
-  }
-
-  .sm\:focus\:bg-secondary-400:focus {
-    background-color: var(--covid-secondary-400);
-  }
-
-  .sm\:focus\:bg-secondary-500:focus {
-    background-color: var(--covid-secondary-500);
   }
 
   .sm\:focus\:bg-secondary:focus {
     background-color: var(--covid-secondary);
   }
 
+  .sm\:focus\:bg-success:focus {
+    background-color: var(--covid-success);
+  }
+
   .sm\:focus\:bg-info:focus {
     background-color: var(--covid-info);
   }
 
-  .sm\:focus\:bg-alert:focus {
-    background-color: var(--covid-alert);
+  .sm\:focus\:bg-warning:focus {
+    background-color: var(--covid-warning);
   }
 
   .sm\:focus\:bg-error:focus {
@@ -14039,60 +13521,24 @@ main {
     border-color: #702459;
   }
 
-  .sm\:border-primary-100 {
-    border-color: var(--covid-primary-100);
-  }
-
-  .sm\:border-primary-200 {
-    border-color: var(--covid-primary-200);
-  }
-
-  .sm\:border-primary-300 {
-    border-color: var(--covid-primary-300);
-  }
-
-  .sm\:border-primary-400 {
-    border-color: var(--covid-primary-400);
-  }
-
-  .sm\:border-primary-500 {
-    border-color: var(--covid-primary-500);
-  }
-
   .sm\:border-primary {
     border-color: var(--covid-primary);
-  }
-
-  .sm\:border-secondary-100 {
-    border-color: var(--covid-secondary-100);
-  }
-
-  .sm\:border-secondary-200 {
-    border-color: var(--covid-secondary-200);
-  }
-
-  .sm\:border-secondary-300 {
-    border-color: var(--covid-secondary-300);
-  }
-
-  .sm\:border-secondary-400 {
-    border-color: var(--covid-secondary-400);
-  }
-
-  .sm\:border-secondary-500 {
-    border-color: var(--covid-secondary-500);
   }
 
   .sm\:border-secondary {
     border-color: var(--covid-secondary);
   }
 
+  .sm\:border-success {
+    border-color: var(--covid-success);
+  }
+
   .sm\:border-info {
     border-color: var(--covid-info);
   }
 
-  .sm\:border-alert {
-    border-color: var(--covid-alert);
+  .sm\:border-warning {
+    border-color: var(--covid-warning);
   }
 
   .sm\:border-error {
@@ -14499,60 +13945,24 @@ main {
     border-color: #702459;
   }
 
-  .sm\:hover\:border-primary-100:hover {
-    border-color: var(--covid-primary-100);
-  }
-
-  .sm\:hover\:border-primary-200:hover {
-    border-color: var(--covid-primary-200);
-  }
-
-  .sm\:hover\:border-primary-300:hover {
-    border-color: var(--covid-primary-300);
-  }
-
-  .sm\:hover\:border-primary-400:hover {
-    border-color: var(--covid-primary-400);
-  }
-
-  .sm\:hover\:border-primary-500:hover {
-    border-color: var(--covid-primary-500);
-  }
-
   .sm\:hover\:border-primary:hover {
     border-color: var(--covid-primary);
-  }
-
-  .sm\:hover\:border-secondary-100:hover {
-    border-color: var(--covid-secondary-100);
-  }
-
-  .sm\:hover\:border-secondary-200:hover {
-    border-color: var(--covid-secondary-200);
-  }
-
-  .sm\:hover\:border-secondary-300:hover {
-    border-color: var(--covid-secondary-300);
-  }
-
-  .sm\:hover\:border-secondary-400:hover {
-    border-color: var(--covid-secondary-400);
-  }
-
-  .sm\:hover\:border-secondary-500:hover {
-    border-color: var(--covid-secondary-500);
   }
 
   .sm\:hover\:border-secondary:hover {
     border-color: var(--covid-secondary);
   }
 
+  .sm\:hover\:border-success:hover {
+    border-color: var(--covid-success);
+  }
+
   .sm\:hover\:border-info:hover {
     border-color: var(--covid-info);
   }
 
-  .sm\:hover\:border-alert:hover {
-    border-color: var(--covid-alert);
+  .sm\:hover\:border-warning:hover {
+    border-color: var(--covid-warning);
   }
 
   .sm\:hover\:border-error:hover {
@@ -14959,60 +14369,24 @@ main {
     border-color: #702459;
   }
 
-  .sm\:focus\:border-primary-100:focus {
-    border-color: var(--covid-primary-100);
-  }
-
-  .sm\:focus\:border-primary-200:focus {
-    border-color: var(--covid-primary-200);
-  }
-
-  .sm\:focus\:border-primary-300:focus {
-    border-color: var(--covid-primary-300);
-  }
-
-  .sm\:focus\:border-primary-400:focus {
-    border-color: var(--covid-primary-400);
-  }
-
-  .sm\:focus\:border-primary-500:focus {
-    border-color: var(--covid-primary-500);
-  }
-
   .sm\:focus\:border-primary:focus {
     border-color: var(--covid-primary);
-  }
-
-  .sm\:focus\:border-secondary-100:focus {
-    border-color: var(--covid-secondary-100);
-  }
-
-  .sm\:focus\:border-secondary-200:focus {
-    border-color: var(--covid-secondary-200);
-  }
-
-  .sm\:focus\:border-secondary-300:focus {
-    border-color: var(--covid-secondary-300);
-  }
-
-  .sm\:focus\:border-secondary-400:focus {
-    border-color: var(--covid-secondary-400);
-  }
-
-  .sm\:focus\:border-secondary-500:focus {
-    border-color: var(--covid-secondary-500);
   }
 
   .sm\:focus\:border-secondary:focus {
     border-color: var(--covid-secondary);
   }
 
+  .sm\:focus\:border-success:focus {
+    border-color: var(--covid-success);
+  }
+
   .sm\:focus\:border-info:focus {
     border-color: var(--covid-info);
   }
 
-  .sm\:focus\:border-alert:focus {
-    border-color: var(--covid-alert);
+  .sm\:focus\:border-warning:focus {
+    border-color: var(--covid-warning);
   }
 
   .sm\:focus\:border-error:focus {
@@ -18427,60 +17801,24 @@ main {
     color: var(--covid-default);
   }
 
-  .sm\:placeholder-primary-100::placeholder {
-    color: var(--covid-primary-100);
-  }
-
-  .sm\:placeholder-primary-200::placeholder {
-    color: var(--covid-primary-200);
-  }
-
-  .sm\:placeholder-primary-300::placeholder {
-    color: var(--covid-primary-300);
-  }
-
-  .sm\:placeholder-primary-400::placeholder {
-    color: var(--covid-primary-400);
-  }
-
-  .sm\:placeholder-primary-500::placeholder {
-    color: var(--covid-primary-500);
-  }
-
   .sm\:placeholder-primary::placeholder {
     color: var(--covid-primary);
-  }
-
-  .sm\:placeholder-secondary-100::placeholder {
-    color: var(--covid-secondary-100);
-  }
-
-  .sm\:placeholder-secondary-200::placeholder {
-    color: var(--covid-secondary-200);
-  }
-
-  .sm\:placeholder-secondary-300::placeholder {
-    color: var(--covid-secondary-300);
-  }
-
-  .sm\:placeholder-secondary-400::placeholder {
-    color: var(--covid-secondary-400);
-  }
-
-  .sm\:placeholder-secondary-500::placeholder {
-    color: var(--covid-secondary-500);
   }
 
   .sm\:placeholder-secondary::placeholder {
     color: var(--covid-secondary);
   }
 
+  .sm\:placeholder-success::placeholder {
+    color: var(--covid-success);
+  }
+
   .sm\:placeholder-info::placeholder {
     color: var(--covid-info);
   }
 
-  .sm\:placeholder-alert::placeholder {
-    color: var(--covid-alert);
+  .sm\:placeholder-warning::placeholder {
+    color: var(--covid-warning);
   }
 
   .sm\:placeholder-error::placeholder {
@@ -18891,60 +18229,24 @@ main {
     color: var(--covid-default);
   }
 
-  .sm\:focus\:placeholder-primary-100:focus::placeholder {
-    color: var(--covid-primary-100);
-  }
-
-  .sm\:focus\:placeholder-primary-200:focus::placeholder {
-    color: var(--covid-primary-200);
-  }
-
-  .sm\:focus\:placeholder-primary-300:focus::placeholder {
-    color: var(--covid-primary-300);
-  }
-
-  .sm\:focus\:placeholder-primary-400:focus::placeholder {
-    color: var(--covid-primary-400);
-  }
-
-  .sm\:focus\:placeholder-primary-500:focus::placeholder {
-    color: var(--covid-primary-500);
-  }
-
   .sm\:focus\:placeholder-primary:focus::placeholder {
     color: var(--covid-primary);
-  }
-
-  .sm\:focus\:placeholder-secondary-100:focus::placeholder {
-    color: var(--covid-secondary-100);
-  }
-
-  .sm\:focus\:placeholder-secondary-200:focus::placeholder {
-    color: var(--covid-secondary-200);
-  }
-
-  .sm\:focus\:placeholder-secondary-300:focus::placeholder {
-    color: var(--covid-secondary-300);
-  }
-
-  .sm\:focus\:placeholder-secondary-400:focus::placeholder {
-    color: var(--covid-secondary-400);
-  }
-
-  .sm\:focus\:placeholder-secondary-500:focus::placeholder {
-    color: var(--covid-secondary-500);
   }
 
   .sm\:focus\:placeholder-secondary:focus::placeholder {
     color: var(--covid-secondary);
   }
 
+  .sm\:focus\:placeholder-success:focus::placeholder {
+    color: var(--covid-success);
+  }
+
   .sm\:focus\:placeholder-info:focus::placeholder {
     color: var(--covid-info);
   }
 
-  .sm\:focus\:placeholder-alert:focus::placeholder {
-    color: var(--covid-alert);
+  .sm\:focus\:placeholder-warning:focus::placeholder {
+    color: var(--covid-warning);
   }
 
   .sm\:focus\:placeholder-error:focus::placeholder {
@@ -19630,60 +18932,24 @@ main {
     color: var(--covid-default);
   }
 
-  .sm\:text-primary-100 {
-    color: var(--covid-primary-100);
-  }
-
-  .sm\:text-primary-200 {
-    color: var(--covid-primary-200);
-  }
-
-  .sm\:text-primary-300 {
-    color: var(--covid-primary-300);
-  }
-
-  .sm\:text-primary-400 {
-    color: var(--covid-primary-400);
-  }
-
-  .sm\:text-primary-500 {
-    color: var(--covid-primary-500);
-  }
-
   .sm\:text-primary {
     color: var(--covid-primary);
-  }
-
-  .sm\:text-secondary-100 {
-    color: var(--covid-secondary-100);
-  }
-
-  .sm\:text-secondary-200 {
-    color: var(--covid-secondary-200);
-  }
-
-  .sm\:text-secondary-300 {
-    color: var(--covid-secondary-300);
-  }
-
-  .sm\:text-secondary-400 {
-    color: var(--covid-secondary-400);
-  }
-
-  .sm\:text-secondary-500 {
-    color: var(--covid-secondary-500);
   }
 
   .sm\:text-secondary {
     color: var(--covid-secondary);
   }
 
+  .sm\:text-success {
+    color: var(--covid-success);
+  }
+
   .sm\:text-info {
     color: var(--covid-info);
   }
 
-  .sm\:text-alert {
-    color: var(--covid-alert);
+  .sm\:text-warning {
+    color: var(--covid-warning);
   }
 
   .sm\:text-error {
@@ -20094,60 +19360,24 @@ main {
     color: var(--covid-default);
   }
 
-  .sm\:hover\:text-primary-100:hover {
-    color: var(--covid-primary-100);
-  }
-
-  .sm\:hover\:text-primary-200:hover {
-    color: var(--covid-primary-200);
-  }
-
-  .sm\:hover\:text-primary-300:hover {
-    color: var(--covid-primary-300);
-  }
-
-  .sm\:hover\:text-primary-400:hover {
-    color: var(--covid-primary-400);
-  }
-
-  .sm\:hover\:text-primary-500:hover {
-    color: var(--covid-primary-500);
-  }
-
   .sm\:hover\:text-primary:hover {
     color: var(--covid-primary);
-  }
-
-  .sm\:hover\:text-secondary-100:hover {
-    color: var(--covid-secondary-100);
-  }
-
-  .sm\:hover\:text-secondary-200:hover {
-    color: var(--covid-secondary-200);
-  }
-
-  .sm\:hover\:text-secondary-300:hover {
-    color: var(--covid-secondary-300);
-  }
-
-  .sm\:hover\:text-secondary-400:hover {
-    color: var(--covid-secondary-400);
-  }
-
-  .sm\:hover\:text-secondary-500:hover {
-    color: var(--covid-secondary-500);
   }
 
   .sm\:hover\:text-secondary:hover {
     color: var(--covid-secondary);
   }
 
+  .sm\:hover\:text-success:hover {
+    color: var(--covid-success);
+  }
+
   .sm\:hover\:text-info:hover {
     color: var(--covid-info);
   }
 
-  .sm\:hover\:text-alert:hover {
-    color: var(--covid-alert);
+  .sm\:hover\:text-warning:hover {
+    color: var(--covid-warning);
   }
 
   .sm\:hover\:text-error:hover {
@@ -20558,60 +19788,24 @@ main {
     color: var(--covid-default);
   }
 
-  .sm\:focus\:text-primary-100:focus {
-    color: var(--covid-primary-100);
-  }
-
-  .sm\:focus\:text-primary-200:focus {
-    color: var(--covid-primary-200);
-  }
-
-  .sm\:focus\:text-primary-300:focus {
-    color: var(--covid-primary-300);
-  }
-
-  .sm\:focus\:text-primary-400:focus {
-    color: var(--covid-primary-400);
-  }
-
-  .sm\:focus\:text-primary-500:focus {
-    color: var(--covid-primary-500);
-  }
-
   .sm\:focus\:text-primary:focus {
     color: var(--covid-primary);
-  }
-
-  .sm\:focus\:text-secondary-100:focus {
-    color: var(--covid-secondary-100);
-  }
-
-  .sm\:focus\:text-secondary-200:focus {
-    color: var(--covid-secondary-200);
-  }
-
-  .sm\:focus\:text-secondary-300:focus {
-    color: var(--covid-secondary-300);
-  }
-
-  .sm\:focus\:text-secondary-400:focus {
-    color: var(--covid-secondary-400);
-  }
-
-  .sm\:focus\:text-secondary-500:focus {
-    color: var(--covid-secondary-500);
   }
 
   .sm\:focus\:text-secondary:focus {
     color: var(--covid-secondary);
   }
 
+  .sm\:focus\:text-success:focus {
+    color: var(--covid-success);
+  }
+
   .sm\:focus\:text-info:focus {
     color: var(--covid-info);
   }
 
-  .sm\:focus\:text-alert:focus {
-    color: var(--covid-alert);
+  .sm\:focus\:text-warning:focus {
+    color: var(--covid-warning);
   }
 
   .sm\:focus\:text-error:focus {
@@ -23927,60 +23121,24 @@ main {
     background-color: var(--covid-default);
   }
 
-  .md\:bg-primary-100 {
-    background-color: var(--covid-primary-100);
-  }
-
-  .md\:bg-primary-200 {
-    background-color: var(--covid-primary-200);
-  }
-
-  .md\:bg-primary-300 {
-    background-color: var(--covid-primary-300);
-  }
-
-  .md\:bg-primary-400 {
-    background-color: var(--covid-primary-400);
-  }
-
-  .md\:bg-primary-500 {
-    background-color: var(--covid-primary-500);
-  }
-
   .md\:bg-primary {
     background-color: var(--covid-primary);
-  }
-
-  .md\:bg-secondary-100 {
-    background-color: var(--covid-secondary-100);
-  }
-
-  .md\:bg-secondary-200 {
-    background-color: var(--covid-secondary-200);
-  }
-
-  .md\:bg-secondary-300 {
-    background-color: var(--covid-secondary-300);
-  }
-
-  .md\:bg-secondary-400 {
-    background-color: var(--covid-secondary-400);
-  }
-
-  .md\:bg-secondary-500 {
-    background-color: var(--covid-secondary-500);
   }
 
   .md\:bg-secondary {
     background-color: var(--covid-secondary);
   }
 
+  .md\:bg-success {
+    background-color: var(--covid-success);
+  }
+
   .md\:bg-info {
     background-color: var(--covid-info);
   }
 
-  .md\:bg-alert {
-    background-color: var(--covid-alert);
+  .md\:bg-warning {
+    background-color: var(--covid-warning);
   }
 
   .md\:bg-error {
@@ -24407,60 +23565,24 @@ main {
     background-color: var(--covid-default);
   }
 
-  .md\:hover\:bg-primary-100:hover {
-    background-color: var(--covid-primary-100);
-  }
-
-  .md\:hover\:bg-primary-200:hover {
-    background-color: var(--covid-primary-200);
-  }
-
-  .md\:hover\:bg-primary-300:hover {
-    background-color: var(--covid-primary-300);
-  }
-
-  .md\:hover\:bg-primary-400:hover {
-    background-color: var(--covid-primary-400);
-  }
-
-  .md\:hover\:bg-primary-500:hover {
-    background-color: var(--covid-primary-500);
-  }
-
   .md\:hover\:bg-primary:hover {
     background-color: var(--covid-primary);
-  }
-
-  .md\:hover\:bg-secondary-100:hover {
-    background-color: var(--covid-secondary-100);
-  }
-
-  .md\:hover\:bg-secondary-200:hover {
-    background-color: var(--covid-secondary-200);
-  }
-
-  .md\:hover\:bg-secondary-300:hover {
-    background-color: var(--covid-secondary-300);
-  }
-
-  .md\:hover\:bg-secondary-400:hover {
-    background-color: var(--covid-secondary-400);
-  }
-
-  .md\:hover\:bg-secondary-500:hover {
-    background-color: var(--covid-secondary-500);
   }
 
   .md\:hover\:bg-secondary:hover {
     background-color: var(--covid-secondary);
   }
 
+  .md\:hover\:bg-success:hover {
+    background-color: var(--covid-success);
+  }
+
   .md\:hover\:bg-info:hover {
     background-color: var(--covid-info);
   }
 
-  .md\:hover\:bg-alert:hover {
-    background-color: var(--covid-alert);
+  .md\:hover\:bg-warning:hover {
+    background-color: var(--covid-warning);
   }
 
   .md\:hover\:bg-error:hover {
@@ -24887,60 +24009,24 @@ main {
     background-color: var(--covid-default);
   }
 
-  .md\:focus\:bg-primary-100:focus {
-    background-color: var(--covid-primary-100);
-  }
-
-  .md\:focus\:bg-primary-200:focus {
-    background-color: var(--covid-primary-200);
-  }
-
-  .md\:focus\:bg-primary-300:focus {
-    background-color: var(--covid-primary-300);
-  }
-
-  .md\:focus\:bg-primary-400:focus {
-    background-color: var(--covid-primary-400);
-  }
-
-  .md\:focus\:bg-primary-500:focus {
-    background-color: var(--covid-primary-500);
-  }
-
   .md\:focus\:bg-primary:focus {
     background-color: var(--covid-primary);
-  }
-
-  .md\:focus\:bg-secondary-100:focus {
-    background-color: var(--covid-secondary-100);
-  }
-
-  .md\:focus\:bg-secondary-200:focus {
-    background-color: var(--covid-secondary-200);
-  }
-
-  .md\:focus\:bg-secondary-300:focus {
-    background-color: var(--covid-secondary-300);
-  }
-
-  .md\:focus\:bg-secondary-400:focus {
-    background-color: var(--covid-secondary-400);
-  }
-
-  .md\:focus\:bg-secondary-500:focus {
-    background-color: var(--covid-secondary-500);
   }
 
   .md\:focus\:bg-secondary:focus {
     background-color: var(--covid-secondary);
   }
 
+  .md\:focus\:bg-success:focus {
+    background-color: var(--covid-success);
+  }
+
   .md\:focus\:bg-info:focus {
     background-color: var(--covid-info);
   }
 
-  .md\:focus\:bg-alert:focus {
-    background-color: var(--covid-alert);
+  .md\:focus\:bg-warning:focus {
+    background-color: var(--covid-warning);
   }
 
   .md\:focus\:bg-error:focus {
@@ -25443,60 +24529,24 @@ main {
     border-color: #702459;
   }
 
-  .md\:border-primary-100 {
-    border-color: var(--covid-primary-100);
-  }
-
-  .md\:border-primary-200 {
-    border-color: var(--covid-primary-200);
-  }
-
-  .md\:border-primary-300 {
-    border-color: var(--covid-primary-300);
-  }
-
-  .md\:border-primary-400 {
-    border-color: var(--covid-primary-400);
-  }
-
-  .md\:border-primary-500 {
-    border-color: var(--covid-primary-500);
-  }
-
   .md\:border-primary {
     border-color: var(--covid-primary);
-  }
-
-  .md\:border-secondary-100 {
-    border-color: var(--covid-secondary-100);
-  }
-
-  .md\:border-secondary-200 {
-    border-color: var(--covid-secondary-200);
-  }
-
-  .md\:border-secondary-300 {
-    border-color: var(--covid-secondary-300);
-  }
-
-  .md\:border-secondary-400 {
-    border-color: var(--covid-secondary-400);
-  }
-
-  .md\:border-secondary-500 {
-    border-color: var(--covid-secondary-500);
   }
 
   .md\:border-secondary {
     border-color: var(--covid-secondary);
   }
 
+  .md\:border-success {
+    border-color: var(--covid-success);
+  }
+
   .md\:border-info {
     border-color: var(--covid-info);
   }
 
-  .md\:border-alert {
-    border-color: var(--covid-alert);
+  .md\:border-warning {
+    border-color: var(--covid-warning);
   }
 
   .md\:border-error {
@@ -25903,60 +24953,24 @@ main {
     border-color: #702459;
   }
 
-  .md\:hover\:border-primary-100:hover {
-    border-color: var(--covid-primary-100);
-  }
-
-  .md\:hover\:border-primary-200:hover {
-    border-color: var(--covid-primary-200);
-  }
-
-  .md\:hover\:border-primary-300:hover {
-    border-color: var(--covid-primary-300);
-  }
-
-  .md\:hover\:border-primary-400:hover {
-    border-color: var(--covid-primary-400);
-  }
-
-  .md\:hover\:border-primary-500:hover {
-    border-color: var(--covid-primary-500);
-  }
-
   .md\:hover\:border-primary:hover {
     border-color: var(--covid-primary);
-  }
-
-  .md\:hover\:border-secondary-100:hover {
-    border-color: var(--covid-secondary-100);
-  }
-
-  .md\:hover\:border-secondary-200:hover {
-    border-color: var(--covid-secondary-200);
-  }
-
-  .md\:hover\:border-secondary-300:hover {
-    border-color: var(--covid-secondary-300);
-  }
-
-  .md\:hover\:border-secondary-400:hover {
-    border-color: var(--covid-secondary-400);
-  }
-
-  .md\:hover\:border-secondary-500:hover {
-    border-color: var(--covid-secondary-500);
   }
 
   .md\:hover\:border-secondary:hover {
     border-color: var(--covid-secondary);
   }
 
+  .md\:hover\:border-success:hover {
+    border-color: var(--covid-success);
+  }
+
   .md\:hover\:border-info:hover {
     border-color: var(--covid-info);
   }
 
-  .md\:hover\:border-alert:hover {
-    border-color: var(--covid-alert);
+  .md\:hover\:border-warning:hover {
+    border-color: var(--covid-warning);
   }
 
   .md\:hover\:border-error:hover {
@@ -26363,60 +25377,24 @@ main {
     border-color: #702459;
   }
 
-  .md\:focus\:border-primary-100:focus {
-    border-color: var(--covid-primary-100);
-  }
-
-  .md\:focus\:border-primary-200:focus {
-    border-color: var(--covid-primary-200);
-  }
-
-  .md\:focus\:border-primary-300:focus {
-    border-color: var(--covid-primary-300);
-  }
-
-  .md\:focus\:border-primary-400:focus {
-    border-color: var(--covid-primary-400);
-  }
-
-  .md\:focus\:border-primary-500:focus {
-    border-color: var(--covid-primary-500);
-  }
-
   .md\:focus\:border-primary:focus {
     border-color: var(--covid-primary);
-  }
-
-  .md\:focus\:border-secondary-100:focus {
-    border-color: var(--covid-secondary-100);
-  }
-
-  .md\:focus\:border-secondary-200:focus {
-    border-color: var(--covid-secondary-200);
-  }
-
-  .md\:focus\:border-secondary-300:focus {
-    border-color: var(--covid-secondary-300);
-  }
-
-  .md\:focus\:border-secondary-400:focus {
-    border-color: var(--covid-secondary-400);
-  }
-
-  .md\:focus\:border-secondary-500:focus {
-    border-color: var(--covid-secondary-500);
   }
 
   .md\:focus\:border-secondary:focus {
     border-color: var(--covid-secondary);
   }
 
+  .md\:focus\:border-success:focus {
+    border-color: var(--covid-success);
+  }
+
   .md\:focus\:border-info:focus {
     border-color: var(--covid-info);
   }
 
-  .md\:focus\:border-alert:focus {
-    border-color: var(--covid-alert);
+  .md\:focus\:border-warning:focus {
+    border-color: var(--covid-warning);
   }
 
   .md\:focus\:border-error:focus {
@@ -29831,60 +28809,24 @@ main {
     color: var(--covid-default);
   }
 
-  .md\:placeholder-primary-100::placeholder {
-    color: var(--covid-primary-100);
-  }
-
-  .md\:placeholder-primary-200::placeholder {
-    color: var(--covid-primary-200);
-  }
-
-  .md\:placeholder-primary-300::placeholder {
-    color: var(--covid-primary-300);
-  }
-
-  .md\:placeholder-primary-400::placeholder {
-    color: var(--covid-primary-400);
-  }
-
-  .md\:placeholder-primary-500::placeholder {
-    color: var(--covid-primary-500);
-  }
-
   .md\:placeholder-primary::placeholder {
     color: var(--covid-primary);
-  }
-
-  .md\:placeholder-secondary-100::placeholder {
-    color: var(--covid-secondary-100);
-  }
-
-  .md\:placeholder-secondary-200::placeholder {
-    color: var(--covid-secondary-200);
-  }
-
-  .md\:placeholder-secondary-300::placeholder {
-    color: var(--covid-secondary-300);
-  }
-
-  .md\:placeholder-secondary-400::placeholder {
-    color: var(--covid-secondary-400);
-  }
-
-  .md\:placeholder-secondary-500::placeholder {
-    color: var(--covid-secondary-500);
   }
 
   .md\:placeholder-secondary::placeholder {
     color: var(--covid-secondary);
   }
 
+  .md\:placeholder-success::placeholder {
+    color: var(--covid-success);
+  }
+
   .md\:placeholder-info::placeholder {
     color: var(--covid-info);
   }
 
-  .md\:placeholder-alert::placeholder {
-    color: var(--covid-alert);
+  .md\:placeholder-warning::placeholder {
+    color: var(--covid-warning);
   }
 
   .md\:placeholder-error::placeholder {
@@ -30295,60 +29237,24 @@ main {
     color: var(--covid-default);
   }
 
-  .md\:focus\:placeholder-primary-100:focus::placeholder {
-    color: var(--covid-primary-100);
-  }
-
-  .md\:focus\:placeholder-primary-200:focus::placeholder {
-    color: var(--covid-primary-200);
-  }
-
-  .md\:focus\:placeholder-primary-300:focus::placeholder {
-    color: var(--covid-primary-300);
-  }
-
-  .md\:focus\:placeholder-primary-400:focus::placeholder {
-    color: var(--covid-primary-400);
-  }
-
-  .md\:focus\:placeholder-primary-500:focus::placeholder {
-    color: var(--covid-primary-500);
-  }
-
   .md\:focus\:placeholder-primary:focus::placeholder {
     color: var(--covid-primary);
-  }
-
-  .md\:focus\:placeholder-secondary-100:focus::placeholder {
-    color: var(--covid-secondary-100);
-  }
-
-  .md\:focus\:placeholder-secondary-200:focus::placeholder {
-    color: var(--covid-secondary-200);
-  }
-
-  .md\:focus\:placeholder-secondary-300:focus::placeholder {
-    color: var(--covid-secondary-300);
-  }
-
-  .md\:focus\:placeholder-secondary-400:focus::placeholder {
-    color: var(--covid-secondary-400);
-  }
-
-  .md\:focus\:placeholder-secondary-500:focus::placeholder {
-    color: var(--covid-secondary-500);
   }
 
   .md\:focus\:placeholder-secondary:focus::placeholder {
     color: var(--covid-secondary);
   }
 
+  .md\:focus\:placeholder-success:focus::placeholder {
+    color: var(--covid-success);
+  }
+
   .md\:focus\:placeholder-info:focus::placeholder {
     color: var(--covid-info);
   }
 
-  .md\:focus\:placeholder-alert:focus::placeholder {
-    color: var(--covid-alert);
+  .md\:focus\:placeholder-warning:focus::placeholder {
+    color: var(--covid-warning);
   }
 
   .md\:focus\:placeholder-error:focus::placeholder {
@@ -31034,60 +29940,24 @@ main {
     color: var(--covid-default);
   }
 
-  .md\:text-primary-100 {
-    color: var(--covid-primary-100);
-  }
-
-  .md\:text-primary-200 {
-    color: var(--covid-primary-200);
-  }
-
-  .md\:text-primary-300 {
-    color: var(--covid-primary-300);
-  }
-
-  .md\:text-primary-400 {
-    color: var(--covid-primary-400);
-  }
-
-  .md\:text-primary-500 {
-    color: var(--covid-primary-500);
-  }
-
   .md\:text-primary {
     color: var(--covid-primary);
-  }
-
-  .md\:text-secondary-100 {
-    color: var(--covid-secondary-100);
-  }
-
-  .md\:text-secondary-200 {
-    color: var(--covid-secondary-200);
-  }
-
-  .md\:text-secondary-300 {
-    color: var(--covid-secondary-300);
-  }
-
-  .md\:text-secondary-400 {
-    color: var(--covid-secondary-400);
-  }
-
-  .md\:text-secondary-500 {
-    color: var(--covid-secondary-500);
   }
 
   .md\:text-secondary {
     color: var(--covid-secondary);
   }
 
+  .md\:text-success {
+    color: var(--covid-success);
+  }
+
   .md\:text-info {
     color: var(--covid-info);
   }
 
-  .md\:text-alert {
-    color: var(--covid-alert);
+  .md\:text-warning {
+    color: var(--covid-warning);
   }
 
   .md\:text-error {
@@ -31498,60 +30368,24 @@ main {
     color: var(--covid-default);
   }
 
-  .md\:hover\:text-primary-100:hover {
-    color: var(--covid-primary-100);
-  }
-
-  .md\:hover\:text-primary-200:hover {
-    color: var(--covid-primary-200);
-  }
-
-  .md\:hover\:text-primary-300:hover {
-    color: var(--covid-primary-300);
-  }
-
-  .md\:hover\:text-primary-400:hover {
-    color: var(--covid-primary-400);
-  }
-
-  .md\:hover\:text-primary-500:hover {
-    color: var(--covid-primary-500);
-  }
-
   .md\:hover\:text-primary:hover {
     color: var(--covid-primary);
-  }
-
-  .md\:hover\:text-secondary-100:hover {
-    color: var(--covid-secondary-100);
-  }
-
-  .md\:hover\:text-secondary-200:hover {
-    color: var(--covid-secondary-200);
-  }
-
-  .md\:hover\:text-secondary-300:hover {
-    color: var(--covid-secondary-300);
-  }
-
-  .md\:hover\:text-secondary-400:hover {
-    color: var(--covid-secondary-400);
-  }
-
-  .md\:hover\:text-secondary-500:hover {
-    color: var(--covid-secondary-500);
   }
 
   .md\:hover\:text-secondary:hover {
     color: var(--covid-secondary);
   }
 
+  .md\:hover\:text-success:hover {
+    color: var(--covid-success);
+  }
+
   .md\:hover\:text-info:hover {
     color: var(--covid-info);
   }
 
-  .md\:hover\:text-alert:hover {
-    color: var(--covid-alert);
+  .md\:hover\:text-warning:hover {
+    color: var(--covid-warning);
   }
 
   .md\:hover\:text-error:hover {
@@ -31962,60 +30796,24 @@ main {
     color: var(--covid-default);
   }
 
-  .md\:focus\:text-primary-100:focus {
-    color: var(--covid-primary-100);
-  }
-
-  .md\:focus\:text-primary-200:focus {
-    color: var(--covid-primary-200);
-  }
-
-  .md\:focus\:text-primary-300:focus {
-    color: var(--covid-primary-300);
-  }
-
-  .md\:focus\:text-primary-400:focus {
-    color: var(--covid-primary-400);
-  }
-
-  .md\:focus\:text-primary-500:focus {
-    color: var(--covid-primary-500);
-  }
-
   .md\:focus\:text-primary:focus {
     color: var(--covid-primary);
-  }
-
-  .md\:focus\:text-secondary-100:focus {
-    color: var(--covid-secondary-100);
-  }
-
-  .md\:focus\:text-secondary-200:focus {
-    color: var(--covid-secondary-200);
-  }
-
-  .md\:focus\:text-secondary-300:focus {
-    color: var(--covid-secondary-300);
-  }
-
-  .md\:focus\:text-secondary-400:focus {
-    color: var(--covid-secondary-400);
-  }
-
-  .md\:focus\:text-secondary-500:focus {
-    color: var(--covid-secondary-500);
   }
 
   .md\:focus\:text-secondary:focus {
     color: var(--covid-secondary);
   }
 
+  .md\:focus\:text-success:focus {
+    color: var(--covid-success);
+  }
+
   .md\:focus\:text-info:focus {
     color: var(--covid-info);
   }
 
-  .md\:focus\:text-alert:focus {
-    color: var(--covid-alert);
+  .md\:focus\:text-warning:focus {
+    color: var(--covid-warning);
   }
 
   .md\:focus\:text-error:focus {
@@ -35331,60 +34129,24 @@ main {
     background-color: var(--covid-default);
   }
 
-  .lg\:bg-primary-100 {
-    background-color: var(--covid-primary-100);
-  }
-
-  .lg\:bg-primary-200 {
-    background-color: var(--covid-primary-200);
-  }
-
-  .lg\:bg-primary-300 {
-    background-color: var(--covid-primary-300);
-  }
-
-  .lg\:bg-primary-400 {
-    background-color: var(--covid-primary-400);
-  }
-
-  .lg\:bg-primary-500 {
-    background-color: var(--covid-primary-500);
-  }
-
   .lg\:bg-primary {
     background-color: var(--covid-primary);
-  }
-
-  .lg\:bg-secondary-100 {
-    background-color: var(--covid-secondary-100);
-  }
-
-  .lg\:bg-secondary-200 {
-    background-color: var(--covid-secondary-200);
-  }
-
-  .lg\:bg-secondary-300 {
-    background-color: var(--covid-secondary-300);
-  }
-
-  .lg\:bg-secondary-400 {
-    background-color: var(--covid-secondary-400);
-  }
-
-  .lg\:bg-secondary-500 {
-    background-color: var(--covid-secondary-500);
   }
 
   .lg\:bg-secondary {
     background-color: var(--covid-secondary);
   }
 
+  .lg\:bg-success {
+    background-color: var(--covid-success);
+  }
+
   .lg\:bg-info {
     background-color: var(--covid-info);
   }
 
-  .lg\:bg-alert {
-    background-color: var(--covid-alert);
+  .lg\:bg-warning {
+    background-color: var(--covid-warning);
   }
 
   .lg\:bg-error {
@@ -35811,60 +34573,24 @@ main {
     background-color: var(--covid-default);
   }
 
-  .lg\:hover\:bg-primary-100:hover {
-    background-color: var(--covid-primary-100);
-  }
-
-  .lg\:hover\:bg-primary-200:hover {
-    background-color: var(--covid-primary-200);
-  }
-
-  .lg\:hover\:bg-primary-300:hover {
-    background-color: var(--covid-primary-300);
-  }
-
-  .lg\:hover\:bg-primary-400:hover {
-    background-color: var(--covid-primary-400);
-  }
-
-  .lg\:hover\:bg-primary-500:hover {
-    background-color: var(--covid-primary-500);
-  }
-
   .lg\:hover\:bg-primary:hover {
     background-color: var(--covid-primary);
-  }
-
-  .lg\:hover\:bg-secondary-100:hover {
-    background-color: var(--covid-secondary-100);
-  }
-
-  .lg\:hover\:bg-secondary-200:hover {
-    background-color: var(--covid-secondary-200);
-  }
-
-  .lg\:hover\:bg-secondary-300:hover {
-    background-color: var(--covid-secondary-300);
-  }
-
-  .lg\:hover\:bg-secondary-400:hover {
-    background-color: var(--covid-secondary-400);
-  }
-
-  .lg\:hover\:bg-secondary-500:hover {
-    background-color: var(--covid-secondary-500);
   }
 
   .lg\:hover\:bg-secondary:hover {
     background-color: var(--covid-secondary);
   }
 
+  .lg\:hover\:bg-success:hover {
+    background-color: var(--covid-success);
+  }
+
   .lg\:hover\:bg-info:hover {
     background-color: var(--covid-info);
   }
 
-  .lg\:hover\:bg-alert:hover {
-    background-color: var(--covid-alert);
+  .lg\:hover\:bg-warning:hover {
+    background-color: var(--covid-warning);
   }
 
   .lg\:hover\:bg-error:hover {
@@ -36291,60 +35017,24 @@ main {
     background-color: var(--covid-default);
   }
 
-  .lg\:focus\:bg-primary-100:focus {
-    background-color: var(--covid-primary-100);
-  }
-
-  .lg\:focus\:bg-primary-200:focus {
-    background-color: var(--covid-primary-200);
-  }
-
-  .lg\:focus\:bg-primary-300:focus {
-    background-color: var(--covid-primary-300);
-  }
-
-  .lg\:focus\:bg-primary-400:focus {
-    background-color: var(--covid-primary-400);
-  }
-
-  .lg\:focus\:bg-primary-500:focus {
-    background-color: var(--covid-primary-500);
-  }
-
   .lg\:focus\:bg-primary:focus {
     background-color: var(--covid-primary);
-  }
-
-  .lg\:focus\:bg-secondary-100:focus {
-    background-color: var(--covid-secondary-100);
-  }
-
-  .lg\:focus\:bg-secondary-200:focus {
-    background-color: var(--covid-secondary-200);
-  }
-
-  .lg\:focus\:bg-secondary-300:focus {
-    background-color: var(--covid-secondary-300);
-  }
-
-  .lg\:focus\:bg-secondary-400:focus {
-    background-color: var(--covid-secondary-400);
-  }
-
-  .lg\:focus\:bg-secondary-500:focus {
-    background-color: var(--covid-secondary-500);
   }
 
   .lg\:focus\:bg-secondary:focus {
     background-color: var(--covid-secondary);
   }
 
+  .lg\:focus\:bg-success:focus {
+    background-color: var(--covid-success);
+  }
+
   .lg\:focus\:bg-info:focus {
     background-color: var(--covid-info);
   }
 
-  .lg\:focus\:bg-alert:focus {
-    background-color: var(--covid-alert);
+  .lg\:focus\:bg-warning:focus {
+    background-color: var(--covid-warning);
   }
 
   .lg\:focus\:bg-error:focus {
@@ -36847,60 +35537,24 @@ main {
     border-color: #702459;
   }
 
-  .lg\:border-primary-100 {
-    border-color: var(--covid-primary-100);
-  }
-
-  .lg\:border-primary-200 {
-    border-color: var(--covid-primary-200);
-  }
-
-  .lg\:border-primary-300 {
-    border-color: var(--covid-primary-300);
-  }
-
-  .lg\:border-primary-400 {
-    border-color: var(--covid-primary-400);
-  }
-
-  .lg\:border-primary-500 {
-    border-color: var(--covid-primary-500);
-  }
-
   .lg\:border-primary {
     border-color: var(--covid-primary);
-  }
-
-  .lg\:border-secondary-100 {
-    border-color: var(--covid-secondary-100);
-  }
-
-  .lg\:border-secondary-200 {
-    border-color: var(--covid-secondary-200);
-  }
-
-  .lg\:border-secondary-300 {
-    border-color: var(--covid-secondary-300);
-  }
-
-  .lg\:border-secondary-400 {
-    border-color: var(--covid-secondary-400);
-  }
-
-  .lg\:border-secondary-500 {
-    border-color: var(--covid-secondary-500);
   }
 
   .lg\:border-secondary {
     border-color: var(--covid-secondary);
   }
 
+  .lg\:border-success {
+    border-color: var(--covid-success);
+  }
+
   .lg\:border-info {
     border-color: var(--covid-info);
   }
 
-  .lg\:border-alert {
-    border-color: var(--covid-alert);
+  .lg\:border-warning {
+    border-color: var(--covid-warning);
   }
 
   .lg\:border-error {
@@ -37307,60 +35961,24 @@ main {
     border-color: #702459;
   }
 
-  .lg\:hover\:border-primary-100:hover {
-    border-color: var(--covid-primary-100);
-  }
-
-  .lg\:hover\:border-primary-200:hover {
-    border-color: var(--covid-primary-200);
-  }
-
-  .lg\:hover\:border-primary-300:hover {
-    border-color: var(--covid-primary-300);
-  }
-
-  .lg\:hover\:border-primary-400:hover {
-    border-color: var(--covid-primary-400);
-  }
-
-  .lg\:hover\:border-primary-500:hover {
-    border-color: var(--covid-primary-500);
-  }
-
   .lg\:hover\:border-primary:hover {
     border-color: var(--covid-primary);
-  }
-
-  .lg\:hover\:border-secondary-100:hover {
-    border-color: var(--covid-secondary-100);
-  }
-
-  .lg\:hover\:border-secondary-200:hover {
-    border-color: var(--covid-secondary-200);
-  }
-
-  .lg\:hover\:border-secondary-300:hover {
-    border-color: var(--covid-secondary-300);
-  }
-
-  .lg\:hover\:border-secondary-400:hover {
-    border-color: var(--covid-secondary-400);
-  }
-
-  .lg\:hover\:border-secondary-500:hover {
-    border-color: var(--covid-secondary-500);
   }
 
   .lg\:hover\:border-secondary:hover {
     border-color: var(--covid-secondary);
   }
 
+  .lg\:hover\:border-success:hover {
+    border-color: var(--covid-success);
+  }
+
   .lg\:hover\:border-info:hover {
     border-color: var(--covid-info);
   }
 
-  .lg\:hover\:border-alert:hover {
-    border-color: var(--covid-alert);
+  .lg\:hover\:border-warning:hover {
+    border-color: var(--covid-warning);
   }
 
   .lg\:hover\:border-error:hover {
@@ -37767,60 +36385,24 @@ main {
     border-color: #702459;
   }
 
-  .lg\:focus\:border-primary-100:focus {
-    border-color: var(--covid-primary-100);
-  }
-
-  .lg\:focus\:border-primary-200:focus {
-    border-color: var(--covid-primary-200);
-  }
-
-  .lg\:focus\:border-primary-300:focus {
-    border-color: var(--covid-primary-300);
-  }
-
-  .lg\:focus\:border-primary-400:focus {
-    border-color: var(--covid-primary-400);
-  }
-
-  .lg\:focus\:border-primary-500:focus {
-    border-color: var(--covid-primary-500);
-  }
-
   .lg\:focus\:border-primary:focus {
     border-color: var(--covid-primary);
-  }
-
-  .lg\:focus\:border-secondary-100:focus {
-    border-color: var(--covid-secondary-100);
-  }
-
-  .lg\:focus\:border-secondary-200:focus {
-    border-color: var(--covid-secondary-200);
-  }
-
-  .lg\:focus\:border-secondary-300:focus {
-    border-color: var(--covid-secondary-300);
-  }
-
-  .lg\:focus\:border-secondary-400:focus {
-    border-color: var(--covid-secondary-400);
-  }
-
-  .lg\:focus\:border-secondary-500:focus {
-    border-color: var(--covid-secondary-500);
   }
 
   .lg\:focus\:border-secondary:focus {
     border-color: var(--covid-secondary);
   }
 
+  .lg\:focus\:border-success:focus {
+    border-color: var(--covid-success);
+  }
+
   .lg\:focus\:border-info:focus {
     border-color: var(--covid-info);
   }
 
-  .lg\:focus\:border-alert:focus {
-    border-color: var(--covid-alert);
+  .lg\:focus\:border-warning:focus {
+    border-color: var(--covid-warning);
   }
 
   .lg\:focus\:border-error:focus {
@@ -41235,60 +39817,24 @@ main {
     color: var(--covid-default);
   }
 
-  .lg\:placeholder-primary-100::placeholder {
-    color: var(--covid-primary-100);
-  }
-
-  .lg\:placeholder-primary-200::placeholder {
-    color: var(--covid-primary-200);
-  }
-
-  .lg\:placeholder-primary-300::placeholder {
-    color: var(--covid-primary-300);
-  }
-
-  .lg\:placeholder-primary-400::placeholder {
-    color: var(--covid-primary-400);
-  }
-
-  .lg\:placeholder-primary-500::placeholder {
-    color: var(--covid-primary-500);
-  }
-
   .lg\:placeholder-primary::placeholder {
     color: var(--covid-primary);
-  }
-
-  .lg\:placeholder-secondary-100::placeholder {
-    color: var(--covid-secondary-100);
-  }
-
-  .lg\:placeholder-secondary-200::placeholder {
-    color: var(--covid-secondary-200);
-  }
-
-  .lg\:placeholder-secondary-300::placeholder {
-    color: var(--covid-secondary-300);
-  }
-
-  .lg\:placeholder-secondary-400::placeholder {
-    color: var(--covid-secondary-400);
-  }
-
-  .lg\:placeholder-secondary-500::placeholder {
-    color: var(--covid-secondary-500);
   }
 
   .lg\:placeholder-secondary::placeholder {
     color: var(--covid-secondary);
   }
 
+  .lg\:placeholder-success::placeholder {
+    color: var(--covid-success);
+  }
+
   .lg\:placeholder-info::placeholder {
     color: var(--covid-info);
   }
 
-  .lg\:placeholder-alert::placeholder {
-    color: var(--covid-alert);
+  .lg\:placeholder-warning::placeholder {
+    color: var(--covid-warning);
   }
 
   .lg\:placeholder-error::placeholder {
@@ -41699,60 +40245,24 @@ main {
     color: var(--covid-default);
   }
 
-  .lg\:focus\:placeholder-primary-100:focus::placeholder {
-    color: var(--covid-primary-100);
-  }
-
-  .lg\:focus\:placeholder-primary-200:focus::placeholder {
-    color: var(--covid-primary-200);
-  }
-
-  .lg\:focus\:placeholder-primary-300:focus::placeholder {
-    color: var(--covid-primary-300);
-  }
-
-  .lg\:focus\:placeholder-primary-400:focus::placeholder {
-    color: var(--covid-primary-400);
-  }
-
-  .lg\:focus\:placeholder-primary-500:focus::placeholder {
-    color: var(--covid-primary-500);
-  }
-
   .lg\:focus\:placeholder-primary:focus::placeholder {
     color: var(--covid-primary);
-  }
-
-  .lg\:focus\:placeholder-secondary-100:focus::placeholder {
-    color: var(--covid-secondary-100);
-  }
-
-  .lg\:focus\:placeholder-secondary-200:focus::placeholder {
-    color: var(--covid-secondary-200);
-  }
-
-  .lg\:focus\:placeholder-secondary-300:focus::placeholder {
-    color: var(--covid-secondary-300);
-  }
-
-  .lg\:focus\:placeholder-secondary-400:focus::placeholder {
-    color: var(--covid-secondary-400);
-  }
-
-  .lg\:focus\:placeholder-secondary-500:focus::placeholder {
-    color: var(--covid-secondary-500);
   }
 
   .lg\:focus\:placeholder-secondary:focus::placeholder {
     color: var(--covid-secondary);
   }
 
+  .lg\:focus\:placeholder-success:focus::placeholder {
+    color: var(--covid-success);
+  }
+
   .lg\:focus\:placeholder-info:focus::placeholder {
     color: var(--covid-info);
   }
 
-  .lg\:focus\:placeholder-alert:focus::placeholder {
-    color: var(--covid-alert);
+  .lg\:focus\:placeholder-warning:focus::placeholder {
+    color: var(--covid-warning);
   }
 
   .lg\:focus\:placeholder-error:focus::placeholder {
@@ -42438,60 +40948,24 @@ main {
     color: var(--covid-default);
   }
 
-  .lg\:text-primary-100 {
-    color: var(--covid-primary-100);
-  }
-
-  .lg\:text-primary-200 {
-    color: var(--covid-primary-200);
-  }
-
-  .lg\:text-primary-300 {
-    color: var(--covid-primary-300);
-  }
-
-  .lg\:text-primary-400 {
-    color: var(--covid-primary-400);
-  }
-
-  .lg\:text-primary-500 {
-    color: var(--covid-primary-500);
-  }
-
   .lg\:text-primary {
     color: var(--covid-primary);
-  }
-
-  .lg\:text-secondary-100 {
-    color: var(--covid-secondary-100);
-  }
-
-  .lg\:text-secondary-200 {
-    color: var(--covid-secondary-200);
-  }
-
-  .lg\:text-secondary-300 {
-    color: var(--covid-secondary-300);
-  }
-
-  .lg\:text-secondary-400 {
-    color: var(--covid-secondary-400);
-  }
-
-  .lg\:text-secondary-500 {
-    color: var(--covid-secondary-500);
   }
 
   .lg\:text-secondary {
     color: var(--covid-secondary);
   }
 
+  .lg\:text-success {
+    color: var(--covid-success);
+  }
+
   .lg\:text-info {
     color: var(--covid-info);
   }
 
-  .lg\:text-alert {
-    color: var(--covid-alert);
+  .lg\:text-warning {
+    color: var(--covid-warning);
   }
 
   .lg\:text-error {
@@ -42902,60 +41376,24 @@ main {
     color: var(--covid-default);
   }
 
-  .lg\:hover\:text-primary-100:hover {
-    color: var(--covid-primary-100);
-  }
-
-  .lg\:hover\:text-primary-200:hover {
-    color: var(--covid-primary-200);
-  }
-
-  .lg\:hover\:text-primary-300:hover {
-    color: var(--covid-primary-300);
-  }
-
-  .lg\:hover\:text-primary-400:hover {
-    color: var(--covid-primary-400);
-  }
-
-  .lg\:hover\:text-primary-500:hover {
-    color: var(--covid-primary-500);
-  }
-
   .lg\:hover\:text-primary:hover {
     color: var(--covid-primary);
-  }
-
-  .lg\:hover\:text-secondary-100:hover {
-    color: var(--covid-secondary-100);
-  }
-
-  .lg\:hover\:text-secondary-200:hover {
-    color: var(--covid-secondary-200);
-  }
-
-  .lg\:hover\:text-secondary-300:hover {
-    color: var(--covid-secondary-300);
-  }
-
-  .lg\:hover\:text-secondary-400:hover {
-    color: var(--covid-secondary-400);
-  }
-
-  .lg\:hover\:text-secondary-500:hover {
-    color: var(--covid-secondary-500);
   }
 
   .lg\:hover\:text-secondary:hover {
     color: var(--covid-secondary);
   }
 
+  .lg\:hover\:text-success:hover {
+    color: var(--covid-success);
+  }
+
   .lg\:hover\:text-info:hover {
     color: var(--covid-info);
   }
 
-  .lg\:hover\:text-alert:hover {
-    color: var(--covid-alert);
+  .lg\:hover\:text-warning:hover {
+    color: var(--covid-warning);
   }
 
   .lg\:hover\:text-error:hover {
@@ -43366,60 +41804,24 @@ main {
     color: var(--covid-default);
   }
 
-  .lg\:focus\:text-primary-100:focus {
-    color: var(--covid-primary-100);
-  }
-
-  .lg\:focus\:text-primary-200:focus {
-    color: var(--covid-primary-200);
-  }
-
-  .lg\:focus\:text-primary-300:focus {
-    color: var(--covid-primary-300);
-  }
-
-  .lg\:focus\:text-primary-400:focus {
-    color: var(--covid-primary-400);
-  }
-
-  .lg\:focus\:text-primary-500:focus {
-    color: var(--covid-primary-500);
-  }
-
   .lg\:focus\:text-primary:focus {
     color: var(--covid-primary);
-  }
-
-  .lg\:focus\:text-secondary-100:focus {
-    color: var(--covid-secondary-100);
-  }
-
-  .lg\:focus\:text-secondary-200:focus {
-    color: var(--covid-secondary-200);
-  }
-
-  .lg\:focus\:text-secondary-300:focus {
-    color: var(--covid-secondary-300);
-  }
-
-  .lg\:focus\:text-secondary-400:focus {
-    color: var(--covid-secondary-400);
-  }
-
-  .lg\:focus\:text-secondary-500:focus {
-    color: var(--covid-secondary-500);
   }
 
   .lg\:focus\:text-secondary:focus {
     color: var(--covid-secondary);
   }
 
+  .lg\:focus\:text-success:focus {
+    color: var(--covid-success);
+  }
+
   .lg\:focus\:text-info:focus {
     color: var(--covid-info);
   }
 
-  .lg\:focus\:text-alert:focus {
-    color: var(--covid-alert);
+  .lg\:focus\:text-warning:focus {
+    color: var(--covid-warning);
   }
 
   .lg\:focus\:text-error:focus {
@@ -46735,60 +45137,24 @@ main {
     background-color: var(--covid-default);
   }
 
-  .xl\:bg-primary-100 {
-    background-color: var(--covid-primary-100);
-  }
-
-  .xl\:bg-primary-200 {
-    background-color: var(--covid-primary-200);
-  }
-
-  .xl\:bg-primary-300 {
-    background-color: var(--covid-primary-300);
-  }
-
-  .xl\:bg-primary-400 {
-    background-color: var(--covid-primary-400);
-  }
-
-  .xl\:bg-primary-500 {
-    background-color: var(--covid-primary-500);
-  }
-
   .xl\:bg-primary {
     background-color: var(--covid-primary);
-  }
-
-  .xl\:bg-secondary-100 {
-    background-color: var(--covid-secondary-100);
-  }
-
-  .xl\:bg-secondary-200 {
-    background-color: var(--covid-secondary-200);
-  }
-
-  .xl\:bg-secondary-300 {
-    background-color: var(--covid-secondary-300);
-  }
-
-  .xl\:bg-secondary-400 {
-    background-color: var(--covid-secondary-400);
-  }
-
-  .xl\:bg-secondary-500 {
-    background-color: var(--covid-secondary-500);
   }
 
   .xl\:bg-secondary {
     background-color: var(--covid-secondary);
   }
 
+  .xl\:bg-success {
+    background-color: var(--covid-success);
+  }
+
   .xl\:bg-info {
     background-color: var(--covid-info);
   }
 
-  .xl\:bg-alert {
-    background-color: var(--covid-alert);
+  .xl\:bg-warning {
+    background-color: var(--covid-warning);
   }
 
   .xl\:bg-error {
@@ -47215,60 +45581,24 @@ main {
     background-color: var(--covid-default);
   }
 
-  .xl\:hover\:bg-primary-100:hover {
-    background-color: var(--covid-primary-100);
-  }
-
-  .xl\:hover\:bg-primary-200:hover {
-    background-color: var(--covid-primary-200);
-  }
-
-  .xl\:hover\:bg-primary-300:hover {
-    background-color: var(--covid-primary-300);
-  }
-
-  .xl\:hover\:bg-primary-400:hover {
-    background-color: var(--covid-primary-400);
-  }
-
-  .xl\:hover\:bg-primary-500:hover {
-    background-color: var(--covid-primary-500);
-  }
-
   .xl\:hover\:bg-primary:hover {
     background-color: var(--covid-primary);
-  }
-
-  .xl\:hover\:bg-secondary-100:hover {
-    background-color: var(--covid-secondary-100);
-  }
-
-  .xl\:hover\:bg-secondary-200:hover {
-    background-color: var(--covid-secondary-200);
-  }
-
-  .xl\:hover\:bg-secondary-300:hover {
-    background-color: var(--covid-secondary-300);
-  }
-
-  .xl\:hover\:bg-secondary-400:hover {
-    background-color: var(--covid-secondary-400);
-  }
-
-  .xl\:hover\:bg-secondary-500:hover {
-    background-color: var(--covid-secondary-500);
   }
 
   .xl\:hover\:bg-secondary:hover {
     background-color: var(--covid-secondary);
   }
 
+  .xl\:hover\:bg-success:hover {
+    background-color: var(--covid-success);
+  }
+
   .xl\:hover\:bg-info:hover {
     background-color: var(--covid-info);
   }
 
-  .xl\:hover\:bg-alert:hover {
-    background-color: var(--covid-alert);
+  .xl\:hover\:bg-warning:hover {
+    background-color: var(--covid-warning);
   }
 
   .xl\:hover\:bg-error:hover {
@@ -47695,60 +46025,24 @@ main {
     background-color: var(--covid-default);
   }
 
-  .xl\:focus\:bg-primary-100:focus {
-    background-color: var(--covid-primary-100);
-  }
-
-  .xl\:focus\:bg-primary-200:focus {
-    background-color: var(--covid-primary-200);
-  }
-
-  .xl\:focus\:bg-primary-300:focus {
-    background-color: var(--covid-primary-300);
-  }
-
-  .xl\:focus\:bg-primary-400:focus {
-    background-color: var(--covid-primary-400);
-  }
-
-  .xl\:focus\:bg-primary-500:focus {
-    background-color: var(--covid-primary-500);
-  }
-
   .xl\:focus\:bg-primary:focus {
     background-color: var(--covid-primary);
-  }
-
-  .xl\:focus\:bg-secondary-100:focus {
-    background-color: var(--covid-secondary-100);
-  }
-
-  .xl\:focus\:bg-secondary-200:focus {
-    background-color: var(--covid-secondary-200);
-  }
-
-  .xl\:focus\:bg-secondary-300:focus {
-    background-color: var(--covid-secondary-300);
-  }
-
-  .xl\:focus\:bg-secondary-400:focus {
-    background-color: var(--covid-secondary-400);
-  }
-
-  .xl\:focus\:bg-secondary-500:focus {
-    background-color: var(--covid-secondary-500);
   }
 
   .xl\:focus\:bg-secondary:focus {
     background-color: var(--covid-secondary);
   }
 
+  .xl\:focus\:bg-success:focus {
+    background-color: var(--covid-success);
+  }
+
   .xl\:focus\:bg-info:focus {
     background-color: var(--covid-info);
   }
 
-  .xl\:focus\:bg-alert:focus {
-    background-color: var(--covid-alert);
+  .xl\:focus\:bg-warning:focus {
+    background-color: var(--covid-warning);
   }
 
   .xl\:focus\:bg-error:focus {
@@ -48251,60 +46545,24 @@ main {
     border-color: #702459;
   }
 
-  .xl\:border-primary-100 {
-    border-color: var(--covid-primary-100);
-  }
-
-  .xl\:border-primary-200 {
-    border-color: var(--covid-primary-200);
-  }
-
-  .xl\:border-primary-300 {
-    border-color: var(--covid-primary-300);
-  }
-
-  .xl\:border-primary-400 {
-    border-color: var(--covid-primary-400);
-  }
-
-  .xl\:border-primary-500 {
-    border-color: var(--covid-primary-500);
-  }
-
   .xl\:border-primary {
     border-color: var(--covid-primary);
-  }
-
-  .xl\:border-secondary-100 {
-    border-color: var(--covid-secondary-100);
-  }
-
-  .xl\:border-secondary-200 {
-    border-color: var(--covid-secondary-200);
-  }
-
-  .xl\:border-secondary-300 {
-    border-color: var(--covid-secondary-300);
-  }
-
-  .xl\:border-secondary-400 {
-    border-color: var(--covid-secondary-400);
-  }
-
-  .xl\:border-secondary-500 {
-    border-color: var(--covid-secondary-500);
   }
 
   .xl\:border-secondary {
     border-color: var(--covid-secondary);
   }
 
+  .xl\:border-success {
+    border-color: var(--covid-success);
+  }
+
   .xl\:border-info {
     border-color: var(--covid-info);
   }
 
-  .xl\:border-alert {
-    border-color: var(--covid-alert);
+  .xl\:border-warning {
+    border-color: var(--covid-warning);
   }
 
   .xl\:border-error {
@@ -48711,60 +46969,24 @@ main {
     border-color: #702459;
   }
 
-  .xl\:hover\:border-primary-100:hover {
-    border-color: var(--covid-primary-100);
-  }
-
-  .xl\:hover\:border-primary-200:hover {
-    border-color: var(--covid-primary-200);
-  }
-
-  .xl\:hover\:border-primary-300:hover {
-    border-color: var(--covid-primary-300);
-  }
-
-  .xl\:hover\:border-primary-400:hover {
-    border-color: var(--covid-primary-400);
-  }
-
-  .xl\:hover\:border-primary-500:hover {
-    border-color: var(--covid-primary-500);
-  }
-
   .xl\:hover\:border-primary:hover {
     border-color: var(--covid-primary);
-  }
-
-  .xl\:hover\:border-secondary-100:hover {
-    border-color: var(--covid-secondary-100);
-  }
-
-  .xl\:hover\:border-secondary-200:hover {
-    border-color: var(--covid-secondary-200);
-  }
-
-  .xl\:hover\:border-secondary-300:hover {
-    border-color: var(--covid-secondary-300);
-  }
-
-  .xl\:hover\:border-secondary-400:hover {
-    border-color: var(--covid-secondary-400);
-  }
-
-  .xl\:hover\:border-secondary-500:hover {
-    border-color: var(--covid-secondary-500);
   }
 
   .xl\:hover\:border-secondary:hover {
     border-color: var(--covid-secondary);
   }
 
+  .xl\:hover\:border-success:hover {
+    border-color: var(--covid-success);
+  }
+
   .xl\:hover\:border-info:hover {
     border-color: var(--covid-info);
   }
 
-  .xl\:hover\:border-alert:hover {
-    border-color: var(--covid-alert);
+  .xl\:hover\:border-warning:hover {
+    border-color: var(--covid-warning);
   }
 
   .xl\:hover\:border-error:hover {
@@ -49171,60 +47393,24 @@ main {
     border-color: #702459;
   }
 
-  .xl\:focus\:border-primary-100:focus {
-    border-color: var(--covid-primary-100);
-  }
-
-  .xl\:focus\:border-primary-200:focus {
-    border-color: var(--covid-primary-200);
-  }
-
-  .xl\:focus\:border-primary-300:focus {
-    border-color: var(--covid-primary-300);
-  }
-
-  .xl\:focus\:border-primary-400:focus {
-    border-color: var(--covid-primary-400);
-  }
-
-  .xl\:focus\:border-primary-500:focus {
-    border-color: var(--covid-primary-500);
-  }
-
   .xl\:focus\:border-primary:focus {
     border-color: var(--covid-primary);
-  }
-
-  .xl\:focus\:border-secondary-100:focus {
-    border-color: var(--covid-secondary-100);
-  }
-
-  .xl\:focus\:border-secondary-200:focus {
-    border-color: var(--covid-secondary-200);
-  }
-
-  .xl\:focus\:border-secondary-300:focus {
-    border-color: var(--covid-secondary-300);
-  }
-
-  .xl\:focus\:border-secondary-400:focus {
-    border-color: var(--covid-secondary-400);
-  }
-
-  .xl\:focus\:border-secondary-500:focus {
-    border-color: var(--covid-secondary-500);
   }
 
   .xl\:focus\:border-secondary:focus {
     border-color: var(--covid-secondary);
   }
 
+  .xl\:focus\:border-success:focus {
+    border-color: var(--covid-success);
+  }
+
   .xl\:focus\:border-info:focus {
     border-color: var(--covid-info);
   }
 
-  .xl\:focus\:border-alert:focus {
-    border-color: var(--covid-alert);
+  .xl\:focus\:border-warning:focus {
+    border-color: var(--covid-warning);
   }
 
   .xl\:focus\:border-error:focus {
@@ -52639,60 +50825,24 @@ main {
     color: var(--covid-default);
   }
 
-  .xl\:placeholder-primary-100::placeholder {
-    color: var(--covid-primary-100);
-  }
-
-  .xl\:placeholder-primary-200::placeholder {
-    color: var(--covid-primary-200);
-  }
-
-  .xl\:placeholder-primary-300::placeholder {
-    color: var(--covid-primary-300);
-  }
-
-  .xl\:placeholder-primary-400::placeholder {
-    color: var(--covid-primary-400);
-  }
-
-  .xl\:placeholder-primary-500::placeholder {
-    color: var(--covid-primary-500);
-  }
-
   .xl\:placeholder-primary::placeholder {
     color: var(--covid-primary);
-  }
-
-  .xl\:placeholder-secondary-100::placeholder {
-    color: var(--covid-secondary-100);
-  }
-
-  .xl\:placeholder-secondary-200::placeholder {
-    color: var(--covid-secondary-200);
-  }
-
-  .xl\:placeholder-secondary-300::placeholder {
-    color: var(--covid-secondary-300);
-  }
-
-  .xl\:placeholder-secondary-400::placeholder {
-    color: var(--covid-secondary-400);
-  }
-
-  .xl\:placeholder-secondary-500::placeholder {
-    color: var(--covid-secondary-500);
   }
 
   .xl\:placeholder-secondary::placeholder {
     color: var(--covid-secondary);
   }
 
+  .xl\:placeholder-success::placeholder {
+    color: var(--covid-success);
+  }
+
   .xl\:placeholder-info::placeholder {
     color: var(--covid-info);
   }
 
-  .xl\:placeholder-alert::placeholder {
-    color: var(--covid-alert);
+  .xl\:placeholder-warning::placeholder {
+    color: var(--covid-warning);
   }
 
   .xl\:placeholder-error::placeholder {
@@ -53103,60 +51253,24 @@ main {
     color: var(--covid-default);
   }
 
-  .xl\:focus\:placeholder-primary-100:focus::placeholder {
-    color: var(--covid-primary-100);
-  }
-
-  .xl\:focus\:placeholder-primary-200:focus::placeholder {
-    color: var(--covid-primary-200);
-  }
-
-  .xl\:focus\:placeholder-primary-300:focus::placeholder {
-    color: var(--covid-primary-300);
-  }
-
-  .xl\:focus\:placeholder-primary-400:focus::placeholder {
-    color: var(--covid-primary-400);
-  }
-
-  .xl\:focus\:placeholder-primary-500:focus::placeholder {
-    color: var(--covid-primary-500);
-  }
-
   .xl\:focus\:placeholder-primary:focus::placeholder {
     color: var(--covid-primary);
-  }
-
-  .xl\:focus\:placeholder-secondary-100:focus::placeholder {
-    color: var(--covid-secondary-100);
-  }
-
-  .xl\:focus\:placeholder-secondary-200:focus::placeholder {
-    color: var(--covid-secondary-200);
-  }
-
-  .xl\:focus\:placeholder-secondary-300:focus::placeholder {
-    color: var(--covid-secondary-300);
-  }
-
-  .xl\:focus\:placeholder-secondary-400:focus::placeholder {
-    color: var(--covid-secondary-400);
-  }
-
-  .xl\:focus\:placeholder-secondary-500:focus::placeholder {
-    color: var(--covid-secondary-500);
   }
 
   .xl\:focus\:placeholder-secondary:focus::placeholder {
     color: var(--covid-secondary);
   }
 
+  .xl\:focus\:placeholder-success:focus::placeholder {
+    color: var(--covid-success);
+  }
+
   .xl\:focus\:placeholder-info:focus::placeholder {
     color: var(--covid-info);
   }
 
-  .xl\:focus\:placeholder-alert:focus::placeholder {
-    color: var(--covid-alert);
+  .xl\:focus\:placeholder-warning:focus::placeholder {
+    color: var(--covid-warning);
   }
 
   .xl\:focus\:placeholder-error:focus::placeholder {
@@ -53842,60 +51956,24 @@ main {
     color: var(--covid-default);
   }
 
-  .xl\:text-primary-100 {
-    color: var(--covid-primary-100);
-  }
-
-  .xl\:text-primary-200 {
-    color: var(--covid-primary-200);
-  }
-
-  .xl\:text-primary-300 {
-    color: var(--covid-primary-300);
-  }
-
-  .xl\:text-primary-400 {
-    color: var(--covid-primary-400);
-  }
-
-  .xl\:text-primary-500 {
-    color: var(--covid-primary-500);
-  }
-
   .xl\:text-primary {
     color: var(--covid-primary);
-  }
-
-  .xl\:text-secondary-100 {
-    color: var(--covid-secondary-100);
-  }
-
-  .xl\:text-secondary-200 {
-    color: var(--covid-secondary-200);
-  }
-
-  .xl\:text-secondary-300 {
-    color: var(--covid-secondary-300);
-  }
-
-  .xl\:text-secondary-400 {
-    color: var(--covid-secondary-400);
-  }
-
-  .xl\:text-secondary-500 {
-    color: var(--covid-secondary-500);
   }
 
   .xl\:text-secondary {
     color: var(--covid-secondary);
   }
 
+  .xl\:text-success {
+    color: var(--covid-success);
+  }
+
   .xl\:text-info {
     color: var(--covid-info);
   }
 
-  .xl\:text-alert {
-    color: var(--covid-alert);
+  .xl\:text-warning {
+    color: var(--covid-warning);
   }
 
   .xl\:text-error {
@@ -54306,60 +52384,24 @@ main {
     color: var(--covid-default);
   }
 
-  .xl\:hover\:text-primary-100:hover {
-    color: var(--covid-primary-100);
-  }
-
-  .xl\:hover\:text-primary-200:hover {
-    color: var(--covid-primary-200);
-  }
-
-  .xl\:hover\:text-primary-300:hover {
-    color: var(--covid-primary-300);
-  }
-
-  .xl\:hover\:text-primary-400:hover {
-    color: var(--covid-primary-400);
-  }
-
-  .xl\:hover\:text-primary-500:hover {
-    color: var(--covid-primary-500);
-  }
-
   .xl\:hover\:text-primary:hover {
     color: var(--covid-primary);
-  }
-
-  .xl\:hover\:text-secondary-100:hover {
-    color: var(--covid-secondary-100);
-  }
-
-  .xl\:hover\:text-secondary-200:hover {
-    color: var(--covid-secondary-200);
-  }
-
-  .xl\:hover\:text-secondary-300:hover {
-    color: var(--covid-secondary-300);
-  }
-
-  .xl\:hover\:text-secondary-400:hover {
-    color: var(--covid-secondary-400);
-  }
-
-  .xl\:hover\:text-secondary-500:hover {
-    color: var(--covid-secondary-500);
   }
 
   .xl\:hover\:text-secondary:hover {
     color: var(--covid-secondary);
   }
 
+  .xl\:hover\:text-success:hover {
+    color: var(--covid-success);
+  }
+
   .xl\:hover\:text-info:hover {
     color: var(--covid-info);
   }
 
-  .xl\:hover\:text-alert:hover {
-    color: var(--covid-alert);
+  .xl\:hover\:text-warning:hover {
+    color: var(--covid-warning);
   }
 
   .xl\:hover\:text-error:hover {
@@ -54770,60 +52812,24 @@ main {
     color: var(--covid-default);
   }
 
-  .xl\:focus\:text-primary-100:focus {
-    color: var(--covid-primary-100);
-  }
-
-  .xl\:focus\:text-primary-200:focus {
-    color: var(--covid-primary-200);
-  }
-
-  .xl\:focus\:text-primary-300:focus {
-    color: var(--covid-primary-300);
-  }
-
-  .xl\:focus\:text-primary-400:focus {
-    color: var(--covid-primary-400);
-  }
-
-  .xl\:focus\:text-primary-500:focus {
-    color: var(--covid-primary-500);
-  }
-
   .xl\:focus\:text-primary:focus {
     color: var(--covid-primary);
-  }
-
-  .xl\:focus\:text-secondary-100:focus {
-    color: var(--covid-secondary-100);
-  }
-
-  .xl\:focus\:text-secondary-200:focus {
-    color: var(--covid-secondary-200);
-  }
-
-  .xl\:focus\:text-secondary-300:focus {
-    color: var(--covid-secondary-300);
-  }
-
-  .xl\:focus\:text-secondary-400:focus {
-    color: var(--covid-secondary-400);
-  }
-
-  .xl\:focus\:text-secondary-500:focus {
-    color: var(--covid-secondary-500);
   }
 
   .xl\:focus\:text-secondary:focus {
     color: var(--covid-secondary);
   }
 
+  .xl\:focus\:text-success:focus {
+    color: var(--covid-success);
+  }
+
   .xl\:focus\:text-info:focus {
     color: var(--covid-info);
   }
 
-  .xl\:focus\:text-alert:focus {
-    color: var(--covid-alert);
+  .xl\:focus\:text-warning:focus {
+    color: var(--covid-warning);
   }
 
   .xl\:focus\:text-error:focus {

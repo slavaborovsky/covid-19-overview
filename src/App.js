@@ -2,15 +2,29 @@ import React, { useState, Suspense } from 'react';
 import classNames from 'classnames';
 import { SWRConfig } from 'swr';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { ThemeProvider } from '@material-ui/core/styles';
 
 import { Header, Footer, Loader } from './components';
-import { swrFetcher } from './utils/api';
+import { swrDashboardFetcher, swrCountryInfoFetcher } from './utils/api';
+import { APP_THEME } from './utils/theme/create-theme';
 
 import './App.scss';
 
-const GlobalDashboard = React.lazy(() => import('./containers/TotalsDashboard'));
+const GlobalDashboard = React.lazy(() => import('./pages/GlobalDashboard'));
 
-const DATA_REFRESH_INTERVAL = 1000 * 30;
+const CountryView = React.lazy(() => import('./pages/CountryView'));
+
+const GLOBAL_DASHBOARD_SWR_CONFIG = {
+	refreshInterval: 1000 * 30, // 30 sec
+	fetcher: swrDashboardFetcher,
+	suspense: true,
+};
+
+const COUNTRY_INFO_SWR_CONFIG = {
+	refreshInterval: 1000 * 60, // 60 sec
+	fetcher: swrCountryInfoFetcher,
+	suspense: true,
+};
 
 function App() {
 	const [theme, setTheme] = useState('light');
@@ -29,35 +43,36 @@ function App() {
 		'grid-rows-main-layout'
 	);
 
-	const swrDashboardConfig = {
-		refreshInterval: DATA_REFRESH_INTERVAL,
-		fetcher: swrFetcher,
-		suspense: true,
-	};
-
 	return (
-		<Router>
-			<div className={containerClassnames}>
-				<Header onThemeChange={changeTheme} />
-				<Suspense fallback={<Loader />}>
-					<Switch>
-						<Route exact path="/">
-							<Redirect to={{ pathname: '/dashboard' }} />
-						</Route>
-						<Route path="/dashboard">
-							<SWRConfig value={swrDashboardConfig}>
-								<GlobalDashboard />
-							</SWRConfig>
-						</Route>
-						<Route path="*">
-							<Loader />
-						</Route>
-					</Switch>
-				</Suspense>
+		<ThemeProvider theme={APP_THEME}>
+			<Router>
+				<div className={containerClassnames}>
+					<Header onThemeChange={changeTheme} />
+					<Suspense fallback={<Loader />}>
+						<Switch>
+							<Route exact path="/">
+								<Redirect to={{ pathname: '/dashboard' }} />
+							</Route>
+							<Route path="/dashboard">
+								<SWRConfig value={GLOBAL_DASHBOARD_SWR_CONFIG}>
+									<GlobalDashboard />
+								</SWRConfig>
+							</Route>
+							<Route path="/countries">
+								<SWRConfig value={COUNTRY_INFO_SWR_CONFIG}>
+									<CountryView />
+								</SWRConfig>
+							</Route>
+							<Route path="*">
+								<h3>Not Found!</h3>
+							</Route>
+						</Switch>
+					</Suspense>
 
-				<Footer />
-			</div>
-		</Router>
+					<Footer />
+				</div>
+			</Router>
+		</ThemeProvider>
 	);
 }
 

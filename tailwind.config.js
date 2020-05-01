@@ -7,24 +7,11 @@ module.exports = {
 		extend: {
 			colors: {
 				default: 'var(--covid-default)',
-				primary: {
-					100: 'var(--covid-primary-100)',
-					200: 'var(--covid-primary-200)',
-					300: 'var(--covid-primary-300)',
-					400: 'var(--covid-primary-400)',
-					500: 'var(--covid-primary-500)',
-					default: 'var(--covid-primary)',
-				},
-				secondary: {
-					100: 'var(--covid-secondary-100)',
-					200: 'var(--covid-secondary-200)',
-					300: 'var(--covid-secondary-300)',
-					400: 'var(--covid-secondary-400)',
-					500: 'var(--covid-secondary-500)',
-					default: 'var(--covid-secondary)',
-				},
+				primary: 'var(--covid-primary)',
+				secondary: 'var(--covid-secondary)',
+				success: 'var(--covid-success)',
 				info: 'var(--covid-info)',
-				alert: 'var(--covid-alert)',
+				warning: 'var(--covid-warning)',
 				error: 'var(--covid-error)',
 				link: 'var(--covid-link)',
 				'link-active': 'var(--covid-link-active)',

@@ -25,7 +25,7 @@ const TotalsDashboard = () => {
 		if (totalsData && totalsData.cases) {
 			return (
 				<React.Fragment>
-					<p className="text-alert text-2xl">
+					<p className="text-warning text-2xl">
 						<CountUp start={0} end={totalsData.cases} duration={1} separator="," />
 					</p>
 					{renderLastUpdateAt}
@@ -60,10 +60,10 @@ const TotalsDashboard = () => {
 			return globalDataError;
 		}
 
-		if (totalsData && totalsData.cases) {
+		if (totalsData && totalsData.recovered) {
 			return (
 				<React.Fragment>
-					<p className="text-info text-2xl">
+					<p className="text-success text-2xl">
 						<CountUp start={0} end={totalsData.recovered} duration={1} separator="," />
 					</p>
 					{renderLastUpdateAt}
@@ -86,9 +86,9 @@ const TotalsDashboard = () => {
 				return (
 					<div className="border shadow-inner border-primary-300 px-4 py-2" key={data.country}>
 						<h4 className="text-2xl text-default cursor-pointer hover:underline hover:font-semibold">{data.country}</h4>
-						<span className="text-base text-alert">Infected: {data.cases}</span>
+						<span className="text-base text-warning">Infected: {data.cases}</span>
 						<span className="mx-2 text-default">|</span>
-						<span className="text-base text-alert">Today: {data.todayCases}</span>
+						<span className="text-base text-warning">Today: {data.todayCases}</span>
 					</div>
 				);
 			});
@@ -128,7 +128,7 @@ const TotalsDashboard = () => {
 				return (
 					<div className="border shadow-inner border-primary-300 px-4 py-2" key={data.country}>
 						<h4 className="text-2xl text-default cursor-pointer hover:underline hover:font-semibold">{data.country}</h4>
-						<span className="text-base text-info">Recovered: {data.recovered}</span>
+						<span className="text-base text-success">Recovered: {data.recovered}</span>
 						<span className="mx-2 text-default">|</span>
 						<span className="text-base text-error">Critical: {data.critical}</span>
 					</div>
@@ -141,21 +141,21 @@ const TotalsDashboard = () => {
 
 	return (
 		<div className="totals-dashboard grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 col-gap-8 md:col-gap-16 row-gap-12 md:row-gap-16 lg:col-gap-24 xl:col-gap-32 px-12 py-8 overflow-auto text-center">
-			<Card header="Global" subheader="Infected">
+			<Card header="Infected">
 				{{
 					renderCount: renderGlobalConfirmedCases,
 					renderList: renderTopFiveConfirmedCountries,
 				}}
 			</Card>
 
-			<Card header="Global" subheader="Deaths">
+			<Card header="Deaths">
 				{{
 					renderCount: renderGlobalDeathsCases,
 					renderList: renderTopFiveDeathsCountries,
 				}}
 			</Card>
 
-			<Card header="Global" subheader="Recovered">
+			<Card header="Recovered">
 				{{
 					renderCount: renderGlobalRecoveredCases,
 					renderList: renderTopFiveRecoversCountries,

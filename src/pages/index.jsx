@@ -1,0 +1,1 @@
+export { TotalsDashboard } from './GlobalDashboard';
