@@ -1,5 +1,7 @@
 import { useMemo } from 'react';
 import useSWR from 'swr';
+import countries from 'i18n-iso-countries';
+import coutryLookup from 'country-code-lookup';
 
 import { getNumericComparer } from '../get-array-comparer';
 
@@ -14,7 +16,34 @@ function aggregateCountriesTopData(data, count) {
 		return data;
 	}
 
-	const filteredCountriesData = data.filter(({ country }) => !INVALID_COUNTRIES.includes(country.toLowerCase()));
+	const filteredCountriesData = data.reduce((out, c) => {
+		if (INVALID_COUNTRIES.includes(c.country.toLowerCase())) {
+			return out;
+		}
+
+		let iso2 = null;
+		let iso3 = null;
+		const countryName = countries.getName(c.country, 'en');
+
+		if (countryName) {
+			iso2 = countries.getAlpha2Code(countryName, 'en');
+			iso3 = countries.getAlpha3Code(countryName, 'en');
+		} else {
+			const lookup =
+				coutryLookup.byCountry(c.country) || coutryLookup.byInternet(c.country) || coutryLookup.byFips(c.country);
+			if (lookup) {
+				iso2 = lookup.iso2;
+				iso3 = lookup.iso3;
+			}
+		}
+
+		if (iso2 && iso3) {
+			out.push({ ...c, iso2, iso3 });
+		}
+
+		return out;
+	}, []);
+
 	const topConfirms = filteredCountriesData.sort(confirmedCasesComparer).slice(0, count);
 	const topDeaths = filteredCountriesData.sort(deathsCasesComparer).slice(0, count);
 	const topRecovers = filteredCountriesData.sort(recoveredCasesComparer).slice(0, count);

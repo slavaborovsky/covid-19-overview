@@ -20,7 +20,9 @@ main {
 	--covid-default: theme('colors.gray.900');
 
 	--covid-primary: theme('colors.purple.600');
+	--mui-primary-rgb: 128, 90, 213;
 	--covid-secondary: theme('colors.teal.600');
+	--mui-secondary-rgb: 49, 151, 149;
 	--covid-success: theme('colors.green.600');
 	--covid-error: theme('colors.red.600');
 	--covid-info: theme('colors.blue.600');
@@ -35,19 +37,25 @@ main {
 	--covid-footer-background: theme('colors.gray.300');
 
 	--covid-on-primary: theme('colors.purple.100');
+	--mui-on-primary-rgb: 250, 245, 255;
 	--covid-on-secondary: theme('colors.teal.100');
+	--mui-on-secondary-rgb: 230, 255, 250;
 	--covid-on-header: theme('colors.indigo.200');
 	--covid-on-body: var(--covid-default);
 	--covid-on-footer: theme('colors.gray.900');
 
 	--covid-btn-box-shadow: 0 0 2px 0 theme('colors.gray.600');
+
+	--mui-icon-hover: rgba(26, 32, 44, 0.04);
 }
 
 .covid-dark-theme {
 	--covid-default: theme('colors.gray.400');
 
 	--covid-primary: theme('colors.pink.600');
+	--mui-primary-rgb: 213, 63, 140;
 	--covid-secondary: theme('colors.orange.600');
+	--mui-secondary-rgb: 221, 107, 32;
 	--covid-success: theme('colors.green.600');
 	--covid-error: theme('colors.red.600');
 	--covid-info: theme('colors.teal.600');
@@ -62,10 +70,14 @@ main {
 	--covid-footer-background: theme('colors.gray.700');
 
 	--covid-on-primary: theme('colors.pink.100');
+	--mui-on-primary-rgb: 255, 245, 247;
 	--covid-on-secondary: theme('colors.orange.100');
+	--mui-on-secondary-rgb: 255, 250, 240;
 	--covid-on-header: theme('colors.gray.200');
 	--covid-on-body: var(--covid-default);
 	--covid-on-footer: theme('colors.gray.100');
 
 	--covid-btn-box-shadow: 0 0 2px 0 theme('colors.gray.100');
+
+	--mui-icon-hover: rgba(203, 213, 224, 0.04);
 }

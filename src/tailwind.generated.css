@@ -11631,7 +11631,9 @@ main {
 .covid-light-theme {
   --covid-default: #1a202c;
   --covid-primary: #805ad5;
+  --mui-primary-rgb: 128, 90, 213;
   --covid-secondary: #319795;
+  --mui-secondary-rgb: 49, 151, 149;
   --covid-success: #38a169;
   --covid-error: #e53e3e;
   --covid-info: #3182ce;
@@ -11643,17 +11645,22 @@ main {
   --covid-card-background: #f7fafc;
   --covid-footer-background: #e2e8f0;
   --covid-on-primary: #faf5ff;
+  --mui-on-primary-rgb: 250, 245, 255;
   --covid-on-secondary: #e6fffa;
+  --mui-on-secondary-rgb: 230, 255, 250;
   --covid-on-header: #c3dafe;
   --covid-on-body: var(--covid-default);
   --covid-on-footer: #1a202c;
   --covid-btn-box-shadow: 0 0 2px 0 #718096;
+  --mui-icon-hover: rgba(26, 32, 44, 0.04);
 }
 
 .covid-dark-theme {
   --covid-default: #cbd5e0;
   --covid-primary: #d53f8c;
+  --mui-primary-rgb: 213, 63, 140;
   --covid-secondary: #dd6b20;
+  --mui-secondary-rgb: 221, 107, 32;
   --covid-success: #38a169;
   --covid-error: #e53e3e;
   --covid-info: #319795;
@@ -11665,11 +11672,14 @@ main {
   --covid-card-background: #2d3748;
   --covid-footer-background: #4a5568;
   --covid-on-primary: #fff5f7;
+  --mui-on-primary-rgb: 255, 245, 247;
   --covid-on-secondary: #fffaf0;
+  --mui-on-secondary-rgb: 255, 250, 240;
   --covid-on-header: #edf2f7;
   --covid-on-body: var(--covid-default);
   --covid-on-footer: #f7fafc;
   --covid-btn-box-shadow: 0 0 2px 0 #f7fafc;
+  --mui-icon-hover: rgba(203, 213, 224, 0.04);
 }
 
 @media (min-width: 640px) {

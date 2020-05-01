@@ -1,6 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CountUp from 'react-countup';
 import useSWR from 'swr';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 
 import { Card, Loader } from '../../components';
 import { useTopCountries } from '../../utils/custom-hooks';
@@ -76,22 +79,37 @@ const TotalsDashboard = () => {
 
 	const renderTopListError = <p className="text-error text-base">Top data list error!</p>;
 
+	const countryLink = ({ country, iso3 }) => {
+		return (
+			<Link
+				to={`/countries?iso3=${iso3}`}
+				className="text-2xl text-default cursor-pointer hover:underline hover:font-semibold"
+			>
+				{country}
+			</Link>
+		);
+	};
+
 	const renderTopFiveConfirmedCountries = () => {
 		if (countriesError) {
 			return renderTopListError;
 		}
 
 		if (countriesData && countriesData.topConfirms) {
-			return countriesData.topConfirms.map((data) => {
-				return (
-					<div className="border shadow-inner border-primary-300 px-4 py-2" key={data.country}>
-						<h4 className="text-2xl text-default cursor-pointer hover:underline hover:font-semibold">{data.country}</h4>
-						<span className="text-base text-warning">Infected: {data.cases}</span>
-						<span className="mx-2 text-default">|</span>
-						<span className="text-base text-warning">Today: {data.todayCases}</span>
-					</div>
-				);
-			});
+			return (
+				<List>
+					{countriesData.topConfirms.map((data) => (
+						<ListItem className="border shadow-inner border-primary-300 px-4 py-2 flex flex-col" key={data.country}>
+							{countryLink(data)}
+							<p className="text-center">
+								<span className="text-base text-warning">Infected: {data.cases}</span>
+								<span className="mx-2 text-default">|</span>
+								<span className="text-base text-warning">Today: {data.todayCases}</span>
+							</p>
+						</ListItem>
+					))}
+				</List>
+			);
 		}
 
 		return <Loader />;
@@ -103,16 +121,20 @@ const TotalsDashboard = () => {
 		}
 
 		if (countriesData && countriesData.topDeaths) {
-			return countriesData.topDeaths.map((data) => {
-				return (
-					<div className="border shadow-inner border-primary-300 px-4 py-2" key={data.country}>
-						<h4 className="text-2xl text-default cursor-pointer hover:underline hover:font-semibold">{data.country}</h4>
-						<span className="text-base text-error">Deaths: {data.deaths}</span>
-						<span className="mx-2 text-default">|</span>
-						<span className="text-base text-error">Today: {data.todayDeaths}</span>
-					</div>
-				);
-			});
+			return (
+				<List>
+					{countriesData.topDeaths.map((data) => (
+						<ListItem className="border shadow-inner border-primary-300 px-4 py-2 flex flex-col" key={data.country}>
+							{countryLink(data)}
+							<p className="text-center">
+								<span className="text-base text-error">Deaths: {data.deaths}</span>
+								<span className="mx-2 text-default">|</span>
+								<span className="text-base text-error">Today: {data.todayDeaths}</span>
+							</p>
+						</ListItem>
+					))}
+				</List>
+			);
 		}
 
 		return <Loader />;
@@ -124,16 +146,20 @@ const TotalsDashboard = () => {
 		}
 
 		if (countriesData && countriesData.topRecovers) {
-			return countriesData.topRecovers.map((data) => {
-				return (
-					<div className="border shadow-inner border-primary-300 px-4 py-2" key={data.country}>
-						<h4 className="text-2xl text-default cursor-pointer hover:underline hover:font-semibold">{data.country}</h4>
-						<span className="text-base text-success">Recovered: {data.recovered}</span>
-						<span className="mx-2 text-default">|</span>
-						<span className="text-base text-error">Critical: {data.critical}</span>
-					</div>
-				);
-			});
+			return (
+				<List>
+					{countriesData.topRecovers.map((data) => (
+						<ListItem className="border shadow-inner border-primary-300 px-4 py-2 flex flex-col" key={data.country}>
+							{countryLink(data)}
+							<p className="text-center">
+								<span className="text-base text-success">Recovered: {data.recovered}</span>
+								<span className="mx-2 text-default">|</span>
+								<span className="text-base text-error">Critical: {data.critical}</span>
+							</p>
+						</ListItem>
+					))}
+				</List>
+			);
 		}
 
 		return <Loader />;

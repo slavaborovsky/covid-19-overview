@@ -3,12 +3,16 @@ import classNames from 'classnames';
 import { SWRConfig } from 'swr';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/core/styles';
+import countries from 'i18n-iso-countries';
+import EnglishTranslation from 'i18n-iso-countries/langs/en.json';
 
 import { Header, Footer, Loader } from './components';
 import { swrDashboardFetcher, swrCountryInfoFetcher } from './utils/api';
 import { APP_THEME } from './utils/theme/create-theme';
 
 import './App.scss';
+
+countries.registerLocale(EnglishTranslation);
 
 const GlobalDashboard = React.lazy(() => import('./pages/GlobalDashboard'));
 
