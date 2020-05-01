@@ -1,0 +1,1 @@
+{"version":3,"sources":["styles.module.scss"],"names":[],"mappings":"AAAA,oCACC,+BAAgC,CAEhC,qCAHD,oCAIE,2BAA4B,CAE7B","file":"4.d9038ae3.chunk.css","sourcesContent":[".CountryViewContainer {\n\tgrid-template-rows: 50px 1fr 1fr;\n\n\t@media screen and (min-width: 1024px) {\n\t\tgrid-template-rows: 50px 1fr;\n\t}\n}\n"]}
