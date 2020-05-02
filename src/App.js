@@ -53,7 +53,7 @@ function App() {
 			<Router basename="/">
 				<div className={containerClassnames}>
 					<Header onThemeChange={changeTheme} />
-					<Suspense fallback={<Loader />}>
+					<Suspense fallback={<Loader text="Loading..." />}>
 						<Switch>
 							<Route exact path="/">
 								<Redirect to={{ pathname: '/dashboard' }} />
@@ -69,7 +69,7 @@ function App() {
 								</SWRConfig>
 							</Route>
 							<Route path="*">
-								<h3>Not Found!</h3>
+								<Loader text="Not Found..." />
 							</Route>
 						</Switch>
 					</Suspense>

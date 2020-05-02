@@ -20,6 +20,12 @@ main {
 	--covid-default: theme('colors.gray.900');
 
 	--covid-primary: theme('colors.purple.600');
+	--covid-primary-100: theme('colors.purple.100');
+	--covid-primary-200: theme('colors.purple.200');
+	--covid-primary-300: theme('colors.purple.300');
+	--covid-primary-400: theme('colors.purple.400');
+	--covid-primary-500: theme('colors.purple.500');
+
 	--mui-primary-rgb: 128, 90, 213;
 	--covid-secondary: theme('colors.teal.600');
 	--mui-secondary-rgb: 49, 151, 149;
@@ -56,6 +62,12 @@ main {
 	--covid-default: theme('colors.gray.400');
 
 	--covid-primary: theme('colors.pink.600');
+	--covid-primary-100: theme('colors.pink.100');
+	--covid-primary-200: theme('colors.pink.200');
+	--covid-primary-300: theme('colors.pink.300');
+	--covid-primary-400: theme('colors.pink.400');
+	--covid-primary-500: theme('colors.pink.500');
+
 	--mui-primary-rgb: 213, 63, 140;
 	--covid-secondary: theme('colors.orange.600');
 	--mui-secondary-rgb: 221, 107, 32;

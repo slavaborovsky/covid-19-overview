@@ -11631,6 +11631,11 @@ main {
 .covid-light-theme {
   --covid-default: #1a202c;
   --covid-primary: #805ad5;
+  --covid-primary-100: #faf5ff;
+  --covid-primary-200: #e9d8fd;
+  --covid-primary-300: #d6bcfa;
+  --covid-primary-400: #b794f4;
+  --covid-primary-500: #9f7aea;
   --mui-primary-rgb: 128, 90, 213;
   --covid-secondary: #319795;
   --mui-secondary-rgb: 49, 151, 149;
@@ -11660,6 +11665,11 @@ main {
 .covid-dark-theme {
   --covid-default: #cbd5e0;
   --covid-primary: #d53f8c;
+  --covid-primary-100: #fff5f7;
+  --covid-primary-200: #fed7e2;
+  --covid-primary-300: #fbb6ce;
+  --covid-primary-400: #f687b3;
+  --covid-primary-500: #ed64a6;
   --mui-primary-rgb: 213, 63, 140;
   --covid-secondary: #dd6b20;
   --mui-secondary-rgb: 221, 107, 32;
