@@ -1,21 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CountUp from 'react-countup';
+import classNames from 'classnames';
 import useSWR from 'swr';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 
-import { Card, Loader } from '../../components';
+import { Card } from '../../components';
 import { useTopCountries } from '../../utils/custom-hooks';
+
+import styles from './styles.module.scss';
 
 const TotalsDashboard = () => {
 	const { data: totalsData, error: totalsError } = useSWR('all');
-	const { data: countriesData, updatedAt, error: countriesError } = useTopCountries();
+	const { data: countriesData, updatedAt, error: countriesError } = useTopCountries(10);
 
 	const globalDataError = <p className="text-error text-2xl">Global data error!</p>;
 
 	const renderLastUpdateAt = (
-		<p className="text-base opacity-60 text-default mb-4">
+		<p className="text-sm opacity-60 text-default mb-4">
 			Last update: {updatedAt.toLocaleTimeString()} {updatedAt.toLocaleDateString()}
 		</p>
 	);
@@ -102,9 +105,11 @@ const TotalsDashboard = () => {
 						<ListItem className="border shadow-inner border-primary-300 px-4 py-2 flex flex-col" key={data.country}>
 							{countryLink(data)}
 							<p className="text-center">
-								<span className="text-base text-warning">Infected: {data.cases}</span>
+								<span className="text-base text-warning whitespace-no-wrap">
+									Infected: {data.cases.toLocaleString()}
+								</span>
 								<span className="mx-2 text-default">|</span>
-								<span className="text-base text-warning">Today: {data.todayCases}</span>
+								<span className="text-base text-warning whitespace-no-wrap">Today: {data.todayCases}</span>
 							</p>
 						</ListItem>
 					))}
@@ -112,7 +117,7 @@ const TotalsDashboard = () => {
 			);
 		}
 
-		return <Loader />;
+		return null;
 	};
 
 	const renderTopFiveDeathsCountries = () => {
@@ -127,9 +132,9 @@ const TotalsDashboard = () => {
 						<ListItem className="border shadow-inner border-primary-300 px-4 py-2 flex flex-col" key={data.country}>
 							{countryLink(data)}
 							<p className="text-center">
-								<span className="text-base text-error">Deaths: {data.deaths}</span>
+								<span className="text-base text-error whitespace-no-wrap">Deaths: {data.deaths.toLocaleString()}</span>
 								<span className="mx-2 text-default">|</span>
-								<span className="text-base text-error">Today: {data.todayDeaths}</span>
+								<span className="text-base text-error whitespace-no-wrap">Today: {data.todayDeaths}</span>
 							</p>
 						</ListItem>
 					))}
@@ -137,7 +142,7 @@ const TotalsDashboard = () => {
 			);
 		}
 
-		return <Loader />;
+		return null;
 	};
 
 	const renderTopFiveRecoversCountries = () => {
@@ -152,9 +157,11 @@ const TotalsDashboard = () => {
 						<ListItem className="border shadow-inner border-primary-300 px-4 py-2 flex flex-col" key={data.country}>
 							{countryLink(data)}
 							<p className="text-center">
-								<span className="text-base text-success">Recovered: {data.recovered}</span>
+								<span className="text-base text-success whitespace-no-wrap">
+									Recovered: {data.recovered.toLocaleString()}
+								</span>
 								<span className="mx-2 text-default">|</span>
-								<span className="text-base text-error">Critical: {data.critical}</span>
+								<span className="text-base text-error whitespace-no-wrap">Critical: {data.critical}</span>
 							</p>
 						</ListItem>
 					))}
@@ -162,31 +169,38 @@ const TotalsDashboard = () => {
 			);
 		}
 
-		return <Loader />;
+		return null;
 	};
 
 	return (
-		<div className="totals-dashboard grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 col-gap-8 md:col-gap-16 row-gap-12 md:row-gap-16 lg:col-gap-24 xl:col-gap-32 px-12 py-8 overflow-auto text-center">
-			<Card header="Infected">
-				{{
-					renderCount: renderGlobalConfirmedCases,
-					renderList: renderTopFiveConfirmedCountries,
-				}}
-			</Card>
+		<div className={classNames(styles.TotalsDashboardContainer, 'flex-auto overflow-y-auto px-16 py-12')}>
+			<div
+				className={classNames(
+					styles.TotalsDashboardGrid,
+					'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 xl:gap-16 text-center'
+				)}
+			>
+				<Card header="Infected">
+					{{
+						renderCount: renderGlobalConfirmedCases,
+						renderList: renderTopFiveConfirmedCountries,
+					}}
+				</Card>
 
-			<Card header="Deaths">
-				{{
-					renderCount: renderGlobalDeathsCases,
-					renderList: renderTopFiveDeathsCountries,
-				}}
-			</Card>
+				<Card header="Deaths">
+					{{
+						renderCount: renderGlobalDeathsCases,
+						renderList: renderTopFiveDeathsCountries,
+					}}
+				</Card>
 
-			<Card header="Recovered">
-				{{
-					renderCount: renderGlobalRecoveredCases,
-					renderList: renderTopFiveRecoversCountries,
-				}}
-			</Card>
+				<Card header="Recovered">
+					{{
+						renderCount: renderGlobalRecoveredCases,
+						renderList: renderTopFiveRecoversCountries,
+					}}
+				</Card>
+			</div>
 		</div>
 	);
 };

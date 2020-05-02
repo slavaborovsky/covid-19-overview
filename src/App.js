@@ -1,7 +1,7 @@
 import React, { useState, Suspense } from 'react';
 import classNames from 'classnames';
 import { SWRConfig } from 'swr';
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/core/styles';
 import countries from 'i18n-iso-countries';
 import EnglishTranslation from 'i18n-iso-countries/langs/en.json';
@@ -43,13 +43,14 @@ function App() {
 		'bg-body',
 		'font-body',
 		'h-screen',
-		'grid',
-		'grid-rows-main-layout'
+		'min-h-full',
+		'flex',
+		'flex-col'
 	);
 
 	return (
 		<ThemeProvider theme={APP_THEME}>
-			<Router>
+			<Router basename="/">
 				<div className={containerClassnames}>
 					<Header onThemeChange={changeTheme} />
 					<Suspense fallback={<Loader />}>

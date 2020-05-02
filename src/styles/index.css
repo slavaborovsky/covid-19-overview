@@ -31,7 +31,10 @@ main {
 	--covid-link: theme('colors.gray.400');
 	--covid-link-active: theme('colors.gray.800');
 
-	--covid-header-background: theme('colors.indigo.800');
+	--covid-nav-link: theme('colors.gray.100');
+	--covid-nav-link-active: theme('colors.blue.500');
+
+	--covid-header-background: theme('colors.indigo.900');
 	--covid-body-background: theme('colors.gray.200');
 	--covid-card-background: theme('colors.gray.100');
 	--covid-footer-background: theme('colors.gray.300');
@@ -63,6 +66,9 @@ main {
 
 	--covid-link: theme('colors.red.400');
 	--covid-link-active: theme('colors.red.800');
+
+	--covid-nav-link: theme('colors.gray.100');
+	--covid-nav-link-active: theme('colors.blue.500');
 
 	--covid-header-background: theme('colors.gray.800');
 	--covid-body-background: theme('colors.gray.900');

@@ -1,10 +1,12 @@
 import React from 'react';
 
+import './styles.scss';
+
 export const Footer = () => {
 	const currentDate = new Date();
 	return (
-		<footer className="bg-footer shadow-inner p-4 text-center font-semibold">
-			<p className="text-base text-on-footer">Powered by Vyacheslav Borovsky, {currentDate.getFullYear()}</p>
+		<footer className="app-footer bg-footer shadow-inner flex justify-center text-center">
+			<p className="text-sm text-on-footer my-auto">Powered by Vyacheslav Borovsky, {currentDate.getFullYear()}</p>
 		</footer>
 	);
 };

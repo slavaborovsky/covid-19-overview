@@ -28,7 +28,7 @@ module.exports = {
 				footer: 'var(--covid-footer-background)',
 			},
 			gridTemplateRows: {
-				'main-layout': 'auto 1fr auto',
+				'main-layout': '50px 1fr 40px',
 			},
 		},
 		container: {
