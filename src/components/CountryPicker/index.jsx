@@ -34,7 +34,7 @@ const CustomTetxField = withStyles({
 	},
 })(TextField);
 
-export const CountryPicker = React.memo(({ countries, selected, onSelect }) => {
+export const CountryPicker = ({ countries, selected, onSelect }) => {
 	const sortedCountries = useMemo(() => (countries || []).slice().sort(countriesAlphaComparer), [countries]);
 
 	return (
@@ -66,4 +66,4 @@ export const CountryPicker = React.memo(({ countries, selected, onSelect }) => {
 			)}
 		/>
 	);
-});
+};

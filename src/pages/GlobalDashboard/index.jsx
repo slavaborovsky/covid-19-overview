@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import CountUp from 'react-countup';
 import classNames from 'classnames';
@@ -7,13 +7,15 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 
 import { Card } from '../../components';
-import { useTopCountries } from '../../utils/custom-hooks';
+import { useCountriesData } from '../../utils/custom-hooks';
 
 import styles from './styles.module.scss';
 
 const TotalsDashboard = () => {
 	const { data: totalsData, error: totalsError } = useSWR('all');
-	const { data: countriesData, updatedAt, error: countriesError } = useTopCountries(10);
+	const { data: countriesData, updatedAt, error: countriesError } = useCountriesData();
+
+	const [topCount] = useState(10);
 
 	const globalDataError = <p className="text-error text-2xl">Global data error!</p>;
 
@@ -98,18 +100,18 @@ const TotalsDashboard = () => {
 			return renderTopListError;
 		}
 
-		if (countriesData && countriesData.topConfirms) {
+		if (countriesData && countriesData.sortedByCases) {
 			return (
 				<List>
-					{countriesData.topConfirms.map((data) => (
-						<ListItem className="border shadow-inner border-primary-300 px-4 py-2 flex flex-col" key={data.country}>
+					{countriesData.sortedByCases.slice(0, topCount).map((data) => (
+						<ListItem className="border shadow-inner border-default px-4 py-2 flex flex-col" key={data.country}>
 							{countryLink(data)}
-							<p className="text-center">
-								<span className="text-base text-warning whitespace-no-wrap">
-									Infected: {data.cases.toLocaleString()}
-								</span>
+							<p className="text-center break-all">
+								<span className="text-base text-warning whitespace-no-wrap">Total: {data.cases.toLocaleString()}</span>
 								<span className="mx-2 text-default">|</span>
-								<span className="text-base text-warning whitespace-no-wrap">Today: {data.todayCases}</span>
+								<span className="text-base text-warning whitespace-no-wrap">
+									Today: {data.todayCases.toLocaleString()}
+								</span>
 							</p>
 						</ListItem>
 					))}
@@ -125,16 +127,18 @@ const TotalsDashboard = () => {
 			return renderTopListError;
 		}
 
-		if (countriesData && countriesData.topDeaths) {
+		if (countriesData && countriesData.sortedByDeaths) {
 			return (
 				<List>
-					{countriesData.topDeaths.map((data) => (
+					{countriesData.sortedByDeaths.slice(0, topCount).map((data) => (
 						<ListItem className="border shadow-inner border-primary-300 px-4 py-2 flex flex-col" key={data.country}>
 							{countryLink(data)}
-							<p className="text-center">
-								<span className="text-base text-error whitespace-no-wrap">Deaths: {data.deaths.toLocaleString()}</span>
+							<p className="text-center break-all">
+								<span className="text-base text-error whitespace-no-wrap">Total: {data.deaths.toLocaleString()}</span>
 								<span className="mx-2 text-default">|</span>
-								<span className="text-base text-error whitespace-no-wrap">Today: {data.todayDeaths}</span>
+								<span className="text-base text-error whitespace-no-wrap">
+									Today: {data.todayDeaths.toLocaleString()}
+								</span>
 							</p>
 						</ListItem>
 					))}
@@ -150,18 +154,20 @@ const TotalsDashboard = () => {
 			return renderTopListError;
 		}
 
-		if (countriesData && countriesData.topRecovers) {
+		if (countriesData && countriesData.sortedByRecovers) {
 			return (
 				<List>
-					{countriesData.topRecovers.map((data) => (
+					{countriesData.sortedByRecovers.slice(0, topCount).map((data) => (
 						<ListItem className="border shadow-inner border-primary-300 px-4 py-2 flex flex-col" key={data.country}>
 							{countryLink(data)}
-							<p className="text-center">
+							<p className="text-center break-all">
 								<span className="text-base text-success whitespace-no-wrap">
-									Recovered: {data.recovered.toLocaleString()}
+									Total: {data.recovered.toLocaleString()}
 								</span>
 								<span className="mx-2 text-default">|</span>
-								<span className="text-base text-error whitespace-no-wrap">Critical: {data.critical}</span>
+								<span className="text-base text-error whitespace-no-wrap">
+									Critical: {data.critical.toLocaleString()}
+								</span>
 							</p>
 						</ListItem>
 					))}

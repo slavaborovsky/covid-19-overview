@@ -1,23 +1,27 @@
-import { useMemo } from 'react';
+import { useMemo, useRef } from 'react';
 import useSWR from 'swr';
 import countries from 'i18n-iso-countries';
 import coutryLookup from 'country-code-lookup';
 
 import { getNumericComparer } from '../get-array-comparer';
+import { WORLD_REGIONS } from '../world-regions';
 
 const confirmedCasesComparer = getNumericComparer({ accessor: (data) => data.cases });
 const deathsCasesComparer = getNumericComparer({ accessor: (data) => data.deaths });
 const recoveredCasesComparer = getNumericComparer({ accessor: (data) => data.recovered });
 
-const INVALID_COUNTRIES = ['world', 'total', 'total:', 'europe', 'north america', 'south america', 'asia', 'africa'];
-
-function aggregateCountriesTopData(data, count) {
+function sortCounriesAndAttachCodes(data) {
 	if (!data) {
-		return data;
+		return {
+			sortedByCases: [],
+			sortedByDeaths: [],
+			sortedByRecovers: [],
+			initialData: [],
+		};
 	}
 
-	const filteredCountriesData = data.reduce((out, c) => {
-		if (INVALID_COUNTRIES.includes(c.country.toLowerCase())) {
+	const filteredCountriesDataWithIsoCodes = data.reduce((out, c) => {
+		if (WORLD_REGIONS.includes(c.country.toLowerCase())) {
 			return out;
 		}
 
@@ -44,25 +48,26 @@ function aggregateCountriesTopData(data, count) {
 		return out;
 	}, []);
 
-	const topConfirms = filteredCountriesData.sort(confirmedCasesComparer).slice(0, count);
-	const topDeaths = filteredCountriesData.sort(deathsCasesComparer).slice(0, count);
-	const topRecovers = filteredCountriesData.sort(recoveredCasesComparer).slice(0, count);
-
 	return {
-		topConfirms,
-		topDeaths,
-		topRecovers,
+		sortedByCases: filteredCountriesDataWithIsoCodes.sort(confirmedCasesComparer),
+		sortedByDeaths: filteredCountriesDataWithIsoCodes.sort(deathsCasesComparer),
+		sortedByRecovers: filteredCountriesDataWithIsoCodes.sort(recoveredCasesComparer),
+		initialData: filteredCountriesDataWithIsoCodes,
 	};
 }
 
-export const useTopCountries = (count = 5) => {
+export const useCountriesData = () => {
 	const { data, error } = useSWR('countries');
+	let updatedAtRef = useRef();
 
-	const memoizedCountriesTopData = useMemo(() => aggregateCountriesTopData(data, count), [data, count]);
+	const memoizedCountriesData = useMemo(() => {
+		updatedAtRef.current = new Date();
+		return sortCounriesAndAttachCodes(data);
+	}, [data]);
 
 	return {
-		data: memoizedCountriesTopData,
-		updatedAt: new Date(),
+		data: memoizedCountriesData,
+		updatedAt: updatedAtRef.current,
 		error,
 	};
 };

@@ -4,7 +4,7 @@ import { SWRConfig } from 'swr';
 import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/core/styles';
 import countries from 'i18n-iso-countries';
-import EnglishTranslation from 'i18n-iso-countries/langs/en.json';
+import EnglishTranslations from 'i18n-iso-countries/langs/en.json';
 
 import { Header, Footer, Loader } from './components';
 import { swrDashboardFetcher, swrCountryInfoFetcher } from './utils/api';
@@ -12,21 +12,21 @@ import { APP_THEME } from './utils/theme/create-theme';
 
 import './App.scss';
 
-countries.registerLocale(EnglishTranslation);
+countries.registerLocale(EnglishTranslations);
 
 const GlobalDashboard = React.lazy(() => import('./pages/GlobalDashboard'));
 
 const CountryView = React.lazy(() => import('./pages/CountryView'));
 
 const GLOBAL_DASHBOARD_SWR_CONFIG = {
-	refreshInterval: 1000 * 30, // 30 sec
+	refreshInterval: 1000 * 60, // 60 sec
 	fetcher: swrDashboardFetcher,
 	suspense: true,
 };
 
 const COUNTRY_INFO_SWR_CONFIG = {
 	refreshInterval: 1000 * 60, // 60 sec
-	fetcher: swrCountryInfoFetcher,
+	fetcher: swrDashboardFetcher,
 	suspense: true,
 };
 
@@ -53,6 +53,7 @@ function App() {
 			<Router basename="/">
 				<div className={containerClassnames}>
 					<Header onThemeChange={changeTheme} />
+
 					<Suspense fallback={<Loader text="Loading..." />}>
 						<Switch>
 							<Route exact path="/">

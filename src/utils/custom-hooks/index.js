@@ -1,3 +1,2 @@
-export { useInterval } from './use-interval';
-export { useTopCountries } from './use-top-countries';
+export { useCountriesData } from './use-countries-data';
 export { useQuery } from './use-query';
