@@ -1,21 +1,21 @@
-import React, { useState, Suspense } from 'react';
+import React, { Suspense, useContext } from 'react';
 import classNames from 'classnames';
 import { SWRConfig } from 'swr';
 import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
-import { ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import countries from 'i18n-iso-countries';
 import EnglishTranslations from 'i18n-iso-countries/langs/en.json';
 
 import { Header, Footer, Loader } from './components';
 import { swrDashboardFetcher as swrFetcher } from './utils/api';
 import { APP_THEME } from './utils/theme/create-theme';
+import { ThemeSelectorContext } from './context/theme/theme-context';
 
 import './App.scss';
 
 countries.registerLocale(EnglishTranslations);
 
 const GlobalDashboard = React.lazy(() => import('./pages/GlobalDashboard'));
-
 const CountryView = React.lazy(() => import('./pages/CountryView'));
 
 const GLOBAL_DASHBOARD_SWR_CONFIG = {
@@ -31,12 +31,7 @@ const COUNTRY_INFO_SWR_CONFIG = {
 };
 
 function App() {
-	const [theme, setTheme] = useState('light');
-
-	const changeTheme = (isDark) => {
-		const nextTheme = isDark ? 'dark' : 'light';
-		setTheme(nextTheme);
-	};
+	const { theme } = useContext(ThemeSelectorContext);
 
 	const containerClassnames = classNames(
 		`covid-${theme}-theme`,
@@ -49,10 +44,10 @@ function App() {
 	);
 
 	return (
-		<ThemeProvider theme={APP_THEME}>
+		<MuiThemeProvider theme={APP_THEME}>
 			<Router basename="/">
 				<div className={containerClassnames}>
-					<Header onThemeChange={changeTheme} />
+					<Header />
 
 					<Suspense fallback={<Loader text="Loading..." />}>
 						<Switch>
@@ -78,7 +73,7 @@ function App() {
 					<Footer />
 				</div>
 			</Router>
-		</ThemeProvider>
+		</MuiThemeProvider>
 	);
 }
 

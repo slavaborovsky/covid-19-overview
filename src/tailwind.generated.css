@@ -11660,6 +11660,9 @@ main {
   --covid-on-footer: #1a202c;
   --covid-btn-box-shadow: 0 0 2px 0 #718096;
   --mui-icon-hover: rgba(26, 32, 44, 0.04);
+  --covid-chart-grid: #cbd5e0;
+  --covid-chart-tooltip-background: #2d3748;
+  --covid-chart-tooltip-text: #edf2f7;
 }
 
 .covid-dark-theme {
@@ -11694,6 +11697,9 @@ main {
   --covid-on-footer: #f7fafc;
   --covid-btn-box-shadow: 0 0 2px 0 #f7fafc;
   --mui-icon-hover: rgba(203, 213, 224, 0.04);
+  --covid-chart-grid: #4a5568;
+  --covid-chart-tooltip-background: #edf2f7;
+  --covid-chart-tooltip-text: #1a202c;
 }
 
 @media (min-width: 640px) {

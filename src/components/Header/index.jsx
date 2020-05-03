@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+
+import { ThemeSelectorContext } from '../../context/theme/theme-context';
 
 import './styles.scss';
 
-export const Header = ({ onThemeChange }) => {
+export const Header = () => {
+	const { toggleTheme } = useContext(ThemeSelectorContext);
+
 	return (
 		<header className="app-header bg-header w-full px-16 border-b-2 border-on-primary flex flex-row items-center">
 			<Link to="/" className="text-lg md:text-xl lg:text-2xl text-on-header mr-8">
@@ -22,12 +26,7 @@ export const Header = ({ onThemeChange }) => {
 
 			<div className="flex items-center ml-auto">
 				<label className="inline-block relative h-6 w-12 font-bold" htmlFor="checkbox">
-					<input
-						type="checkbox"
-						id="checkbox"
-						className="themeSwitchCheckbox hidden"
-						onChange={(e) => onThemeChange(e.target.checked)}
-					/>
+					<input type="checkbox" id="checkbox" className="themeSwitchCheckbox hidden" onChange={(e) => toggleTheme()} />
 					<div className="themeSwitchSlider bg-white inset-0 cursor-pointer absolute rounded-full transition-500"></div>
 				</label>
 				<em className="ml-5 text-sm text-on-header">Enable Dark Mode</em>

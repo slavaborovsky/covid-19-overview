@@ -56,6 +56,10 @@ main {
 	--covid-btn-box-shadow: 0 0 2px 0 theme('colors.gray.600');
 
 	--mui-icon-hover: rgba(26, 32, 44, 0.04);
+
+	--covid-chart-grid: theme('colors.gray.400');
+	--covid-chart-tooltip-background: theme('colors.gray.800');
+	--covid-chart-tooltip-text: theme('colors.gray.200');
 }
 
 .covid-dark-theme {
@@ -98,4 +102,8 @@ main {
 	--covid-btn-box-shadow: 0 0 2px 0 theme('colors.gray.100');
 
 	--mui-icon-hover: rgba(203, 213, 224, 0.04);
+
+	--covid-chart-grid: theme('colors.gray.700');
+	--covid-chart-tooltip-background: theme('colors.gray.200');
+	--covid-chart-tooltip-text: theme('colors.gray.900');
 }
