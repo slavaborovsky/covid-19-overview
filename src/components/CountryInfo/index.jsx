@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import CountUp from 'react-countup';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import { useCountriesData } from '../../utils/custom-hooks/use-countries-data';
@@ -32,26 +33,32 @@ export const CountryInfo = ({ selected }) => {
 					<List>
 						<CustomListItem className="border border-default flex flex-col shadow-inner">
 							<p className="text-center">
-								<span className="text-lg text-warning whitespace-no-wrap">Infected: {data.cases.toLocaleString()}</span>
-								<span className="mx-2 text-default">|</span>
 								<span className="text-lg text-warning whitespace-no-wrap">
-									Today: {data.todayCases.toLocaleString()}
+									Infected: <CountUp start={0} end={data.cases} duration={1.5} separator="," />
 								</span>
 								<span className="mx-2 text-default">|</span>
-								<span className="text-lg text-warning whitespace-no-wrap">Active: {data.active.toLocaleString()}</span>
+								<span className="text-lg text-warning whitespace-no-wrap">
+									Today: <CountUp start={0} end={data.todayCases} duration={1.5} separator="," />
+								</span>
+								<span className="mx-2 text-default">|</span>
+								<span className="text-lg text-warning whitespace-no-wrap">
+									Active: <CountUp start={0} end={data.active} duration={1.5} separator="," />
+								</span>
 							</p>
 						</CustomListItem>
 
 						<CustomListItem className="border border-default flex flex-col shadow-inner">
 							<p className="text-center">
-								<span className="text-lg text-error whitespace-no-wrap">Deaths: {data.deaths.toLocaleString()}</span>
-								<span className="mx-2 text-default">|</span>
 								<span className="text-lg text-error whitespace-no-wrap">
-									Today: {data.todayDeaths.toLocaleString()}
+									Deaths: <CountUp start={0} end={data.deaths} duration={1.5} separator="," />
 								</span>
 								<span className="mx-2 text-default">|</span>
 								<span className="text-lg text-error whitespace-no-wrap">
-									Critical: {data.critical.toLocaleString()}
+									Today: <CountUp start={0} end={data.todayDeaths} duration={1.5} separator="," />
+								</span>
+								<span className="mx-2 text-default">|</span>
+								<span className="text-lg text-error whitespace-no-wrap">
+									Critical: <CountUp start={0} end={data.critical} duration={1.5} separator="," />
 								</span>
 							</p>
 						</CustomListItem>
@@ -59,7 +66,7 @@ export const CountryInfo = ({ selected }) => {
 						<CustomListItem className="border border-default flex flex-col shadow-inner">
 							<p className="text-center">
 								<span className="text-lg text-success whitespace-no-wrap">
-									Recovered: {data.recovered.toLocaleString()}
+									Recovered: <CountUp start={0} end={data.recovered} duration={1.5} separator="," />
 								</span>
 							</p>
 						</CustomListItem>
@@ -67,11 +74,11 @@ export const CountryInfo = ({ selected }) => {
 						<CustomListItem className="border border-default flex flex-col shadow-inner">
 							<p className="text-center">
 								<span className="text-lg text-info whitespace-no-wrap">
-									Total tests: {data.totalTests.toLocaleString()}
+									Total tests: <CountUp start={0} end={data.totalTests} duration={1.5} separator="," />
 								</span>
 								<span className="mx-2 text-default">|</span>
 								<span className="text-lg text-info whitespace-no-wrap">
-									Tests per a million: {data.testsPerOneMillion.toLocaleString()}
+									Tests per a million: <CountUp start={0} end={data.testsPerOneMillion} duration={1.5} separator="," />
 								</span>
 							</p>
 						</CustomListItem>

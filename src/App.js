@@ -7,7 +7,7 @@ import countries from 'i18n-iso-countries';
 import EnglishTranslations from 'i18n-iso-countries/langs/en.json';
 
 import { Header, Footer, Loader } from './components';
-import { swrDashboardFetcher, swrCountryInfoFetcher } from './utils/api';
+import { swrDashboardFetcher as swrFetcher } from './utils/api';
 import { APP_THEME } from './utils/theme/create-theme';
 
 import './App.scss';
@@ -20,13 +20,13 @@ const CountryView = React.lazy(() => import('./pages/CountryView'));
 
 const GLOBAL_DASHBOARD_SWR_CONFIG = {
 	refreshInterval: 1000 * 60, // 60 sec
-	fetcher: swrDashboardFetcher,
+	fetcher: swrFetcher,
 	suspense: true,
 };
 
 const COUNTRY_INFO_SWR_CONFIG = {
 	refreshInterval: 1000 * 60, // 60 sec
-	fetcher: swrDashboardFetcher,
+	fetcher: swrFetcher,
 	suspense: true,
 };
 
