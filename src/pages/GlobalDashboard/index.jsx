@@ -5,7 +5,7 @@ import useSWR from 'swr';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 
-import { Card, MemoizedGlobalDailyChart } from '../../components';
+import { Card, GlobalDailyChart } from '../../components';
 import { useCountriesData } from '../../utils/custom-hooks';
 
 const TotalsDashboard = () => {
@@ -204,7 +204,7 @@ const TotalsDashboard = () => {
 				</Card>
 
 				<div className="col-span-1 md:col-span-2 xl:col-span-3">
-					<MemoizedGlobalDailyChart />
+					<GlobalDailyChart />
 				</div>
 			</div>
 		</div>

@@ -22,5 +22,3 @@ export const GlobalDailyChart = () => {
 		</div>
 	);
 };
-
-export const MemoizedGlobalDailyChart = React.memo(GlobalDailyChart);

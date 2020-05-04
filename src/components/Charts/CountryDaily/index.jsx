@@ -22,5 +22,3 @@ export const CountryDailyChart = ({ countryIso3Code }) => {
 		</div>
 	);
 };
-
-export const MemoizedCountryDailyChart = React.memo(CountryDailyChart);
