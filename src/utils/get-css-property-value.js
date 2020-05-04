@@ -1,5 +1,10 @@
 export const getCssPropertyValue = (keys, theme = 'light') => {
-	const computedStyles = window.getComputedStyle(document.querySelector(`.covid-${theme}-theme`));
+	const themeElement = document.querySelector(`.covid-${theme}-theme`);
+	if (!themeElement) {
+		return {};
+	}
+
+	const computedStyles = window.getComputedStyle(themeElement);
 	return keys.reduce((out, key) => {
 		const variable = `--covid-${key}`;
 

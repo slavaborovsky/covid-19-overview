@@ -19,13 +19,13 @@ const GlobalDashboard = React.lazy(() => import('./pages/GlobalDashboard'));
 const CountryView = React.lazy(() => import('./pages/CountryView'));
 
 const GLOBAL_DASHBOARD_SWR_CONFIG = {
-	refreshInterval: 1000 * 60, // 60 sec
+	refreshInterval: 0, // 60 sec
 	fetcher: swrFetcher,
 	suspense: true,
 };
 
 const COUNTRY_INFO_SWR_CONFIG = {
-	refreshInterval: 1000 * 60, // 60 sec
+	refreshInterval: 0, // 60 sec
 	fetcher: swrFetcher,
 	suspense: true,
 };
@@ -45,8 +45,8 @@ function App() {
 
 	return (
 		<MuiThemeProvider theme={APP_THEME}>
-			<Router basename="/">
-				<div className={containerClassnames}>
+			<div className={containerClassnames}>
+				<Router basename="/">
 					<Header />
 
 					<Suspense fallback={<Loader text="Loading..." />}>
@@ -71,8 +71,8 @@ function App() {
 					</Suspense>
 
 					<Footer />
-				</div>
-			</Router>
+				</Router>
+			</div>
 		</MuiThemeProvider>
 	);
 }

@@ -5,7 +5,7 @@ import useSWR from 'swr';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 
-import { Card } from '../../components';
+import { Card, MemoizedGlobalDailyChart } from '../../components';
 import { useCountriesData } from '../../utils/custom-hooks';
 
 const TotalsDashboard = () => {
@@ -31,7 +31,7 @@ const TotalsDashboard = () => {
 			return (
 				<React.Fragment>
 					<p className="text-warning text-2xl">
-						<CountUp start={0} end={totalsData.cases} duration={1.5} separator="," />
+						<CountUp start={0} end={totalsData.cases} duration={1} separator="," />
 					</p>
 					{renderLastUpdateAt}
 				</React.Fragment>
@@ -50,7 +50,7 @@ const TotalsDashboard = () => {
 			return (
 				<React.Fragment>
 					<p className="text-error text-2xl">
-						<CountUp start={0} end={totalsData.deaths} duration={1.5} separator="," />
+						<CountUp start={0} end={totalsData.deaths} duration={1} separator="," />
 					</p>
 					{renderLastUpdateAt}
 				</React.Fragment>
@@ -69,7 +69,7 @@ const TotalsDashboard = () => {
 			return (
 				<React.Fragment>
 					<p className="text-success text-2xl">
-						<CountUp start={0} end={totalsData.recovered} duration={1.5} separator="," />
+						<CountUp start={0} end={totalsData.recovered} duration={1} separator="," />
 					</p>
 					{renderLastUpdateAt}
 				</React.Fragment>
@@ -105,11 +105,11 @@ const TotalsDashboard = () => {
 							{countryLink(data)}
 							<p className="text-center break-all">
 								<span className="text-base text-warning whitespace-no-wrap">
-									Total: <CountUp start={0} end={data.cases} duration={1.5} separator="," />
+									Total: <CountUp start={0} end={data.cases} duration={1} separator="," />
 								</span>
 								<span className="mx-2 text-default">|</span>
 								<span className="text-base text-warning whitespace-no-wrap">
-									Today: <CountUp start={0} end={data.todayCases} duration={1.5} separator="," />
+									Today: <CountUp start={0} end={data.todayCases} duration={1} separator="," />
 								</span>
 							</p>
 						</ListItem>
@@ -134,11 +134,11 @@ const TotalsDashboard = () => {
 							{countryLink(data)}
 							<p className="text-center break-all">
 								<span className="text-base text-error whitespace-no-wrap">
-									Total: <CountUp start={0} end={data.deaths} duration={1.5} separator="," />
+									Total: <CountUp start={0} end={data.deaths} duration={1} separator="," />
 								</span>
 								<span className="mx-2 text-default">|</span>
 								<span className="text-base text-error whitespace-no-wrap">
-									Today: <CountUp start={0} end={data.todayDeaths} duration={1.5} separator="," />
+									Today: <CountUp start={0} end={data.todayDeaths} duration={1} separator="," />
 								</span>
 							</p>
 						</ListItem>
@@ -163,11 +163,11 @@ const TotalsDashboard = () => {
 							{countryLink(data)}
 							<p className="text-center break-all">
 								<span className="text-base text-success whitespace-no-wrap">
-									Total: <CountUp start={0} end={data.recovered} duration={1.5} separator="," />
+									Total: <CountUp start={0} end={data.recovered} duration={1} separator="," />
 								</span>
 								<span className="mx-2 text-default">|</span>
 								<span className="text-base text-error whitespace-no-wrap">
-									Critical: <CountUp start={0} end={data.critical} duration={1.5} separator="," />
+									Critical: <CountUp start={0} end={data.critical} duration={1} separator="," />
 								</span>
 							</p>
 						</ListItem>
@@ -202,6 +202,10 @@ const TotalsDashboard = () => {
 						renderList: renderTopFiveRecoversCountries,
 					}}
 				</Card>
+
+				<div className="col-span-1 md:col-span-2 xl:col-span-3">
+					<MemoizedGlobalDailyChart />
+				</div>
 			</div>
 		</div>
 	);

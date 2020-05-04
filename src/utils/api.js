@@ -33,10 +33,10 @@ export const getCountires = async () => {
 export const getGlobalDailyData = async () => {
 	try {
 		const { data } = await axios.get(`${COUNTRY_INFO_API_BASE_URL}/api/daily`);
-		return data.map(({ confirmed, deaths, reportDate: date }) => ({
+		return data.map(({ confirmed, deaths, reportDate }) => ({
 			confirmed: confirmed.total,
 			deaths: deaths.total,
-			date,
+			date: reportDate,
 		}));
 	} catch (err) {
 		return [];

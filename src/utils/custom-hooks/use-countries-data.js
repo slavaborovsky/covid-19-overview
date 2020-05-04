@@ -34,10 +34,10 @@ function sortCounriesAndAttachCodes(data) {
 	}, []);
 
 	return {
-		sortedByCases: filteredCountriesDataWithIsoCodes.sort(confirmedCasesComparer),
-		sortedByDeaths: filteredCountriesDataWithIsoCodes.sort(deathsCasesComparer),
-		sortedByRecovers: filteredCountriesDataWithIsoCodes.sort(recoveredCasesComparer),
-		initialData: filteredCountriesDataWithIsoCodes,
+		sortedByCases: filteredCountriesDataWithIsoCodes.slice().sort(confirmedCasesComparer),
+		sortedByDeaths: filteredCountriesDataWithIsoCodes.slice().sort(deathsCasesComparer),
+		sortedByRecovers: filteredCountriesDataWithIsoCodes.slice().sort(recoveredCasesComparer),
+		initialData: filteredCountriesDataWithIsoCodes.slice(),
 	};
 }
 

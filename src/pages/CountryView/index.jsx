@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import useSWR from 'swr';
 import classNames from 'classnames';
-import { CountryPicker, CountryInfo, CountryDailyChart } from '../../components';
+import { CountryPicker, CountryInfo, MemoizedCountryDailyChart } from '../../components';
 import { useQuery } from '../../utils/custom-hooks';
 import { getCountires } from '../../utils/api';
 
@@ -46,7 +46,7 @@ export const CountryView = () => {
 						<CountryInfo selected={selectedCountry} />
 					</div>
 					<div className="grid col-span-1 lg:col-span-2">
-						<CountryDailyChart selected={selectedCountry} />
+						<MemoizedCountryDailyChart countryIso3Code={selectedCountry ? selectedCountry.iso3 : null} />
 					</div>
 				</div>
 			) : null}
