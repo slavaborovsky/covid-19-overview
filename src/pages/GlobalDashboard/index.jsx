@@ -181,7 +181,7 @@ const TotalsDashboard = () => {
 
 	return (
 		<div className="flex-auto overflow-y-auto">
-			<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 xl:gap-16 py-12 px-16 text-center">
+			<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 xl:gap-16 min-h-full py-12 px-16 text-center">
 				<Card header="Infected">
 					{{
 						renderCount: renderGlobalConfirmedCases,

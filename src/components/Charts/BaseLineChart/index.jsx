@@ -43,56 +43,60 @@ export const BaseLineChart = ({ data }) => {
 		});
 	}
 
+	const chartOptions = {
+		responsive: true,
+		maintainAspectRatio: false,
+		scales: {
+			xAxes: [
+				{
+					ticks: {
+						autoSkip: true,
+						maxTicksLimit: 20,
+						fontColor: themeProps.default,
+					},
+					gridLines: {
+						color: themeProps['chart-grid'],
+					},
+				},
+			],
+			yAxes: [
+				{
+					ticks: {
+						autoSkip: true,
+						maxTicksLimit: 10,
+						fontColor: themeProps.default,
+						callback: (label) => Number(label).toLocaleString(),
+					},
+					gridLines: {
+						color: themeProps['chart-grid'],
+					},
+				},
+			],
+		},
+		legend: {
+			labels: {
+				fontColor: themeProps.default,
+				fontSize: 14,
+			},
+		},
+		tooltips: {
+			backgroundColor: themeProps['chart-tooltip-background'],
+			titleFontColor: themeProps['chart-tooltip-text'],
+			bodyFontColor: themeProps['chart-tooltip-text'],
+			footerFontColor: themeProps['chart-tooltip-text'],
+			callbacks: {
+				label: (tooltipItem) => tooltipItem.yLabel.toLocaleString(),
+			},
+		},
+	};
+
 	return (
 		<Line
 			data={{
 				labels: data.map(({ date }) => date),
 				datasets,
 			}}
-			options={{
-				scales: {
-					xAxes: [
-						{
-							ticks: {
-								autoSkip: true,
-								maxTicksLimit: 20,
-								fontColor: themeProps.default,
-							},
-							gridLines: {
-								color: themeProps['chart-grid'],
-							},
-						},
-					],
-					yAxes: [
-						{
-							ticks: {
-								autoSkip: true,
-								maxTicksLimit: 10,
-								fontColor: themeProps.default,
-								callback: (label) => Number(label).toLocaleString(),
-							},
-							gridLines: {
-								color: themeProps['chart-grid'],
-							},
-						},
-					],
-				},
-				legend: {
-					labels: {
-						fontColor: themeProps.default,
-						fontSize: 14,
-					},
-				},
-				tooltips: {
-					backgroundColor: themeProps['chart-tooltip-background'],
-					titleFontColor: themeProps['chart-tooltip-text'],
-					bodyFontColor: themeProps['chart-tooltip-text'],
-					footerFontColor: themeProps['chart-tooltip-text'],
-					callbacks: {
-						label: (tooltipItem) => tooltipItem.yLabel.toLocaleString(),
-					},
-				},
-			}}
+			options={chartOptions}
 		/>
 	);
 };

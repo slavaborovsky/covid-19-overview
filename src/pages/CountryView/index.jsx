@@ -34,7 +34,9 @@ export const CountryView = () => {
 			{countriesListError ? (
 				renderError
 			) : countriesList ? (
-				<div className={classNames(styles.CountryViewGrid, 'grid grid-cols-1 lg:grid-cols-3 gap-6 px-16 py-8')}>
+				<div
+					className={classNames(styles.CountryViewGrid, 'grid grid-cols-1 lg:grid-cols-3 gap-6 min-h-full px-16 py-8')}
+				>
 					<div className="grid col-span-1 lg:col-span-3 justify-center items-center">
 						<CountryPicker
 							countries={countriesList}
