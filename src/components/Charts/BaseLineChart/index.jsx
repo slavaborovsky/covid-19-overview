@@ -1,23 +1,16 @@
-import React, { useContext, useMemo } from 'react';
+import React, { useContext } from 'react';
 import { Line } from 'react-chartjs-2';
 
 import { getCssPropertyValue } from '../../../utils/get-css-property-value';
-
 import { ThemeSelectorContext } from '../../../context/theme/theme-context';
 
 export const BaseLineChart = ({ data }) => {
 	const { theme } = useContext(ThemeSelectorContext);
 
-	const themeProps = useMemo(
-		() =>
-			getCssPropertyValue(
-				['warning', 'error', 'success', 'default', 'chart-grid', 'chart-tooltip-background', 'chart-tooltip-text'],
-				theme
-			),
-		[theme]
+	const themeProps = getCssPropertyValue(
+		['warning', 'error', 'success', 'default', 'chart-grid', 'chart-tooltip-background', 'chart-tooltip-text'],
+		theme
 	);
-
-	console.count('BaseLineChart');
 
 	const datasets = [
 		{
@@ -90,15 +83,19 @@ export const BaseLineChart = ({ data }) => {
 		},
 	};
 
-	return (
-		<Line
-			data={{
-				labels: data.map(({ date }) => date),
-				datasets,
-			}}
-			options={chartOptions}
-		/>
-	);
+	if (data && themeProps) {
+		return (
+			<Line
+				data={{
+					labels: data.map(({ date }) => date),
+					datasets,
+				}}
+				options={chartOptions}
+			/>
+		);
+	}
+
+	return null;
 };
 
 export const MemoizedBaseLineChart = React.memo(BaseLineChart);
