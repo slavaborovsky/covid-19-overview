@@ -11,7 +11,7 @@ export const CountryDailyChart = ({ countryIso3Code }) => {
 	return error ? (
 		<p className="text-error text-2xl text-center">Error loading country daily data</p>
 	) : (
-		<div className="bg-card shadow-2xl rounded-md flex flex-col justify-center items-center max-w-full p-3">
+		<div className="bg-card shadow-md rounded-md flex flex-col justify-center items-center max-w-full p-3">
 			{countryIso3Code && countriesDailyData[countryIso3Code] ? (
 				<MemoizedBaseLineChart data={countriesDailyData[countryIso3Code]} />
 			) : (

@@ -55,6 +55,8 @@ main {
 
 	--covid-btn-box-shadow: 0 0 2px 0 theme('colors.gray.600');
 
+	--covid-box-shadow-color: theme('colors.gray.500');
+
 	--mui-icon-hover: rgba(26, 32, 44, 0.04);
 
 	--covid-chart-grid: theme('colors.gray.400');
@@ -100,6 +102,7 @@ main {
 	--covid-on-footer: theme('colors.gray.100');
 
 	--covid-btn-box-shadow: 0 0 2px 0 theme('colors.gray.100');
+	--covid-box-shadow-color: theme('colors.gray.600');
 
 	--mui-icon-hover: rgba(203, 213, 224, 0.04);
 
