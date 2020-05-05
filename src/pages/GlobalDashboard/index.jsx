@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import CountUp from 'react-countup';
+import classNames from 'classnames';
 import useSWR from 'swr';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -8,11 +9,13 @@ import ListItem from '@material-ui/core/ListItem';
 import { Card, GlobalDailyChart } from '../../components';
 import { useCountriesData } from '../../utils/custom-hooks';
 
+import styles from './styles.module.scss';
+
 const TotalsDashboard = () => {
 	const { data: totalsData, error: totalsError } = useSWR('all');
 	const { data: countriesData, updatedAt, error: countriesError } = useCountriesData();
 
-	const [topCount] = useState(10);
+	const [topCount] = useState(5);
 
 	const globalDataError = <p className="text-error text-2xl">Global data error!</p>;
 
@@ -31,7 +34,7 @@ const TotalsDashboard = () => {
 			return (
 				<React.Fragment>
 					<p className="text-warning text-2xl">
-						<CountUp start={0} end={totalsData.cases} duration={1} separator="," />
+						<CountUp start={0} end={totalsData.cases} duration={1.5} separator="," />
 					</p>
 					{renderLastUpdateAt}
 				</React.Fragment>
@@ -50,7 +53,7 @@ const TotalsDashboard = () => {
 			return (
 				<React.Fragment>
 					<p className="text-error text-2xl">
-						<CountUp start={0} end={totalsData.deaths} duration={1} separator="," />
+						<CountUp start={0} end={totalsData.deaths} duration={1.5} separator="," />
 					</p>
 					{renderLastUpdateAt}
 				</React.Fragment>
@@ -69,7 +72,7 @@ const TotalsDashboard = () => {
 			return (
 				<React.Fragment>
 					<p className="text-success text-2xl">
-						<CountUp start={0} end={totalsData.recovered} duration={1} separator="," />
+						<CountUp start={0} end={totalsData.recovered} duration={1.5} separator="," />
 					</p>
 					{renderLastUpdateAt}
 				</React.Fragment>
@@ -105,11 +108,11 @@ const TotalsDashboard = () => {
 							{countryLink(data)}
 							<p className="text-center break-all">
 								<span className="text-base text-warning whitespace-no-wrap">
-									Total: <CountUp start={0} end={data.cases} duration={1} separator="," />
+									Total: <CountUp start={0} end={data.cases} duration={1.5} separator="," />
 								</span>
 								<span className="mx-2 text-default">|</span>
 								<span className="text-base text-warning whitespace-no-wrap">
-									Today: <CountUp start={0} end={data.todayCases} duration={1} separator="," />
+									Today: <CountUp start={0} end={data.todayCases} duration={1.5} separator="," />
 								</span>
 							</p>
 						</ListItem>
@@ -134,11 +137,11 @@ const TotalsDashboard = () => {
 							{countryLink(data)}
 							<p className="text-center break-all">
 								<span className="text-base text-error whitespace-no-wrap">
-									Total: <CountUp start={0} end={data.deaths} duration={1} separator="," />
+									Total: <CountUp start={0} end={data.deaths} duration={1.5} separator="," />
 								</span>
 								<span className="mx-2 text-default">|</span>
 								<span className="text-base text-error whitespace-no-wrap">
-									Today: <CountUp start={0} end={data.todayDeaths} duration={1} separator="," />
+									Today: <CountUp start={0} end={data.todayDeaths} duration={1.5} separator="," />
 								</span>
 							</p>
 						</ListItem>
@@ -163,11 +166,11 @@ const TotalsDashboard = () => {
 							{countryLink(data)}
 							<p className="text-center break-all">
 								<span className="text-base text-success whitespace-no-wrap">
-									Total: <CountUp start={0} end={data.recovered} duration={1} separator="," />
+									Total: <CountUp start={0} end={data.recovered} duration={1.5} separator="," />
 								</span>
 								<span className="mx-2 text-default">|</span>
 								<span className="text-base text-error whitespace-no-wrap">
-									Critical: <CountUp start={0} end={data.critical} duration={1} separator="," />
+									Critical: <CountUp start={0} end={data.critical} duration={1.5} separator="," />
 								</span>
 							</p>
 						</ListItem>
@@ -180,8 +183,13 @@ const TotalsDashboard = () => {
 	};
 
 	return (
-		<div className="flex-auto overflow-y-auto">
-			<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 xl:gap-16 min-h-full py-12 px-16 text-center">
+		<div className={classNames(styles.GlobalDashboardContainer, 'flex-auto overflow-y-auto')}>
+			<div
+				className={classNames(
+					styles.GlobalDashboardGrid,
+					'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 xl:gap-16 min-h-full py-12 px-16 text-center'
+				)}
+			>
 				<Card header="Infected">
 					{{
 						renderCount: renderGlobalConfirmedCases,
@@ -203,7 +211,7 @@ const TotalsDashboard = () => {
 					}}
 				</Card>
 
-				<div className="col-span-1 md:col-span-2 xl:col-span-3">
+				<div className="col-span-1 md:col-span-2 xl:col-span-3 relative">
 					<GlobalDailyChart />
 				</div>
 			</div>
