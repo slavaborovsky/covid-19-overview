@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, useMemo } from 'react';
+import React, { useContext, useMemo } from 'react';
 import { Line } from 'react-chartjs-2';
 
 import { getCssPropertyValue } from '../../../utils/get-css-property-value';
@@ -45,7 +45,7 @@ export const BaseLineChart = ({ data }) => {
 
 	const chartOptions = {
 		responsive: true,
-		maintainAspectRatio: false,
+		maintainAspectRatio: true,
 		scales: {
 			xAxes: [
 				{

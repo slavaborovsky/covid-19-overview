@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import CountUp from 'react-countup';
-import classNames from 'classnames';
 import useSWR from 'swr';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 
 import { Card, GlobalDailyChart } from '../../components';
 import { useCountriesData } from '../../utils/custom-hooks';
-
-import styles from './styles.module.scss';
 
 const TotalsDashboard = () => {
 	const { data: totalsData, error: totalsError } = useSWR('all');
@@ -183,35 +180,30 @@ const TotalsDashboard = () => {
 	};
 
 	return (
-		<div className={classNames(styles.GlobalDashboardContainer, 'flex-auto overflow-y-auto')}>
-			<div
-				className={classNames(
-					styles.GlobalDashboardGrid,
-					'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 xl:gap-16 min-h-full py-12 px-16 text-center'
-				)}
-			>
-				<Card header="Infected">
+		<div className="flex-auto overflow-y-auto">
+			<div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-12 xl:gap-16 min-h-full py-12 px-16 text-center">
+				<Card header="Infected" classes="col-span-2">
 					{{
 						renderCount: renderGlobalConfirmedCases,
 						renderList: renderTopFiveConfirmedCountries,
 					}}
 				</Card>
 
-				<Card header="Deaths">
+				<Card header="Deaths" classes="col-span-2">
 					{{
 						renderCount: renderGlobalDeathsCases,
 						renderList: renderTopFiveDeathsCountries,
 					}}
 				</Card>
 
-				<Card header="Recovered">
+				<Card header="Recovered" classes="col-span-2 col-start-1 md:col-start-2 xl:col-start-5">
 					{{
 						renderCount: renderGlobalRecoveredCases,
 						renderList: renderTopFiveRecoversCountries,
 					}}
 				</Card>
 
-				<div className="col-span-1 md:col-span-2 xl:col-span-3 relative">
+				<div className="col-span-2 md:col-span-4 xl:col-span-6">
 					<GlobalDailyChart />
 				</div>
 			</div>

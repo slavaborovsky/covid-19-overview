@@ -23,7 +23,7 @@ export const CountryInfo = ({ countryIso3Code }) => {
 	}, [countriesData, countryIso3Code]);
 
 	return (
-		<div className="bg-card shadow-2xl rounded-lg flex flex-col justify-center">
+		<div className="bg-card shadow-2xl rounded-md flex flex-col justify-center">
 			{data ? (
 				<React.Fragment>
 					<h2 className="text-default text-center break-all text-2xl my-3">Overview Information:</h2>
