@@ -9,7 +9,7 @@ const confirmedCasesComparer = getNumericComparer({ accessor: (data) => data.cas
 const deathsCasesComparer = getNumericComparer({ accessor: (data) => data.deaths });
 const recoveredCasesComparer = getNumericComparer({ accessor: (data) => data.recovered });
 
-function sortCounriesAndAttachCodes(data) {
+function sortCountriesAndAttachIsoCodes(data) {
 	if (!data) {
 		return {
 			sortedByCases: [],
@@ -47,7 +47,7 @@ export const useCountriesData = () => {
 
 	const memoizedCountriesData = useMemo(() => {
 		updatedAtRef.current = new Date();
-		return sortCounriesAndAttachCodes(data);
+		return sortCountriesAndAttachIsoCodes(data);
 	}, [data]);
 
 	return {

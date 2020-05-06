@@ -1,23 +1,91 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import CountUp from 'react-countup';
 import useSWR from 'swr';
+import TextField from '@material-ui/core/TextField';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 
 import { Card, GlobalDailyChart } from '../../components';
 import { useCountriesData } from '../../utils/custom-hooks';
+import { withStyles } from '@material-ui/core';
+
+const CustomTextField = withStyles({
+	root: {
+		'& .MuiFormLabel-root': {
+			color: 'var(--covid-default)',
+			opacity: 0.67,
+		},
+		'& .MuiFormHelperText-root': {
+			color: 'var(--covid-default)',
+			opacity: 0.67,
+		},
+		'& .MuiInputBase-root': {
+			color: 'var(--covid-default)',
+		},
+		'& .MuiInput-underline:before': {
+			borderBottomColor: 'var(--covid-default)',
+		},
+		'& .MuiInput-underline:hover:not(.Mui-disabled):before': {
+			borderBottomColor: 'var(--covid-default)',
+		},
+	},
+})(TextField);
 
 const TotalsDashboard = () => {
 	const { data: totalsData, error: totalsError } = useSWR('all');
 	const { data: countriesData, updatedAt, error: countriesError } = useCountriesData();
 
+	const [searchState, setSearchState] = useState({ infected: '', deaths: '', recovered: '' });
+
 	const [topCount] = useState(5);
 
 	const globalDataError = <p className="text-error text-2xl">Global data error!</p>;
 
+	const topInfectedCountries = useMemo(() => {
+		if (!(countriesData && countriesData.sortedByCases)) {
+			return [];
+		}
+
+		if (!searchState.infected || searchState.infected.trim().length === 0) {
+			return countriesData.sortedByCases.slice(0, topCount);
+		}
+
+		return countriesData.sortedByCases
+			.filter((c) => c.country.toLowerCase().includes(searchState.infected.toLowerCase()))
+			.slice(0, topCount);
+	}, [countriesData, searchState.infected, topCount]);
+
+	const topDeathsCountries = useMemo(() => {
+		if (!(countriesData && countriesData.sortedByDeaths)) {
+			return [];
+		}
+
+		if (searchState.deaths.trim().length === 0) {
+			return countriesData.sortedByDeaths.slice(0, topCount);
+		}
+
+		return countriesData.sortedByDeaths
+			.filter((c) => c.country.toLowerCase().includes(searchState.deaths.toLowerCase()))
+			.slice(0, topCount);
+	}, [countriesData, searchState.deaths, topCount]);
+
+	const topRecoveredCountries = useMemo(() => {
+		if (!(countriesData && countriesData.sortedByRecovers)) {
+			return [];
+		}
+
+		if (searchState.recovered.trim().length === 0) {
+			return countriesData.sortedByRecovers.slice(0, topCount);
+		}
+
+		return countriesData.sortedByRecovers
+			.filter((c) => c.country.toLowerCase().includes(searchState.recovered.toLowerCase()))
+			.slice(0, topCount);
+	}, [countriesData, searchState.recovered, topCount]);
+
 	const renderLastUpdateAt = (
-		<p className="text-sm opacity-60 text-default mb-4">
+		<p className="text-sm opacity-60 text-default mb-1">
 			Last update: {updatedAt.toLocaleTimeString()} {updatedAt.toLocaleDateString()}
 		</p>
 	);
@@ -97,10 +165,18 @@ const TotalsDashboard = () => {
 			return renderTopListError;
 		}
 
-		if (countriesData && countriesData.sortedByCases) {
-			return (
+		return (
+			<React.Fragment>
+				<CustomTextField
+					name="countrySearch"
+					label="Country Name"
+					fullWidth
+					helperText="Type to find a country"
+					value={searchState.infected}
+					onChange={(event) => setSearchState({ ...searchState, infected: event.target.value || '' })}
+				/>
 				<List>
-					{countriesData.sortedByCases.slice(0, topCount).map((data) => (
+					{topInfectedCountries.map((data) => (
 						<ListItem className="border shadow-inner border-default px-4 py-2 flex flex-col" key={data.country}>
 							{countryLink(data)}
 							<p className="text-center break-all">
@@ -115,10 +191,8 @@ const TotalsDashboard = () => {
 						</ListItem>
 					))}
 				</List>
-			);
-		}
-
-		return null;
+			</React.Fragment>
+		);
 	};
 
 	const renderTopFiveDeathsCountries = () => {
@@ -126,10 +200,18 @@ const TotalsDashboard = () => {
 			return renderTopListError;
 		}
 
-		if (countriesData && countriesData.sortedByDeaths) {
-			return (
+		return (
+			<React.Fragment>
+				<CustomTextField
+					name="countrySearch"
+					label="Country Name"
+					fullWidth
+					helperText="Type to find a country"
+					value={searchState.deaths}
+					onChange={(event) => setSearchState({ ...searchState, deaths: event.target.value || '' })}
+				/>
 				<List>
-					{countriesData.sortedByDeaths.slice(0, topCount).map((data) => (
+					{topDeathsCountries.map((data) => (
 						<ListItem className="border shadow-inner border-primary-300 px-4 py-2 flex flex-col" key={data.country}>
 							{countryLink(data)}
 							<p className="text-center break-all">
@@ -144,10 +226,8 @@ const TotalsDashboard = () => {
 						</ListItem>
 					))}
 				</List>
-			);
-		}
-
-		return null;
+			</React.Fragment>
+		);
 	};
 
 	const renderTopFiveRecoversCountries = () => {
@@ -155,10 +235,18 @@ const TotalsDashboard = () => {
 			return renderTopListError;
 		}
 
-		if (countriesData && countriesData.sortedByRecovers) {
-			return (
+		return (
+			<React.Fragment>
+				<CustomTextField
+					name="countrySearch"
+					label="Country Name"
+					fullWidth
+					helperText="Type to find a country"
+					value={searchState.recovered}
+					onChange={(event) => setSearchState({ ...searchState, recovered: event.target.value || '' })}
+				/>
 				<List>
-					{countriesData.sortedByRecovers.slice(0, topCount).map((data) => (
+					{topRecoveredCountries.map((data) => (
 						<ListItem className="border shadow-inner border-primary-300 px-4 py-2 flex flex-col" key={data.country}>
 							{countryLink(data)}
 							<p className="text-center break-all">
@@ -173,10 +261,8 @@ const TotalsDashboard = () => {
 						</ListItem>
 					))}
 				</List>
-			);
-		}
-
-		return null;
+			</React.Fragment>
+		);
 	};
 
 	return (
