@@ -1,4 +1,5 @@
 module.exports = {
+	purge: ['./src/**/*.html', './src/**/*.js', './src/**/*.jsx'],
 	theme: {
 		fontFamily: {
 			display: 'var(--font-display)',

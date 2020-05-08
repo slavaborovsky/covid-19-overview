@@ -11614,11 +11614,6 @@ video {
   transition-duration: 1000ms;
 }
 
-:root {
-  --font-display: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
 html,
 body,
 main {
@@ -11632,6 +11627,11 @@ button,
 button:hover,
 button:focus {
   outline: none;
+}
+
+:root {
+  --font-display: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .covid-light-theme {

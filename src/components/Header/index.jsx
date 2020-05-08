@@ -9,7 +9,7 @@ export const Header = () => {
 	const { theme, toggleTheme } = useContext(ThemeSelectorContext);
 
 	return (
-		<header className="app-header bg-header w-full px-16 flex flex-row items-center">
+		<header className="app-header bg-header shadow-md w-full px-16 relative flex flex-row items-center">
 			<Link to="/" className="text-lg md:text-xl lg:text-2xl text-on-header mr-8">
 				COVID-19
 			</Link>
