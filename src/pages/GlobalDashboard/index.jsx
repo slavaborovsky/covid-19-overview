@@ -59,7 +59,12 @@ const TotalsDashboard = () => {
 		</p>
 	);
 
-	console.count('Global');
+	console.log({
+		totals: { ...totalsData },
+		countries: countriesData ? countriesData.length : 0,
+		sort: { ...sortState },
+		top: { ...topCountState },
+	});
 
 	const renderInfectedHeader = () => (
 		<React.Fragment>

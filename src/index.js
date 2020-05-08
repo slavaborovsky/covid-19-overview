@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './tailwind.generated.css';
 import App from './App';
+import './tailwind.generated.css';
 import { ThemeContextProvider } from './context/theme/context-provider';
 import * as serviceWorker from './serviceWorker';
 

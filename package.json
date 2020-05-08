@@ -27,7 +27,7 @@
 		"swr": "^0.2.0"
 	},
 	"scripts": {
-		"build:tailwind": "postcss src/styles/index.css -o src/tailwind.generated.css",
+		"build:tailwind": "cross-env NODE_ENV=production postcss src/styles/index.css -o src/tailwind.generated.css",
 		"watch:tailwind": "postcss src/styles/index.css -o src/tailwind.generated.css -w",
 		"start": " react-scripts start",
 		"prebuild": "yarn run build:tailwind",
@@ -55,7 +55,7 @@
 		]
 	},
 	"devDependencies": {
-		"@fullhuman/postcss-purgecss": "^2.1.2",
+		"@fullhuman/postcss-purgecss": "^2.2.0",
 		"autoprefixer": "^9.7.6",
 		"cross-env": "^7.0.2",
 		"gh-pages": "^2.2.0",
