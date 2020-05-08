@@ -60,3 +60,9 @@ export const MUI_BUTTON_OVERRIDES = {
 		},
 	},
 };
+
+export const MUI_ICON_BUTTON_OVERRIDES = {
+	root: {
+		color: 'var(--covid-default)',
+	},
+};

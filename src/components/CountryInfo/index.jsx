@@ -17,7 +17,7 @@ export const CountryInfo = ({ countryIso3Code }) => {
 
 	useEffect(() => {
 		if (countriesData) {
-			const countryData = countriesData.initialData.find(({ iso3 }) => countryIso3Code === iso3);
+			const countryData = countriesData.find(({ iso3 }) => countryIso3Code === iso3);
 			setData(countryData);
 		}
 	}, [countriesData, countryIso3Code]);

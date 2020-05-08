@@ -2,92 +2,105 @@ import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import CountUp from 'react-countup';
 import useSWR from 'swr';
-import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 
 import { Card, GlobalDailyChart } from '../../components';
 import { useCountriesData } from '../../utils/custom-hooks';
-import { withStyles } from '@material-ui/core';
+import { getNumericComparer } from '../../utils/get-array-comparer';
 
-const CustomTextField = withStyles({
-	root: {
-		'& .MuiFormLabel-root': {
-			color: 'var(--covid-default)',
-			opacity: 0.67,
-		},
-		'& .MuiFormHelperText-root': {
-			color: 'var(--covid-default)',
-			opacity: 0.67,
-		},
-		'& .MuiInputBase-root': {
-			color: 'var(--covid-default)',
-		},
-		'& .MuiInput-underline:before': {
-			borderBottomColor: 'var(--covid-default)',
-		},
-		'& .MuiInput-underline:hover:not(.Mui-disabled):before': {
-			borderBottomColor: 'var(--covid-default)',
-		},
-	},
-})(TextField);
+const getInfectedComparer = (ordering = 'desc') => {
+	return getNumericComparer({ accessor: (data) => data.cases, desc: ordering === 'desc' });
+};
+const getDeathsComparer = (ordering = 'desc') => {
+	return getNumericComparer({ accessor: (data) => data.deaths, desc: ordering === 'desc' });
+};
+const getRecoversComparer = (ordering = 'desc') => {
+	return getNumericComparer({ accessor: (data) => data.recovered, desc: ordering === 'desc' });
+};
 
 const TotalsDashboard = () => {
 	const { data: totalsData, error: totalsError } = useSWR('all');
 	const { data: countriesData, updatedAt, error: countriesError } = useCountriesData();
 
-	const [searchState, setSearchState] = useState({ infected: '', deaths: '', recovered: '' });
+	const [topCountState, setTopCountState] = useState({
+		infected: 5,
+		deaths: 5,
+		recovers: 5,
+	});
 
-	const [topCount] = useState(5);
+	const [sortState, setSortState] = useState({
+		infected: 'desc',
+		deaths: 'desc',
+		recovers: 'desc',
+	});
+
+	const sortedByInfected = useMemo(() => {
+		return countriesData.slice().sort(getInfectedComparer(sortState.infected));
+	}, [countriesData, sortState.infected]);
+
+	const sortedByDeaths = useMemo(() => {
+		return countriesData.slice().sort(getDeathsComparer(sortState.deaths));
+	}, [countriesData, sortState.deaths]);
+
+	const sortedByRecovers = useMemo(() => {
+		return countriesData.slice().sort(getRecoversComparer(sortState.recovers));
+	}, [countriesData, sortState.recovers]);
 
 	const globalDataError = <p className="text-error text-2xl">Global data error!</p>;
-
-	const topInfectedCountries = useMemo(() => {
-		if (!(countriesData && countriesData.sortedByCases)) {
-			return [];
-		}
-
-		if (!searchState.infected || searchState.infected.trim().length === 0) {
-			return countriesData.sortedByCases.slice(0, topCount);
-		}
-
-		return countriesData.sortedByCases
-			.filter((c) => c.country.toLowerCase().includes(searchState.infected.toLowerCase()))
-			.slice(0, topCount);
-	}, [countriesData, searchState.infected, topCount]);
-
-	const topDeathsCountries = useMemo(() => {
-		if (!(countriesData && countriesData.sortedByDeaths)) {
-			return [];
-		}
-
-		if (searchState.deaths.trim().length === 0) {
-			return countriesData.sortedByDeaths.slice(0, topCount);
-		}
-
-		return countriesData.sortedByDeaths
-			.filter((c) => c.country.toLowerCase().includes(searchState.deaths.toLowerCase()))
-			.slice(0, topCount);
-	}, [countriesData, searchState.deaths, topCount]);
-
-	const topRecoveredCountries = useMemo(() => {
-		if (!(countriesData && countriesData.sortedByRecovers)) {
-			return [];
-		}
-
-		if (searchState.recovered.trim().length === 0) {
-			return countriesData.sortedByRecovers.slice(0, topCount);
-		}
-
-		return countriesData.sortedByRecovers
-			.filter((c) => c.country.toLowerCase().includes(searchState.recovered.toLowerCase()))
-			.slice(0, topCount);
-	}, [countriesData, searchState.recovered, topCount]);
 
 	const renderLastUpdateAt = (
 		<p className="text-sm opacity-60 text-default mb-1">
 			Last update: {updatedAt.toLocaleTimeString()} {updatedAt.toLocaleDateString()}
 		</p>
+	);
+
+	console.count('Global');
+
+	const renderInfectedHeader = () => (
+		<React.Fragment>
+			Infected
+			<IconButton
+				onClick={() => {
+					setSortState((s) => ({ ...s, infected: sortState.infected === 'desc' ? 'asc' : 'desc' }));
+					setTopCountState((s) => ({ ...s, infected: 5 }));
+				}}
+			>
+				{sortState.infected === 'desc' ? <ArrowDownwardIcon /> : <ArrowUpwardIcon />}
+			</IconButton>
+		</React.Fragment>
+	);
+
+	const renderDeathsHeader = () => (
+		<React.Fragment>
+			Deaths
+			<IconButton
+				onClick={() => {
+					setSortState((s) => ({ ...s, deaths: sortState.deaths === 'desc' ? 'asc' : 'desc' }));
+					setTopCountState((s) => ({ ...s, deaths: 5 }));
+				}}
+			>
+				{sortState.deaths === 'desc' ? <ArrowDownwardIcon /> : <ArrowUpwardIcon />}
+			</IconButton>
+		</React.Fragment>
+	);
+
+	const renderRecoversHeader = () => (
+		<React.Fragment>
+			Recovers
+			<IconButton
+				onClick={() => {
+					setSortState((s) => ({ ...s, recovers: sortState.recovers === 'desc' ? 'asc' : 'desc' }));
+					setTopCountState((s) => ({ ...s, recovers: 5 }));
+				}}
+			>
+				{sortState.recovers === 'desc' ? <ArrowDownwardIcon /> : <ArrowUpwardIcon />}
+			</IconButton>
+		</React.Fragment>
 	);
 
 	const renderGlobalConfirmedCases = () => {
@@ -160,24 +173,20 @@ const TotalsDashboard = () => {
 		);
 	};
 
-	const renderTopFiveConfirmedCountries = () => {
+	const renderTopFiveInfectedCountries = () => {
 		if (countriesError) {
 			return renderTopListError;
 		}
 
+		if (!(sortedByInfected && sortedByInfected.length > 0)) {
+			return null;
+		}
+
 		return (
 			<React.Fragment>
-				<CustomTextField
-					name="countrySearch"
-					label="Country Name"
-					fullWidth
-					helperText="Type to find a country"
-					value={searchState.infected}
-					onChange={(event) => setSearchState({ ...searchState, infected: event.target.value || '' })}
-				/>
 				<List>
-					{topInfectedCountries.map((data) => (
-						<ListItem className="border shadow-inner border-default px-4 py-2 flex flex-col" key={data.country}>
+					{sortedByInfected.slice(0, topCountState.infected).map((data) => (
+						<ListItem className="shadow-inner px-4 py-2 flex flex-col" key={data.country}>
 							{countryLink(data)}
 							<p className="text-center break-all">
 								<span className="text-base text-warning whitespace-no-wrap">
@@ -191,6 +200,9 @@ const TotalsDashboard = () => {
 						</ListItem>
 					))}
 				</List>
+				{topCountState.infected < countriesData.length && (
+					<Button onClick={() => setTopCountState((s) => ({ ...s, infected: s.infected * 2 }))}>Show More</Button>
+				)}
 			</React.Fragment>
 		);
 	};
@@ -200,19 +212,15 @@ const TotalsDashboard = () => {
 			return renderTopListError;
 		}
 
+		if (!(sortedByDeaths && sortedByDeaths.length > 0)) {
+			return null;
+		}
+
 		return (
 			<React.Fragment>
-				<CustomTextField
-					name="countrySearch"
-					label="Country Name"
-					fullWidth
-					helperText="Type to find a country"
-					value={searchState.deaths}
-					onChange={(event) => setSearchState({ ...searchState, deaths: event.target.value || '' })}
-				/>
 				<List>
-					{topDeathsCountries.map((data) => (
-						<ListItem className="border shadow-inner border-primary-300 px-4 py-2 flex flex-col" key={data.country}>
+					{sortedByDeaths.slice(0, topCountState.deaths).map((data) => (
+						<ListItem className="shadow-inner px-4 py-2 flex flex-col" key={data.country}>
 							{countryLink(data)}
 							<p className="text-center break-all">
 								<span className="text-base text-error whitespace-no-wrap">
@@ -226,6 +234,9 @@ const TotalsDashboard = () => {
 						</ListItem>
 					))}
 				</List>
+				{topCountState.deaths < countriesData.length && (
+					<Button onClick={() => setTopCountState((s) => ({ ...s, deaths: s.deaths * 2 }))}>Show More</Button>
+				)}
 			</React.Fragment>
 		);
 	};
@@ -235,19 +246,15 @@ const TotalsDashboard = () => {
 			return renderTopListError;
 		}
 
+		if (!(sortedByRecovers && sortedByRecovers.length > 0)) {
+			return null;
+		}
+
 		return (
 			<React.Fragment>
-				<CustomTextField
-					name="countrySearch"
-					label="Country Name"
-					fullWidth
-					helperText="Type to find a country"
-					value={searchState.recovered}
-					onChange={(event) => setSearchState({ ...searchState, recovered: event.target.value || '' })}
-				/>
 				<List>
-					{topRecoveredCountries.map((data) => (
-						<ListItem className="border shadow-inner border-primary-300 px-4 py-2 flex flex-col" key={data.country}>
+					{sortedByRecovers.slice(0, topCountState.recovers).map((data) => (
+						<ListItem className="shadow-inner px-4 py-2 flex flex-col" key={data.country}>
 							{countryLink(data)}
 							<p className="text-center break-all">
 								<span className="text-base text-success whitespace-no-wrap">
@@ -261,6 +268,9 @@ const TotalsDashboard = () => {
 						</ListItem>
 					))}
 				</List>
+				{topCountState.recovers < countriesData.length && (
+					<Button onClick={() => setTopCountState((s) => ({ ...s, recovers: s.recovers * 2 }))}>Show More</Button>
+				)}
 			</React.Fragment>
 		);
 	};
@@ -268,22 +278,25 @@ const TotalsDashboard = () => {
 	return (
 		<div className="flex-auto overflow-y-auto">
 			<div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-12 xl:gap-16 min-h-full py-12 px-16 text-center">
-				<Card header="Infected" classes="col-span-2">
+				<Card classes="col-span-2">
 					{{
+						renderHeader: renderInfectedHeader,
 						renderCount: renderGlobalConfirmedCases,
-						renderList: renderTopFiveConfirmedCountries,
+						renderList: renderTopFiveInfectedCountries,
 					}}
 				</Card>
 
-				<Card header="Deaths" classes="col-span-2">
+				<Card classes="col-span-2">
 					{{
+						renderHeader: renderDeathsHeader,
 						renderCount: renderGlobalDeathsCases,
 						renderList: renderTopFiveDeathsCountries,
 					}}
 				</Card>
 
-				<Card header="Recovered" classes="col-span-2 col-start-1 md:col-start-2 xl:col-start-5">
+				<Card classes="col-span-2 col-start-1 md:col-start-2 xl:col-start-5">
 					{{
+						renderHeader: renderRecoversHeader,
 						renderCount: renderGlobalRecoveredCases,
 						renderList: renderTopFiveRecoversCountries,
 					}}

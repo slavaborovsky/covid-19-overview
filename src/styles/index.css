@@ -16,6 +16,12 @@ main {
 	width: 100%;
 }
 
+button,
+button:hover,
+button:focus {
+	outline: none;
+}
+
 .covid-light-theme {
 	--covid-default: theme('colors.gray.900');
 

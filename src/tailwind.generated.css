@@ -11628,6 +11628,12 @@ main {
   width: 100%;
 }
 
+button,
+button:hover,
+button:focus {
+  outline: none;
+}
+
 .covid-light-theme {
   --covid-default: #1a202c;
   --covid-primary: #805ad5;

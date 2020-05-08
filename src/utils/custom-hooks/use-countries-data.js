@@ -1,22 +1,12 @@
 import { useMemo, useRef } from 'react';
 import useSWR from 'swr';
 
-import { getNumericComparer } from '../get-array-comparer';
 import { WORLD_REGIONS } from '../world-regions';
 import { getCountryIsoCodes } from '../get-country-iso-codes';
 
-const confirmedCasesComparer = getNumericComparer({ accessor: (data) => data.cases });
-const deathsCasesComparer = getNumericComparer({ accessor: (data) => data.deaths });
-const recoveredCasesComparer = getNumericComparer({ accessor: (data) => data.recovered });
-
 function sortCountriesAndAttachIsoCodes(data) {
 	if (!data) {
-		return {
-			sortedByCases: [],
-			sortedByDeaths: [],
-			sortedByRecovers: [],
-			initialData: [],
-		};
+		return [];
 	}
 
 	const filteredCountriesDataWithIsoCodes = data.reduce((out, c) => {
@@ -33,12 +23,7 @@ function sortCountriesAndAttachIsoCodes(data) {
 		return out;
 	}, []);
 
-	return {
-		sortedByCases: filteredCountriesDataWithIsoCodes.slice().sort(confirmedCasesComparer),
-		sortedByDeaths: filteredCountriesDataWithIsoCodes.slice().sort(deathsCasesComparer),
-		sortedByRecovers: filteredCountriesDataWithIsoCodes.slice().sort(recoveredCasesComparer),
-		initialData: filteredCountriesDataWithIsoCodes.slice(),
-	};
+	return filteredCountriesDataWithIsoCodes.slice();
 }
 
 export const useCountriesData = () => {

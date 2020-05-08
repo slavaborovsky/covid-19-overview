@@ -1,1 +1,1 @@
-export { MUI_BUTTON_OVERRIDES } from './Button';
+export { MUI_BUTTON_OVERRIDES, MUI_ICON_BUTTON_OVERRIDES } from './Buttons';
