@@ -28,7 +28,7 @@ export const CountryInfo = ({ countryIso3Code }) => {
 				<React.Fragment>
 					<h2 className="text-default text-center break-all text-2xl my-3">Overview Information:</h2>
 					<List>
-						<CustomListItem className="border-t border-default flex flex-col shadow-inner">
+						<CustomListItem className="flex flex-col shadow-inner">
 							<p className="text-default text-center break-all">
 								<span className="text-base whitespace-no-wrap">
 									Infected: <CountUp className="text-warning" start={0} end={data.cases} duration={1} separator="," />
@@ -44,7 +44,7 @@ export const CountryInfo = ({ countryIso3Code }) => {
 							</p>
 						</CustomListItem>
 
-						<CustomListItem className="border-t border-default flex flex-col shadow-inner">
+						<CustomListItem className="flex flex-col shadow-inner">
 							<p className="text-default text-center break-all">
 								<span className="text-base whitespace-no-wrap">
 									Deaths: <CountUp className="text-error" start={0} end={data.deaths} duration={1} separator="," />
@@ -60,7 +60,7 @@ export const CountryInfo = ({ countryIso3Code }) => {
 							</p>
 						</CustomListItem>
 
-						<CustomListItem className="border-t border-default flex flex-col shadow-inner">
+						<CustomListItem className="flex flex-col shadow-inner">
 							<p className="text-default text-center break-all">
 								<span className="text-base whitespace-no-wrap">
 									Recovered:{' '}
@@ -69,7 +69,7 @@ export const CountryInfo = ({ countryIso3Code }) => {
 							</p>
 						</CustomListItem>
 
-						<CustomListItem className="border-t border-b border-default flex flex-col shadow-inner">
+						<CustomListItem className="flex flex-col shadow-inner">
 							<p className="text-default text-center break-all">
 								<span className="text-base whitespace-no-wrap">
 									Total tests:{' '}
