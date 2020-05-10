@@ -1,6 +1,8 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import CountUp from 'react-countup';
+import classNames from 'classnames';
+import { debounce } from 'throttle-debounce';
 import useSWR from 'swr';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
@@ -8,10 +10,13 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 
 import { Card } from '../../components';
 import { useCountriesData } from '../../utils/custom-hooks';
 import { getNumericComparer } from '../../utils/get-array-comparer';
+
+import styles from './styles.module.scss';
 
 const getInfectedComparer = (ordering = 'desc') => {
 	return getNumericComparer({ accessor: (data) => data.cases, desc: ordering === 'desc' });
@@ -27,6 +32,8 @@ const TotalsDashboard = () => {
 	const { data: totalsData, error: totalsError } = useSWR('all');
 	const { data: countriesData, updatedAt, error: countriesError } = useCountriesData();
 
+	const gridRef = useRef();
+
 	const [topCountState, setTopCountState] = useState({
 		infected: 5,
 		deaths: 5,
@@ -38,6 +45,33 @@ const TotalsDashboard = () => {
 		deaths: 'desc',
 		recovers: 'desc',
 	});
+
+	const [showScrollToTopBtn, setShowScrollToTopBtn] = useState(false);
+
+	const onPageScrollCallback = useCallback(
+		debounce(150, () => {
+			if (gridRef.current.scrollTop > 250) {
+				setShowScrollToTopBtn(true);
+			} else {
+				setShowScrollToTopBtn(false);
+			}
+		}),
+		[]
+	);
+
+	useEffect(() => {
+		gridRef.current.addEventListener('scroll', onPageScrollCallback);
+
+		return () => {
+			console.log('Here!');
+			window.removeEventListener('scroll', onPageScrollCallback);
+		};
+	}, [onPageScrollCallback]);
+
+	const scrollToTop = () => {
+		gridRef.current.scrollTo(0, 0);
+		setShowScrollToTopBtn(false);
+	};
 
 	const sortedByInfected = useMemo(() => {
 		return countriesData.slice().sort(getInfectedComparer(sortState.infected));
@@ -274,7 +308,7 @@ const TotalsDashboard = () => {
 	};
 
 	return (
-		<div className="flex-auto overflow-y-auto">
+		<div className="flex-auto overflow-y-auto" ref={gridRef}>
 			<div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-12 xl:gap-16 min-h-full py-12 px-16 text-center">
 				<Card classes="col-span-2">
 					{{
@@ -300,6 +334,13 @@ const TotalsDashboard = () => {
 					}}
 				</Card>
 			</div>
+			{showScrollToTopBtn && (
+				<div className={classNames(styles.scrollToTop, 'fixed z-50 cursor-pointer')}>
+					<IconButton onClick={scrollToTop} color="secondary">
+						<ArrowDropUpIcon fontSize="large" />
+					</IconButton>
+				</div>
+			)}
 		</div>
 	);
 };

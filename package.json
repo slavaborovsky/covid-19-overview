@@ -25,7 +25,8 @@
 		"react-router-dom": "^5.1.2",
 		"react-scripts": "3.4.1",
 		"react-spring": "^8.0.27",
-		"swr": "^0.2.0"
+		"swr": "^0.2.0",
+		"throttle-debounce": "^2.1.0"
 	},
 	"scripts": {
 		"build:tailwind": "cross-env NODE_ENV=production postcss src/styles/index.css -o src/tailwind.generated.css",
