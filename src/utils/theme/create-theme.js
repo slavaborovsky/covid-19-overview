@@ -1,6 +1,6 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
-import { MUI_BUTTON_OVERRIDES, MUI_ICON_BUTTON_OVERRIDES } from './overrides';
+import { MUI_BUTTON_OVERRIDES, MUI_ICON_BUTTON_OVERRIDES, MUI_TAB_OVERRIDES } from './overrides';
 
 export const APP_THEME = createMuiTheme({
 	palette: {
@@ -16,5 +16,6 @@ export const APP_THEME = createMuiTheme({
 	overrides: {
 		MuiButton: MUI_BUTTON_OVERRIDES,
 		MuiIconButton: MUI_ICON_BUTTON_OVERRIDES,
+		MuiTab: MUI_TAB_OVERRIDES,
 	},
 });

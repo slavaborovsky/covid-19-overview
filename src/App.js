@@ -13,16 +13,12 @@ import './App.scss';
 
 countries.registerLocale(EnglishTranslations);
 
-const GlobalDashboard = React.lazy(() => import('./pages/GlobalDashboard'));
+const GlobalDashboard = React.lazy(() => import('./pages/Dashboard'));
 const CountryView = React.lazy(() => import('./pages/CountryView'));
+const WorldView = React.lazy(() => import('./pages/WorldView'));
+const UsaView = React.lazy(() => import('./pages/UsaView'));
 
-const GLOBAL_DASHBOARD_SWR_CONFIG = {
-	refreshInterval: 1000 * 60, // 60 sec
-	fetcher: swrFetcher,
-	suspense: true,
-};
-
-const COUNTRY_INFO_SWR_CONFIG = {
+const APP_SWR_CONFIG = {
 	refreshInterval: 1000 * 60, // 60 sec
 	fetcher: swrFetcher,
 	suspense: true,
@@ -37,24 +33,20 @@ function App() {
 				<Header />
 
 				<Suspense fallback={<Loader text="Loading..." />}>
-					<Switch location={location}>
-						<Route exact path="/">
-							<Redirect to={{ pathname: '/dashboard' }} />
-						</Route>
-						<Route path="/dashboard">
-							<SWRConfig value={GLOBAL_DASHBOARD_SWR_CONFIG}>
-								<GlobalDashboard />
-							</SWRConfig>
-						</Route>
-						<Route path="/countries">
-							<SWRConfig value={COUNTRY_INFO_SWR_CONFIG}>
-								<CountryView />
-							</SWRConfig>
-						</Route>
-						<Route path="*">
-							<Loader text="Not Found..." />
-						</Route>
-					</Switch>
+					<SWRConfig value={APP_SWR_CONFIG}>
+						<Switch location={location}>
+							<Route exact path="/">
+								<Redirect to={{ pathname: '/dashboard' }} />
+							</Route>
+							<Route path="/dashboard" component={GlobalDashboard} />
+							<Route path="/world" component={WorldView} />
+							<Route path="/usa" component={UsaView} />
+							<Route path="/countries" component={CountryView} />
+							<Route path="*">
+								<Loader text="Not Found..." />
+							</Route>
+						</Switch>
+					</SWRConfig>
 				</Suspense>
 
 				<Footer />

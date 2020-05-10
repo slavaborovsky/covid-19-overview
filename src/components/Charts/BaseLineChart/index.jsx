@@ -38,7 +38,7 @@ export const BaseLineChart = ({ data }) => {
 
 	const chartOptions = {
 		responsive: true,
-		maintainAspectRatio: true,
+		maintainAspectRatio: false,
 		scales: {
 			xAxes: [
 				{

@@ -19,6 +19,14 @@ export const Header = () => {
 					Dashboard
 				</NavLink>
 
+				<NavLink to="/world" activeClassName="active">
+					World
+				</NavLink>
+
+				<NavLink to="/usa" activeClassName="active">
+					USA
+				</NavLink>
+
 				<NavLink to="/countries" activeClassName="active">
 					Countries
 				</NavLink>

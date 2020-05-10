@@ -9,7 +9,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 
-import { Card, GlobalDailyChart } from '../../components';
+import { Card } from '../../components';
 import { useCountriesData } from '../../utils/custom-hooks';
 import { getNumericComparer } from '../../utils/get-array-comparer';
 
@@ -299,10 +299,6 @@ const TotalsDashboard = () => {
 						renderList: renderTopFiveRecoversCountries,
 					}}
 				</Card>
-
-				<div className="col-span-2 md:col-span-4 xl:col-span-6">
-					<GlobalDailyChart />
-				</div>
 			</div>
 		</div>
 	);

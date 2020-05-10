@@ -16,7 +16,7 @@ export const GlobalDailyChart = () => {
 				<MemoizedBaseLineChart data={globalDailyData} />
 			) : (
 				<p className="text-base italic text-default text-center my-auto mx-6">
-					None global historical details available
+					None of global historical details available
 				</p>
 			)}
 		</div>

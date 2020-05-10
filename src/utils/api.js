@@ -36,7 +36,7 @@ export const getGlobalDailyData = async () => {
 		return data.map(({ confirmed, deaths, reportDate }) => ({
 			confirmed: confirmed.total,
 			deaths: deaths.total,
-			date: reportDate,
+			date: new Date(reportDate).toLocaleDateString(),
 		}));
 	} catch (err) {
 		return [];
@@ -53,6 +53,22 @@ export const getCountriesDailyData = async () => {
 			}
 			return out;
 		}, {});
+	} catch (err) {
+		return [];
+	}
+};
+
+export const getUSADailyData = async () => {
+	try {
+		const { data } = await axios('https://covidtracking.com/api/v1/us/daily.json');
+		return data
+			.map(({ positive, death, recovered, dateChecked }) => ({
+				confirmed: positive,
+				deaths: death,
+				recovered,
+				date: new Date(dateChecked).toLocaleDateString(),
+			}))
+			.reverse();
 	} catch (err) {
 		return [];
 	}
