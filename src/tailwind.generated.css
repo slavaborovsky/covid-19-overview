@@ -11632,9 +11632,6 @@ button:focus {
 :root {
   --font-display: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-.covid-light-theme {
   --covid-default: #1a202c;
   --covid-primary: #805ad5;
   --covid-primary-100: #faf5ff;
@@ -11672,7 +11669,7 @@ button:focus {
   --covid-chart-tooltip-text: #edf2f7;
 }
 
-.covid-dark-theme {
+html[data-theme='dark'] {
   --covid-default: #cbd5e0;
   --covid-primary: #d53f8c;
   --covid-primary-100: #fff5f7;
