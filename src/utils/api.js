@@ -73,3 +73,20 @@ export const getUSADailyData = async () => {
 		return [];
 	}
 };
+
+export const getUSASpreadingData = async () => {
+	try {
+		const { data } = await axios('https://covidtracking.com/api/v1/states/current.json');
+		return data
+			.map(({ state, positive, death, recovered, dateChecked }) => ({
+				iso2: state,
+				cases: positive,
+				deaths: death,
+				recovered,
+				date: new Date(dateChecked).toLocaleDateString(),
+			}))
+			.reverse();
+	} catch (err) {
+		return [];
+	}
+};

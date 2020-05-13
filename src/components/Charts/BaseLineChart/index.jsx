@@ -7,10 +7,15 @@ import { ThemeSelectorContext } from '../../../context/theme/theme-context';
 export const BaseLineChart = ({ data }) => {
 	const { theme } = useContext(ThemeSelectorContext);
 
-	const themeProps = getCssPropertyValue(
-		['warning', 'error', 'success', 'default', 'chart-grid', 'chart-tooltip-background', 'chart-tooltip-text'],
-		theme
-	);
+	const themeProps = getCssPropertyValue([
+		'warning',
+		'error',
+		'success',
+		'default',
+		'chart-grid',
+		'chart-tooltip-background',
+		'chart-tooltip-text',
+	]);
 
 	const datasets = [
 		{

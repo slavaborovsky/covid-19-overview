@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
-import { GlobalDailyChart } from '../../components';
+import { GlobalDailyChart, WorldMapChart } from '../../components';
 
 function a11yProps(index) {
 	return {
@@ -12,18 +12,22 @@ function a11yProps(index) {
 	};
 }
 
-const TabPanel = ({ children, index: tabIndex, value: activeTabIndex, ...rest }) => (
-	<div
-		className="flex-auto"
-		role="tabpanel"
-		hidden={tabIndex !== activeTabIndex}
-		id={`world-info-tab-panel-${tabIndex}`}
-		aria-labelledby={`world-info-tab-${tabIndex}`}
-		{...rest}
-	>
-		{tabIndex === activeTabIndex && <React.Fragment>{children}</React.Fragment>}
-	</div>
-);
+const TabPanel = ({ children, index: tabIndex, value: activeTabIndex, ...rest }) => {
+	const isActiveTab = tabIndex === activeTabIndex;
+	const classes = classNames('flex-auto', isActiveTab ? 'flex flex-col' : null);
+	return (
+		<div
+			className={classes}
+			role="tabpanel"
+			hidden={isActiveTab === false}
+			id={`world-info-tab-panel-${tabIndex}`}
+			aria-labelledby={`world-info-tab-${tabIndex}`}
+			{...rest}
+		>
+			{isActiveTab && <React.Fragment>{children}</React.Fragment>}
+		</div>
+	);
+};
 
 const WorldView = () => {
 	const [activeTabIndex, setActiveTabIndex] = useState(0);
@@ -56,7 +60,7 @@ const WorldView = () => {
 				</Tabs>
 			</div>
 			<TabPanel value={activeTabIndex} index={0}>
-				<h2>World map chart!!!</h2>
+				<WorldMapChart />
 			</TabPanel>
 			<TabPanel value={activeTabIndex} index={1}>
 				<GlobalDailyChart />
