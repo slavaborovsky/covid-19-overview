@@ -63,6 +63,7 @@ button:focus {
 
 	--mui-icon-hover: rgba(26, 32, 44, 0.04);
 
+	--covid-map-text: theme('colors.gray.900');
 	--covid-chart-grid: theme('colors.gray.400');
 	--covid-chart-tooltip-background: theme('colors.gray.800');
 	--covid-chart-tooltip-text: theme('colors.gray.200');

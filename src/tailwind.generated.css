@@ -11664,6 +11664,7 @@ button:focus {
   --covid-btn-box-shadow: 0 0 2px 0 #718096;
   --covid-box-shadow-color: #a0aec0;
   --mui-icon-hover: rgba(26, 32, 44, 0.04);
+  --covid-map-text: #1a202c;
   --covid-chart-grid: #cbd5e0;
   --covid-chart-tooltip-background: #2d3748;
   --covid-chart-tooltip-text: #edf2f7;
