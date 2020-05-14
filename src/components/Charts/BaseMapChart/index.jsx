@@ -26,13 +26,13 @@ const formatTooltip = (name, data) => {
 
 	return `<p class="text-center text-base italic">${name}</p>
 	<p>
-		Cases - <b class="text-warning">${data.cases}</b>
+		Cases - <b class="text-warning">${data.cases ? data.cases.toLocaleString() : 'Unknown'}</b>
 	</p>
 	<p>
-		Deaths - <b class="text-error">${data.deaths || 'Unknown'}</b>
+		Deaths - <b class="text-error">${data.deaths ? data.deaths.toLocaleString() : 'Unknown'}</b>
 	</p>
 	<p>
-		Recovers - <b class="text-success">${data.recovered || 'Unknown'}</b>
+		Recovers - <b class="text-success">${data.recovered ? data.recovered.toLocaleString() : 'Unknown'}</b>
 	</p>`;
 };
 
