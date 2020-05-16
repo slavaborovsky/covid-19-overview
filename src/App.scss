@@ -1,8 +1,12 @@
 a {
-	color: var(--link-color);
+	color: var(--covid--link);
+
+	&:hover,
+	&.active {
+		color: var(--covid-link-active);
+	}
 
 	&.active {
 		font-weight: 600;
-		color: var(--link-active-color);
 	}
 }

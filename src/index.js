@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter as Router } from 'react-router-dom';
+// will be created dynamically during development or build phase
 import './tailwind.generated.css';
 import App from './App';
 

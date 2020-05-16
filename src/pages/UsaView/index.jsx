@@ -51,7 +51,8 @@ const UsaView = () => {
 				<Tabs
 					action={tabsRef}
 					value={activeTabIndex}
-					textColor="secondary"
+					textColor="primary"
+					indicatorColor="primary"
 					centered={true}
 					onChange={changeActiveTab}
 					aria-label="USA Covid-19 tabs"

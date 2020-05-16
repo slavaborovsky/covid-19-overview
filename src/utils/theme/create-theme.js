@@ -17,5 +17,15 @@ export const APP_THEME = createMuiTheme({
 		MuiButton: MUI_BUTTON_OVERRIDES,
 		MuiIconButton: MUI_ICON_BUTTON_OVERRIDES,
 		MuiTab: MUI_TAB_OVERRIDES,
+		MuiMenu: {
+			list: {
+				backgroundColor: 'var(--covid-menu-background)',
+			},
+		},
+		MuiMenuItem: {
+			root: {
+				color: 'var(--covid-menu-item-color)',
+			},
+		},
 	},
 });

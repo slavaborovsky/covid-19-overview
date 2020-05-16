@@ -3,7 +3,7 @@
 
 	.themeSwitchSlider:before {
 		border-radius: 50%;
-		background: var(--covid-primary);
+		background: var(--covid-header-background);
 		bottom: 2px;
 		content: '';
 		height: 1.3em;
@@ -19,11 +19,7 @@
 
 	a {
 		color: var(--covid-nav-link);
-
-		&:hover,
-		&.active {
-			color: var(--covid-nav-link-active);
-		}
+		white-space: nowrap;
 	}
 
 	&__navigation {

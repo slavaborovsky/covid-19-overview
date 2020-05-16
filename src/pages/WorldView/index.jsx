@@ -51,12 +51,13 @@ const WorldView = () => {
 				<Tabs
 					action={tabsRef}
 					value={activeTabIndex}
-					textColor="secondary"
+					textColor="primary"
+					indicatorColor="primary"
 					onChange={changeActiveTab}
 					aria-label="World Covid-19 tabs"
 				>
 					<Tab label="Map" {...a11yProps(0)} />
-					<Tab label="Daily History" {...a11yProps(1)} />
+					<Tab label="History" {...a11yProps(1)} />
 				</Tabs>
 			</div>
 			<TabPanel value={activeTabIndex} index={0}>

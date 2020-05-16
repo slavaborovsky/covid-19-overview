@@ -196,10 +196,7 @@ const TotalsDashboard = () => {
 
 	const countryLink = ({ country, iso3 }) => {
 		return (
-			<Link
-				to={`/countries?iso3=${iso3}`}
-				className="text-2xl text-default cursor-pointer hover:underline hover:font-semibold"
-			>
+			<Link to={`/countries?iso3=${iso3}`} className="text-2xl text-default cursor-pointer hover:text-primary">
 				{country}
 			</Link>
 		);

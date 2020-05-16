@@ -20,23 +20,28 @@ function getScaleColors(startColorKey, endColorKey) {
 const mapContainerStyles = { width: '100%', height: '100%', overflow: 'hidden' };
 
 const formatTooltip = (name, data) => {
+	let content = `<p class="text-center text-base italic">${name}</p>`;
+
 	if (!data) {
-		return `<p class="text-sm">Unknown for ${name}</p>`;
+		return content;
 	}
 
-	return `<p class="text-center text-base italic">${name}</p>
-	<p>
-		Cases - <b class="text-warning">${data.cases ? data.cases.toLocaleString() : 'Unknown'}</b>
-	</p>
-	<p>
-		Deaths - <b class="text-error">${data.deaths ? data.deaths.toLocaleString() : 'Unknown'}</b>
-	</p>
-	<p>
-		Recovers - <b class="text-success">${data.recovered ? data.recovered.toLocaleString() : 'Unknown'}</b>
-	</p>`;
+	if (data.cases !== null && !Number.isNaN(Number(data.cases))) {
+		content += `<p>Cases - <b class="text-warning">${data.cases.toLocaleString()}</b></p>`;
+	}
+
+	if (data.deaths !== null && !Number.isNaN(Number(data.deaths))) {
+		content += `<p>Deaths - <b class="text-error">${data.deaths.toLocaleString()}</b></p>`;
+	}
+
+	if (data.recovered !== null && !Number.isNaN(Number(data.recovered))) {
+		content += `<p>Recovered - <b class="text-success">${data.recovered.toLocaleString()}</b></p>`;
+	}
+
+	return content;
 };
 
-export const BaseMapChart = ({ data, projection, geography, renderMarker }) => {
+export const BaseMapChart = ({ data, projection = 'geoEqualEarth', geography, renderMarker }) => {
 	const [tooltipContent, setTooltipContent] = useState('');
 	const { theme } = useContext(ThemeSelectorContext);
 
@@ -63,7 +68,6 @@ export const BaseMapChart = ({ data, projection, geography, renderMarker }) => {
 									stroke: 'var(--covid-default)',
 									strokeWidth: 1,
 									outline: 'none',
-									fill: curr ? colorScale(curr.cases) : 'var(--covid-card-background)',
 								},
 								hover: {
 									stroke: 'var(--covid-default)',
@@ -89,9 +93,9 @@ export const BaseMapChart = ({ data, projection, geography, renderMarker }) => {
 
 	return (
 		<React.Fragment>
-			<div className="relative flex-auto">
+			<div className="relative flex-auto bg-card shadow-md rounded-md">
 				<div className="absolute inset-0">
-					<ComposableMap projection={projection} data-tip="" style={mapContainerStyles}>
+					<ComposableMap projection={projection} style={mapContainerStyles} data-tip="">
 						<ZoomableGroup>
 							<Geographies geography={geography}>{({ geographies }) => renderItem(geographies)}</Geographies>
 						</ZoomableGroup>

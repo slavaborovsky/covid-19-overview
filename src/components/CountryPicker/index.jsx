@@ -7,7 +7,7 @@ import { withStyles } from '@material-ui/core';
 
 const countriesAlphaComparer = getAlphaComparer({ accessor: (a) => a.name });
 
-const CustomTetxField = withStyles({
+const CustomTextField = withStyles({
 	root: {
 		'& label': {
 			color: 'var(--covid-default)',
@@ -34,26 +34,41 @@ const CustomTetxField = withStyles({
 	},
 })(TextField);
 
+const CustomAutoComplete = withStyles({
+	root: {
+		minWidth: 300,
+	},
+	popper: {
+		backgroundColor: 'var(--covid-popper-background)',
+		border: 'var(--covid-default)',
+	},
+	listbox: {
+		backgroundColor: 'var(--covid-popper-background)',
+	},
+	option: {
+		color: 'var(--covid-popper-item-color)',
+	},
+})(Autocomplete);
+
 export const CountryPicker = ({ countries, selected, onSelect }) => {
 	const sortedCountries = useMemo(() => (countries || []).slice().sort(countriesAlphaComparer), [countries]);
 
 	return (
-		<Autocomplete
+		<CustomAutoComplete
 			value={selected}
 			onChange={(_, c) => onSelect(c)}
 			options={sortedCountries}
-			style={{ minWidth: 300 }}
 			autoHighlight
 			blurOnSelect={true}
 			getOptionLabel={(o) => o.name}
-			renderOption={(o) => (
+			renderOption={(o, { selected }) => (
 				<React.Fragment>
-					<span className="mr-2">{o.iso2}</span>
-					<span className="text-info">{o.name}</span>
+					<span className={selected ? 'text-primary mr-2' : 'mr-2'}>({o.iso2})</span>
+					<span className={selected ? 'text-primary' : null}>{o.name}</span>
 				</React.Fragment>
 			)}
 			renderInput={(params) => (
-				<CustomTetxField
+				<CustomTextField
 					{...params}
 					color="primary"
 					label="Select a country"
