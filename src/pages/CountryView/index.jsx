@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import useSWR from 'swr';
+import classNames from 'classnames';
 import { CountryPicker, MemoizedCountryInfo, CountryDailyChart } from '../../components';
 import { useQuery } from '../../utils/custom-hooks';
 import { getInfectedCountries } from '../../utils/api';
+
+import styles from './styles.module.scss';
 
 export const CountryView = () => {
 	const query = useQuery();
@@ -31,18 +34,20 @@ export const CountryView = () => {
 			{countriesListError ? (
 				renderError
 			) : countriesList ? (
-				<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 min-h-full px-16 py-8">
-					<div className="grid col-span-1 lg:col-span-3 justify-center items-center">
+				<div
+					className={classNames(styles.gridContainer, 'grid grid-cols-1 lg:grid-cols-3 gap-6 min-h-full px-16 py-8')}
+				>
+					<div className={classNames(styles.gridItem, 'grid col-span-1 lg:col-span-3 justify-center items-center')}>
 						<CountryPicker
 							countries={countriesList}
 							selected={selectedCountry}
 							onSelect={(country) => setSelectedCountry(country)}
 						/>
 					</div>
-					<div className="grid col-span-1 lg:col-span-1">
+					<div className={classNames(styles.gridItem, 'grid col-span-1 lg:col-span-1')}>
 						<MemoizedCountryInfo countryIso3Code={selectedCountry ? selectedCountry.iso3 : null} />
 					</div>
-					<div className="grid col-span-1 lg:col-span-2">
+					<div className={classNames(styles.gridItem, 'grid col-span-1 lg:col-span-2')}>
 						<CountryDailyChart countryIso3Code={selectedCountry ? selectedCountry.iso3 : null} />
 					</div>
 				</div>

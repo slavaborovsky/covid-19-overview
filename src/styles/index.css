@@ -61,6 +61,8 @@ button:focus {
 
 	--mui-icon-hover: rgba(26, 32, 44, 0.04);
 
+	--covid-active-theme-color: theme('colors.yellow.500');
+
 	--covid-menu-background: theme('colors.gray.100');
 	--covid-menu-item-color: var(--covid-default);
 
@@ -111,6 +113,8 @@ html[data-theme='dark'] {
 	--covid-box-shadow-color: theme('colors.gray.600');
 
 	--mui-icon-hover: rgba(203, 213, 224, 0.04);
+
+	--covid-active-theme-color: theme('colors.gray.200');
 
 	--covid-menu-background: theme('colors.gray.800');
 

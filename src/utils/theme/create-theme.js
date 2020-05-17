@@ -27,5 +27,10 @@ export const APP_THEME = createMuiTheme({
 				color: 'var(--covid-menu-item-color)',
 			},
 		},
+		MuiIcon: {
+			root: {
+				color: 'var(--covid-default)',
+			},
+		},
 	},
 });

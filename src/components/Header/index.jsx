@@ -1,7 +1,9 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import IconButton from '@material-ui/core/IconButton';
 import ListIcon from '@material-ui/icons/List';
+import WbSunnyIcon from '@material-ui/icons/WbSunny';
+import Brightness3Icon from '@material-ui/icons/Brightness3';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 
@@ -75,7 +77,8 @@ export const Header = () => {
 			</div>
 
 			<div className="flex items-center ml-auto">
-				<label className="inline-block relative h-6 w-12 font-bold" htmlFor="checkbox">
+				<WbSunnyIcon htmlColor={theme === 'dark' ? '' : 'var(--covid-active-theme-color)'} />
+				<label className="inline-block relative h-6 w-12 font-bold mx-2" htmlFor="checkbox">
 					<input
 						type="checkbox"
 						id="checkbox"
@@ -85,7 +88,7 @@ export const Header = () => {
 					/>
 					<div className="themeSwitchSlider bg-white inset-0 cursor-pointer absolute rounded-full transition-500"></div>
 				</label>
-				<em className="ml-5 text-sm text-on-header whitespace-no-wrap">Enable Dark Mode</em>
+				<Brightness3Icon htmlColor={theme === 'dark' ? 'var(--covid-active-theme-color)' : ''} />
 			</div>
 		</header>
 	);

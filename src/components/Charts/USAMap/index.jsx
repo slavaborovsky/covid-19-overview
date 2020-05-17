@@ -46,13 +46,13 @@ export const USAMapChart = () => {
 								dx={offsets[cur.iso2][0]}
 								dy={offsets[cur.iso2][1]}
 							>
-								<text x={4} fill="var(--covid-default)" fontSize={13} alignmentBaseline="middle">
+								<text x={4} fill="var(--covid-default)" pointerEvents="none" fontSize={13} alignmentBaseline="middle">
 									{cur.iso2}
 								</text>
 							</Annotation>
 						) : (
 							<Marker coordinates={centroid}>
-								<text y="2" fill="var(--covid-map-text)" fontSize={13} textAnchor="middle">
+								<text y="2" fill="var(--covid-map-text)" pointerEvents="none" fontSize={13} textAnchor="middle">
 									{cur.iso2}
 								</text>
 							</Marker>

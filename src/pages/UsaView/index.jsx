@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useLayoutEffect, useRef } from 'react';
 import classNames from 'classnames';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -37,7 +37,7 @@ const UsaView = () => {
 		setActiveTabIndex(nextIndex);
 	};
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		// fix tabs indicator does not reflect active position on lazy/suspense component loaded
 		window.dispatchEvent(new CustomEvent('resize'));
 		if (tabsRef.current) {
@@ -47,13 +47,12 @@ const UsaView = () => {
 
 	return (
 		<div className="flex flex-col flex-auto overflow-auto px-16 py-6">
-			<div className="usa-tabs">
+			<div className="usa-tabs flex justify-center">
 				<Tabs
 					action={tabsRef}
 					value={activeTabIndex}
 					textColor="primary"
 					indicatorColor="primary"
-					centered={true}
 					onChange={changeActiveTab}
 					aria-label="USA Covid-19 tabs"
 				>

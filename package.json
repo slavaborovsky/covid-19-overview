@@ -2,7 +2,7 @@
 	"name": "covid-dashboard",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "http://slavaborovsky.github.io/covid-19-overview",
+	"homepage": "",
 	"dependencies": {
 		"@material-ui/core": "^4.9.10",
 		"@material-ui/icons": "^4.9.1",
@@ -42,7 +42,7 @@
 		"eject": "react-scripts eject",
 		"prettier:check": "prettier \"**/*.{html,scss,css,jsx,tsx,yml,yaml,json,md}\" --check",
 		"prettier:write": "prettier \"**/*.{html,scss,css,jsx,tsx,yml,yaml,json,md}\" --write",
-		"predeploy:gh-pages": "yarn run build",
+		"predeploy:gh-pages": "cross-env PUBLIC_URL=https://slavaborovsky.github.io/covid-19-overview yarn build",
 		"deploy:gh-pages": "gh-pages -d build"
 	},
 	"eslintConfig": {

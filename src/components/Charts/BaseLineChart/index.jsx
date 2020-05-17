@@ -71,6 +71,9 @@ export const BaseLineChart = ({ data }) => {
 				},
 			],
 		},
+		layout: {
+			padding: 10,
+		},
 		legend: {
 			labels: {
 				fontColor: themeProps.default,
