@@ -35,6 +35,6 @@ jobs:
           IMAGE_STORAGE: vyacheslavborovsky/covid-dashboard-docker-repo
           TAG: latest
           HEROKU_USERNAME: ${{ secrets.HEROKU_USERNAME }}
-          HEROKU_APP_NAME: ${{ secrets.HEROKU_APP }}
+          HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
         run: sh ./scripts/deploy-heroku.sh
