@@ -38,7 +38,6 @@ const UsaView = () => {
 	};
 
 	useLayoutEffect(() => {
-		// fix tabs indicator does not reflect active position on lazy/suspense component loaded
 		window.dispatchEvent(new CustomEvent('resize'));
 		if (tabsRef.current) {
 			tabsRef.current.updateIndicator();

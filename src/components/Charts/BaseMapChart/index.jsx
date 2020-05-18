@@ -41,7 +41,7 @@ const formatTooltip = (name, data) => {
 	return content;
 };
 
-export const BaseMapChart = ({ data, projection = 'geoEqualEarth', geography, renderMarker }) => {
+export const BaseMapChart = ({ data, projection = 'geoEqualEarth', geography, clickHandler, renderMarker }) => {
 	const [tooltipContent, setTooltipContent] = useState('');
 	const { theme } = useContext(ThemeSelectorContext);
 
@@ -58,7 +58,7 @@ export const BaseMapChart = ({ data, projection = 'geoEqualEarth', geography, re
 		return (
 			<React.Fragment>
 				{geographies.map((geo, i) => {
-					const curr = data.find((item) => item.iso2 === geo.properties.iso_code);
+					const country = data.find((item) => item.iso2 === geo.properties.iso_code);
 					return (
 						<Geography
 							key={`${geo.properties.iso_code}-${i}`}
@@ -73,16 +73,20 @@ export const BaseMapChart = ({ data, projection = 'geoEqualEarth', geography, re
 									stroke: 'var(--covid-default)',
 									strokeWidth: 1.5,
 									outline: 'none',
+									cursor: 'pointer',
 								},
+							}}
+							onClick={() => {
+								clickHandler && clickHandler(country);
 							}}
 							onMouseEnter={() => {
 								const { name } = geo.properties;
-								setTooltipContent(formatTooltip(name, curr));
+								setTooltipContent(formatTooltip(name, country));
 							}}
 							onMouseLeave={() => {
 								setTooltipContent('');
 							}}
-							fill={curr ? colorScale(curr.cases) : 'var(--covid-card-background)'}
+							fill={country ? colorScale(country.cases) : 'var(--covid-card-background)'}
 						/>
 					);
 				})}

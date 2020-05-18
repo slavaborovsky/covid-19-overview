@@ -38,7 +38,6 @@ const WorldView = () => {
 	};
 
 	useEffect(() => {
-		// fix tabs indicator not reflects active position on lazy/suspense component loaded
 		window.dispatchEvent(new CustomEvent('resize'));
 		if (tabsRef.current) {
 			tabsRef.current.updateIndicator();
