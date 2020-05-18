@@ -1,0 +1,41 @@
+name: Deploy-Production
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:      
+    - uses: actions/checkout@v2
+      
+    - name: Grant Permissions to executable
+      run: chmod +rwx ./scripts/deploy-heroku.sh
+      
+    - name: Build the Docker image
+      env:
+        DOCKER_STORAGE_URL: vyacheslavborovsky/covid-dashboard-docker-repo
+        TAG: latest
+      run: sh ./scripts/build-image.sh $DOCKER_STORAGE_URL $TAG
+    
+    - name: Push a docker image to DockerHub
+      env:
+        DOCKER_STORAGE_URL: vyacheslavborovsky/covid-dashboard-docker-repo
+        TAG: latest
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      run: sh ./scripts/push-image.sh $DOCKER_STORAGE_URL $TAG
+    - name: Deploy to Heroku
+      env:
+        DOCKER_STORAGE_URL: vyacheslavborovsky/covid-dashboard-docker-repo
+        TAG: latest
+        HEROKU_USERNAME: ${{ secrets.HEROKU_USERNAME }}
+        HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+      run: sh ./scripts/deploy-heroku.sh
