@@ -12,4 +12,11 @@ server {
   location = /50x.html {
     root   /usr/share/nginx/html;
   }
+
+  location ~* \.(?:css|js)$ {
+            try_files $uri =404;
+            expires 1y;
+            access_log off;
+            add_header Cache-Control "public";
+        }
 }
