@@ -5,6 +5,7 @@ server {
     root   /usr/share/nginx/html;
     index  index.html index.htm;
     try_files $uri $uri/ /index.html;
+    include /etc/nginx/mime.types;
   }
 
   error_page   500 502 503 504  /50x.html;
@@ -12,11 +13,4 @@ server {
   location = /50x.html {
     root   /usr/share/nginx/html;
   }
-
-  location ~* \.(?:css|js)$ {
-            try_files $uri =404;
-            expires 1y;
-            access_log off;
-            add_header Cache-Control "public";
-        }
 }
