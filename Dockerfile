@@ -23,11 +23,11 @@ COPY . /app
 RUN yarn run build
 
 
+FROM nginx:1.18.0
+COPY nginx/default.conf.template /etc/nginx/conf.d/default.conf.template
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
 
-FROM nginx:stable-alpine
 RUN rm -rf /usr/share/nginx/html/*
 COPY --from=build /app/build /usr/share/nginx/html
-COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
 
+CMD /bin/bash -c "envsubst '\$PORT' < /etc/nginx/conf.d/default.conf.template > /etc/nginx/conf.d/default.conf" && nginx -g 'daemon off;'
