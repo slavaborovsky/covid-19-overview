@@ -1,14 +1,20 @@
 server {
   listen $PORT default_server;
-
-  location / {
-    root   /usr/share/nginx/html;
-    index  index.html index.htm;
-    try_files $uri $uri/ /index.html;
-    include /etc/nginx/mime.types;
-  }
+  root   /usr/share/nginx/html;
+  index  index.html index.htm;
+  include /etc/nginx/mime.types;
 
   error_page   500 502 503 504  /50x.html;
+
+  location / {
+    try_files $uri $uri/ /index.html =404;
+    add_header Cache-Control "no-cache";
+  }
+
+  location /static {
+    expires 1y;
+    add_header Cache-Control "public";
+  }
 
   location = /50x.html {
     root   /usr/share/nginx/html;
