@@ -1,16 +1,14 @@
-import React, { useState, useLayoutEffect, useRef } from 'react';
+import React, { useState, useRef, Suspense } from 'react';
 import classNames from 'classnames';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
-import { USADailyChart, USAMapChart } from '../../components';
+import { USADailyChart, USAMapChart, Loader } from '../../components';
 
-function a11yProps(index) {
-	return {
-		id: `world-info-tab-${index}`,
-		'aria-controls': `world-info-tabpanel-${index}`,
-	};
-}
+const a11yProps = (index) => ({
+	id: `usa-info-tab-${index}`,
+	'aria-controls': `usa-info-tabpanel-${index}`,
+});
 
 const TabPanel = ({ children, index: tabIndex, value: activeTabIndex, ...rest }) => {
 	const isActiveTab = tabIndex === activeTabIndex;
@@ -37,13 +35,6 @@ const UsaView = () => {
 		setActiveTabIndex(nextIndex);
 	};
 
-	useLayoutEffect(() => {
-		window.dispatchEvent(new CustomEvent('resize'));
-		if (tabsRef.current) {
-			tabsRef.current.updateIndicator();
-		}
-	}, [activeTabIndex]);
-
 	return (
 		<div className="flex flex-col flex-auto overflow-auto px-16 py-6">
 			<div className="usa-tabs flex justify-center">
@@ -60,10 +51,14 @@ const UsaView = () => {
 				</Tabs>
 			</div>
 			<TabPanel value={activeTabIndex} index={0}>
-				<USAMapChart />
+				<Suspense fallback={<Loader text="Loading USA map" />}>
+					<USAMapChart />
+				</Suspense>
 			</TabPanel>
 			<TabPanel value={activeTabIndex} index={1}>
-				<USADailyChart />
+				<Suspense fallback={<Loader text="Loading USA daily" />}>
+					<USADailyChart />
+				</Suspense>
 			</TabPanel>
 		</div>
 	);

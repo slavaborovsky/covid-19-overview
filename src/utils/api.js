@@ -30,6 +30,11 @@ export const getInfectedCountries = async () => {
 	}
 };
 
+export const getWorldTopojsonData = async () => {
+	const { data } = await axios.get('./static/topojson/world.topojson');
+	return data;
+};
+
 export const getGlobalDailyData = async () => {
 	try {
 		const { data } = await axios.get(`${COUNTRY_INFO_API_BASE_URL}/api/daily`);
@@ -56,6 +61,11 @@ export const getCountriesDailyData = async () => {
 	} catch (err) {
 		return [];
 	}
+};
+
+export const getUSATopojsonData = async () => {
+	const { data } = await axios.get('./static/topojson/usa.topojson');
+	return data;
 };
 
 export const getUSADailyData = async () => {

@@ -3,11 +3,9 @@ import useSwr from 'swr';
 
 import { geoCentroid } from 'd3-geo';
 import { Marker, Annotation } from 'react-simple-maps';
-import { getUSASpreadingData } from '../../../utils/api';
+import { getUSASpreadingData, getUSATopojsonData } from '../../../utils/api';
 
 import { MemoizedBaseMapChart } from '../BaseMapChart';
-
-import USAJson from './USA.json';
 
 const offsets = {
 	VT: [50, -8],
@@ -29,6 +27,7 @@ const connectorLineStyles = {
 
 export const USAMapChart = () => {
 	const { data, error } = useSwr('usaSpreadingData', getUSASpreadingData);
+	const { data: usaTopojson, error: topojsonError } = useSwr('usaTopojson', getUSATopojsonData);
 
 	const renderStateAnnotation = (geographies) => {
 		return geographies.map((geo, i) => {
@@ -62,7 +61,7 @@ export const USAMapChart = () => {
 		});
 	};
 
-	if (error) {
+	if (error || topojsonError) {
 		return <h2 className="text-default text-xl my-auto text-center">Error loading USA virus spreading data</h2>;
 	}
 
@@ -70,7 +69,7 @@ export const USAMapChart = () => {
 		<MemoizedBaseMapChart
 			projection="geoAlbersUsa"
 			data={data}
-			geography={USAJson}
+			geography={usaTopojson}
 			renderMarker={renderStateAnnotation}
 		/>
 	);

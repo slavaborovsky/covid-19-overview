@@ -32,22 +32,36 @@ function App() {
 			<div className="bg-body font-body h-screen min-h-full flex flex-col">
 				<Header />
 
-				<Suspense fallback={<Loader text="Loading..." />}>
-					<SWRConfig value={APP_SWR_CONFIG}>
-						<Switch location={location}>
-							<Route exact path="/">
-								<Redirect to={{ pathname: '/dashboard' }} />
-							</Route>
-							<Route path="/dashboard" component={GlobalDashboard} />
-							<Route path="/world" component={WorldView} />
-							<Route path="/usa" component={UsaView} />
-							<Route path="/countries" component={CountryView} />
-							<Route path="*">
-								<Loader text="Not Found..." />
-							</Route>
-						</Switch>
-					</SWRConfig>
-				</Suspense>
+				<SWRConfig value={APP_SWR_CONFIG}>
+					<Switch location={location}>
+						<Route exact path="/">
+							<Redirect to={{ pathname: '/dashboard' }} />
+						</Route>
+						<Route path="/dashboard">
+							<Suspense fallback={<Loader text="Loading dashboard..." />}>
+								<GlobalDashboard />
+							</Suspense>
+						</Route>
+						<Route path="/world">
+							<Suspense fallback={<Loader text="Loading world data..." />}>
+								<WorldView />
+							</Suspense>
+						</Route>
+						<Route path="/usa">
+							<Suspense fallback={<Loader text="Loading USA data..." />}>
+								<UsaView />
+							</Suspense>
+						</Route>
+						<Route path="/countries">
+							<Suspense fallback={<Loader text="Loading countries..." />}>
+								<CountryView />
+							</Suspense>
+						</Route>
+						<Route path="*">
+							<Loader text="Not Found..." />
+						</Route>
+					</Switch>
+				</SWRConfig>
 
 				<Footer />
 			</div>

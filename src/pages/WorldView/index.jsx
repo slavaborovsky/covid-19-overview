@@ -1,16 +1,14 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef, Suspense } from 'react';
 import classNames from 'classnames';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
-import { GlobalDailyChart, WorldMapChart } from '../../components';
+import { GlobalDailyChart, WorldMapChart, Loader } from '../../components';
 
-function a11yProps(index) {
-	return {
-		id: `world-info-tab-${index}`,
-		'aria-controls': `world-info-tabpanel-${index}`,
-	};
-}
+const a11yProps = (index) => ({
+	id: `world-info-tab-${index}`,
+	'aria-controls': `world-info-tabpanel-${index}`,
+});
 
 const TabPanel = ({ children, index: tabIndex, value: activeTabIndex, ...rest }) => {
 	const isActiveTab = tabIndex === activeTabIndex;
@@ -37,13 +35,6 @@ const WorldView = () => {
 		setActiveTabIndex(nextIndex);
 	};
 
-	useEffect(() => {
-		window.dispatchEvent(new CustomEvent('resize'));
-		if (tabsRef.current) {
-			tabsRef.current.updateIndicator();
-		}
-	}, [activeTabIndex]);
-
 	return (
 		<div className="flex flex-col flex-auto overflow-auto px-16 py-6">
 			<div className="world-tabs flex justify-center">
@@ -60,10 +51,14 @@ const WorldView = () => {
 				</Tabs>
 			</div>
 			<TabPanel value={activeTabIndex} index={0}>
-				<WorldMapChart />
+				<Suspense fallback={<Loader text="Loading World map" />}>
+					<WorldMapChart />
+				</Suspense>
 			</TabPanel>
 			<TabPanel value={activeTabIndex} index={1}>
-				<GlobalDailyChart />
+				<Suspense fallback={<Loader text="Loading World daily" />}>
+					<GlobalDailyChart />
+				</Suspense>
 			</TabPanel>
 		</div>
 	);

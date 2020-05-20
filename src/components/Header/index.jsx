@@ -27,7 +27,7 @@ export const Header = () => {
 	return (
 		<header className="app-header bg-header shadow-md w-full pl-16 pr-8 relative flex flex-row items-center">
 			<Link to="/" className="text-lg md:text-xl lg:text-2xl text-on-header mr-8">
-				COVID-2019
+				COVID Tracker
 			</Link>
 
 			<div className="hidden align-middle md:flex app-header__navigation">
