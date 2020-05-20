@@ -17,6 +17,7 @@ import { useCountriesData } from '../../utils/custom-hooks';
 import { getNumericComparer } from '../../utils/get-array-comparer';
 
 import styles from './styles.module.scss';
+import { withStyles } from '@material-ui/core';
 
 const getInfectedComparer = (ordering = 'desc') => {
 	return getNumericComparer({ accessor: (data) => data.cases, desc: ordering === 'desc' });
@@ -27,6 +28,27 @@ const getDeathsComparer = (ordering = 'desc') => {
 const getRecoversComparer = (ordering = 'desc') => {
 	return getNumericComparer({ accessor: (data) => data.recovered, desc: ordering === 'desc' });
 };
+
+const StyledList = withStyles({
+	root: {
+		flex: '1 1 0',
+		overflow: 'auto',
+		padding: 0,
+		boxShadow: '0 1px 3px 0 var(--covid-box-shadow-color), 0 1px 2px 0 var(--covid-box-shadow-color)',
+	},
+})(List);
+
+const StyledListItem = withStyles({
+	divider: {
+		borderBottomColor: 'var(--covid-box-shadow-color)',
+	},
+})(ListItem);
+
+const StyledButton = withStyles({
+	root: {
+		margin: '15px 0',
+	},
+})(Button);
 
 const TotalsDashboard = () => {
 	const { data: totalsData, error: totalsError } = useSWR('all');
@@ -202,7 +224,7 @@ const TotalsDashboard = () => {
 		);
 	};
 
-	const renderTopFiveInfectedCountries = () => {
+	const renderCountriesSortedByInfects = () => {
 		if (countriesError) {
 			return renderTopListError;
 		}
@@ -213,9 +235,9 @@ const TotalsDashboard = () => {
 
 		return (
 			<React.Fragment>
-				<List>
+				<StyledList>
 					{sortedByInfected.slice(0, topCountState.infected).map((data) => (
-						<ListItem className="shadow-inner px-4 py-2 flex flex-col" key={data.country}>
+						<StyledListItem className="px-4 py-2 flex flex-col" key={data.country} divider={true}>
 							{countryLink(data)}
 							<p className="text-center break-all">
 								<span className="text-base text-warning whitespace-no-wrap">
@@ -226,17 +248,19 @@ const TotalsDashboard = () => {
 									Today: <CountUp start={0} end={data.todayCases} duration={1.5} separator="," />
 								</span>
 							</p>
-						</ListItem>
+						</StyledListItem>
 					))}
-				</List>
-				{topCountState.infected < countriesData.length && (
-					<Button onClick={() => setTopCountState((s) => ({ ...s, infected: s.infected * 2 }))}>Show More</Button>
-				)}
+					{topCountState.infected < countriesData.length && (
+						<StyledButton onClick={() => setTopCountState((s) => ({ ...s, infected: s.infected * 2 }))}>
+							Show More
+						</StyledButton>
+					)}
+				</StyledList>
 			</React.Fragment>
 		);
 	};
 
-	const renderTopFiveDeathsCountries = () => {
+	const renderCountriesSortedByDeaths = () => {
 		if (countriesError) {
 			return renderTopListError;
 		}
@@ -247,9 +271,9 @@ const TotalsDashboard = () => {
 
 		return (
 			<React.Fragment>
-				<List>
+				<StyledList>
 					{sortedByDeaths.slice(0, topCountState.deaths).map((data) => (
-						<ListItem className="shadow-inner px-4 py-2 flex flex-col" key={data.country}>
+						<StyledListItem className="px-4 py-2 flex flex-col" key={data.country} divider={true}>
 							{countryLink(data)}
 							<p className="text-center break-all">
 								<span className="text-base text-error whitespace-no-wrap">
@@ -260,17 +284,19 @@ const TotalsDashboard = () => {
 									Today: <CountUp start={0} end={data.todayDeaths} duration={1.5} separator="," />
 								</span>
 							</p>
-						</ListItem>
+						</StyledListItem>
 					))}
-				</List>
-				{topCountState.deaths < countriesData.length && (
-					<Button onClick={() => setTopCountState((s) => ({ ...s, deaths: s.deaths * 2 }))}>Show More</Button>
-				)}
+					{topCountState.deaths < countriesData.length && (
+						<StyledButton onClick={() => setTopCountState((s) => ({ ...s, deaths: s.deaths * 2 }))}>
+							Show More
+						</StyledButton>
+					)}
+				</StyledList>
 			</React.Fragment>
 		);
 	};
 
-	const renderTopFiveRecoversCountries = () => {
+	const renderCountriesSortedByRecovers = () => {
 		if (countriesError) {
 			return renderTopListError;
 		}
@@ -281,9 +307,9 @@ const TotalsDashboard = () => {
 
 		return (
 			<React.Fragment>
-				<List>
+				<StyledList>
 					{sortedByRecovers.slice(0, topCountState.recovers).map((data) => (
-						<ListItem className="shadow-inner px-4 py-2 flex flex-col" key={data.country}>
+						<StyledListItem className="px-4 py-2 flex flex-col" key={data.country} divider={true}>
 							{countryLink(data)}
 							<p className="text-center break-all">
 								<span className="text-base text-success whitespace-no-wrap">
@@ -294,24 +320,31 @@ const TotalsDashboard = () => {
 									Critical: <CountUp start={0} end={data.critical} duration={1.5} separator="," />
 								</span>
 							</p>
-						</ListItem>
+						</StyledListItem>
 					))}
-				</List>
-				{topCountState.recovers < countriesData.length && (
-					<Button onClick={() => setTopCountState((s) => ({ ...s, recovers: s.recovers * 2 }))}>Show More</Button>
-				)}
+					{topCountState.recovers < countriesData.length && (
+						<StyledButton onClick={() => setTopCountState((s) => ({ ...s, recovers: s.recovers * 2 }))}>
+							Show More
+						</StyledButton>
+					)}
+				</StyledList>
 			</React.Fragment>
 		);
 	};
 
 	return (
 		<div className="flex-auto overflow-y-auto" ref={gridRef}>
-			<div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-12 xl:gap-16 min-h-full py-12 px-16 text-center">
+			<div
+				className={classNames(
+					styles.gridContainer,
+					'grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-12 xl:gap-16 min-h-full py-12 px-16 text-center'
+				)}
+			>
 				<Card classes="col-span-2">
 					{{
 						renderHeader: renderInfectedHeader,
 						renderCount: renderGlobalConfirmedCases,
-						renderList: renderTopFiveInfectedCountries,
+						renderList: renderCountriesSortedByInfects,
 					}}
 				</Card>
 
@@ -319,7 +352,7 @@ const TotalsDashboard = () => {
 					{{
 						renderHeader: renderDeathsHeader,
 						renderCount: renderGlobalDeathsCases,
-						renderList: renderTopFiveDeathsCountries,
+						renderList: renderCountriesSortedByDeaths,
 					}}
 				</Card>
 
@@ -327,17 +360,17 @@ const TotalsDashboard = () => {
 					{{
 						renderHeader: renderRecoversHeader,
 						renderCount: renderGlobalRecoveredCases,
-						renderList: renderTopFiveRecoversCountries,
+						renderList: renderCountriesSortedByRecovers,
 					}}
 				</Card>
+				{showScrollToTopBtn && (
+					<div className={classNames(styles.scrollToTop, 'fixed z-50 cursor-pointer')}>
+						<IconButton onClick={scrollToTop} color="secondary">
+							<ArrowDropUpIcon fontSize="large" />
+						</IconButton>
+					</div>
+				)}
 			</div>
-			{showScrollToTopBtn && (
-				<div className={classNames(styles.scrollToTop, 'fixed z-50 cursor-pointer')}>
-					<IconButton onClick={scrollToTop} color="secondary">
-						<ArrowDropUpIcon fontSize="large" />
-					</IconButton>
-				</div>
-			)}
 		</div>
 	);
 };

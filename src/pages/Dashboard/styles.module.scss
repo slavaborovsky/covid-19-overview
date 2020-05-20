@@ -1,3 +1,15 @@
+.gridContainer {
+	grid-template-rows: repeat(3, minmax(500px, 1fr));
+
+	@media screen and (min-width: 768px) {
+		grid-template-rows: repeat(2, minmax(500px, 1fr));
+	}
+
+	@media screen and (min-width: 1280px) {
+		grid-template-rows: 1fr;
+	}
+}
+
 .scrollToTop {
 	bottom: 3em;
 	right: 1em;
