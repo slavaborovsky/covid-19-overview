@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import IconButton from '@material-ui/core/IconButton';
 import ListIcon from '@material-ui/icons/List';
@@ -7,12 +7,11 @@ import Brightness3Icon from '@material-ui/icons/Brightness3';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 
-import { ThemeSelectorContext } from '../../context/theme/theme-context';
-
 import './styles.scss';
+import { useTheme } from '../../context/theme/theme-provider';
 
 export const Header = () => {
-	const { theme, toggleTheme } = useContext(ThemeSelectorContext);
+	const [theme, toggleTheme] = useTheme();
 
 	const [menuEl, setMenuEl] = React.useState(null);
 
@@ -26,8 +25,8 @@ export const Header = () => {
 
 	return (
 		<header className="app-header bg-header shadow-md w-full pl-16 pr-8 relative flex flex-row items-center">
-			<Link to="/" className="text-lg md:text-xl lg:text-2xl text-on-header mr-8">
-				COVID Tracker
+			<Link to="/" className="text-lg md:text-xl lg:text-2xl text-on-header mr-10">
+				COVID-19 Tracker
 			</Link>
 
 			<div className="hidden align-middle md:flex app-header__navigation">

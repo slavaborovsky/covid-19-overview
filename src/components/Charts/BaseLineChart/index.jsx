@@ -1,21 +1,24 @@
-import React, { useContext } from 'react';
+import React, { useMemo } from 'react';
 import { Line } from 'react-chartjs-2';
 
 import { getCssPropertyValue } from '../../../utils/get-css-property-value';
-import { ThemeSelectorContext } from '../../../context/theme/theme-context';
+import { useThemeState } from '../../../context/theme/theme-provider';
 
 export const BaseLineChart = ({ data }) => {
-	const { theme } = useContext(ThemeSelectorContext);
+	const theme = useThemeState();
 
-	const themeProps = getCssPropertyValue([
-		'warning',
-		'error',
-		'success',
-		'default',
-		'chart-grid',
-		'chart-tooltip-background',
-		'chart-tooltip-text',
-	]);
+	const themeProps = useMemo(() => {
+		return getCssPropertyValue([
+			'warning',
+			'error',
+			'success',
+			'default',
+			'chart-grid',
+			'chart-tooltip-background',
+			'chart-tooltip-text',
+		]);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [theme]);
 
 	const datasets = [
 		{

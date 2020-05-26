@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useContext } from 'react';
+import React, { useState, useMemo } from 'react';
 import ReactTooltip from 'react-tooltip';
 import { ComposableMap, Geographies, Geography, ZoomableGroup } from 'react-simple-maps';
 import { scaleQuantile } from 'd3-scale';
@@ -6,7 +6,7 @@ import { scaleQuantile } from 'd3-scale';
 import { getCssPropertyValue } from '../../../utils/get-css-property-value';
 import getColorsInRange from '../../../utils/color/get-colors-in-range';
 import parseColorString from '../../../utils/color/parse-color-string';
-import { ThemeSelectorContext } from '../../../context/theme/theme-context';
+import { useThemeState } from '../../../context/theme/theme-provider';
 
 function getScaleColors(startColorKey, endColorKey) {
 	const themeProps = getCssPropertyValue([startColorKey, endColorKey]);
@@ -43,7 +43,7 @@ const formatTooltip = (name, data) => {
 
 export const BaseMapChart = ({ data, projection = 'geoEqualEarth', geography, clickHandler, renderMarker }) => {
 	const [tooltipContent, setTooltipContent] = useState('');
-	const { theme } = useContext(ThemeSelectorContext);
+	const theme = useThemeState();
 
 	const colorScale = useMemo(
 		() =>

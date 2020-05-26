@@ -5,16 +5,16 @@ import { HashRouter as Router } from 'react-router-dom';
 import './tailwind.generated.css';
 import App from './App';
 
-import { ThemeContextProvider } from './context/theme/context-provider';
+import { ThemeProvider } from './context/theme/theme-provider';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<ThemeContextProvider>
+		<ThemeProvider>
 			<Router basename="/">
 				<App />
 			</Router>
-		</ThemeContextProvider>
+		</ThemeProvider>
 	</React.StrictMode>,
 	document.getElementById('root')
 );
