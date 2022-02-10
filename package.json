@@ -18,7 +18,7 @@
 		"d3-scale": "^3.2.1",
 		"husky": "^4.2.5",
 		"i18n-iso-countries": "^5.2.0",
-		"node-sass": "^4.13.1",
+		"node-sass": "^7.0.0",
 		"prettier": "^2.0.4",
 		"prop-types": "^15.7.2",
 		"react": "^16.13.1",
